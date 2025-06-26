@@ -1073,36 +1073,28 @@
   ],
   "pantauanKejadian": [
     {
-      "no": 1,
-      "tanggal": "20/06/2025",
-      "no_ka": "331",
-      "kejadian": "Lampu kabin padam di KMP 3",
-      "tindak_lanjut": "Perbaikan oleh TPK di Cikampek",
-      "keterangan": "Selesai ditangani"
-    },
-    {
-      "no": 2,
-      "tanggal": "21/06/2025",
-      "no_ka": "328",
-      "kejadian": "AC tidak dingin",
-      "tindak_lanjut": "Pengecekan freon di Purwakarta",
-      "keterangan": "Dalam proses"
+      "no": "",
+      "tanggal": "",
+      "no_ka": "",
+      "kejadian": "",
+      "tindak_lanjut": "",
+      "keterangan": "NIHIL"
     }
   ],
   "pantauanKKA": [
     {
-      "no": 1,
-      "tanggal": "15/06/2025",
-      "kejadian": "KA 348 melewati sinyal aspek merah di Stasiun X",
-      "tindak_lanjut": "Masinis di-grounded dan dilakukan pembinaan",
-      "keterangan": "Selesai"
+      "no": "",
+      "tanggal": "",
+      "kejadian": "",
+      "tindak_lanjut": "",
+      "keterangan": "NIHIL"
     }
   ],
   "pantauanPerka": {
     "wam": {
       "jalan": [
         {
-          "no": 1,
+          "no": "1",
           "tanggal": "18/06/2025",
           "ka": "KLB/1A",
           "relasi": "PWK-BD",
@@ -1112,7 +1104,7 @@
       ],
       "batal": [
         {
-          "no": 1,
+          "no": "1",
           "tanggal": "19/06/2025",
           "ka": "PLB 33C",
           "relasi": "CKP-PWK",
@@ -1124,7 +1116,7 @@
     "ppk": {
       "jalan": [
         {
-          "no": 1,
+          "no": "1",
           "tanggal": "22/06/2025",
           "ka": "2501",
           "relasi": "PWK-TG",
@@ -1134,7 +1126,7 @@
       ],
       "batal": [
         {
-          "no": 1,
+          "no": "1",
           "tanggal": "23/06/2025",
           "ka": "2708F",
           "relasi": "CBR-PWK",
@@ -1145,7 +1137,7 @@
     },
     "wad": [
       {
-        "no": 1,
+        "no": "1",
         "tanggal": "10/06/2025",
         "dasar": "WAD.10/VI/25-DAOP2",
         "keterangan": "Perubahan Gapeka Parsial Mulai 12 Juni 2025"
@@ -1155,106 +1147,106 @@
   "pantauanTaspat": {
     "hilir_bd": [
       {
-        "no": 1,
+        "no": "1",
         "petak": "BD - BD",
         "km": "155 + 400 S/D 154 + 500",
-        "kecepatan": 20
+        "kecepatan": "20"
       },
       {
-        "no": 2,
+        "no": "2",
         "petak": "CMI - PDL",
         "km": "144 + 700 S/D 144 + 000",
-        "kecepatan": 100
+        "kecepatan": "100"
       },
       {
-        "no": 3,
+        "no": "3",
         "petak": "SKT - MSI",
         "km": "144 + 100 S/D 142 + 700",
-        "kecepatan": 50
+        "kecepatan": "50"
       }
     ],
     "hulu_bd": [
       {
-        "no": 1,
+        "no": "1",
         "petak": "BD - BD",
         "km": "155 + 400 S/D 154 + 500",
-        "kecepatan": 20
+        "kecepatan": "20"
       },
       {
-        "no": 2,
+        "no": "2",
         "petak": "PDL - CMI",
         "km": "144 + 100 S/D 144 + 700",
-        "kecepatan": 100
+        "kecepatan": "100"
       },
       {
-        "no": 3,
+        "no": "3",
         "petak": "SKT - MSI",
         "km": "144 + 100 S/D 142 + 700",
-        "kecepatan": 50
+        "kecepatan": "50"
       }
     ],
     "hilir_ckr": [
       {
-        "no": 1,
+        "no": "1",
         "petak": "PWK - CBR",
         "km": "103 + 100 S/D 95 + 600",
-        "kecepatan": 80
+        "kecepatan": "80"
       },
       {
-        "no": 2,
+        "no": "2",
         "petak": "CBR - CBR",
         "km": "92 + 200 S/D 88 + 600",
-        "kecepatan": 80
+        "kecepatan": "80"
       },
       {
-        "no": 3,
+        "no": "3",
         "petak": "EMPL CKP",
         "km": "84 + 400 S/D 85 + 200",
-        "kecepatan": 30
+        "kecepatan": "30"
       },
       {
-        "no": 4,
+        "no": "4",
         "petak": "KW - KDH",
         "km": "58 + 200 S/D 56 + 300",
-        "kecepatan": 90
+        "kecepatan": "90"
       },
       {
-        "no": 5,
+        "no": "5",
         "petak": "EMPL CKR",
         "km": "42 + 500 S/D 43 + 800",
-        "kecepatan": 70
+        "kecepatan": "70"
       }
     ],
     "hulu_ckr": [
       {
-        "no": 1,
+        "no": "1",
         "petak": "CBR - PWK",
         "km": "95+ 600 S/D 103 + 100",
-        "kecepatan": 80
+        "kecepatan": "80"
       },
       {
-        "no": 2,
+        "no": "2",
         "petak": "CBR - CBR",
         "km": "88 + 600 S/D 92 + 200",
-        "kecepatan": 80
+        "kecepatan": "80"
       },
       {
-        "no": 3,
+        "no": "3",
         "petak": "EMPL CKP",
         "km": "85 + 200 S/D 84 + 400",
-        "kecepatan": 30
+        "kecepatan": "30"
       },
       {
-        "no": 4,
+        "no": "4",
         "petak": "KDH - KW",
         "km": "56 + 800 S/D 58 + 000",
-        "kecepatan": 90
+        "kecepatan": "90"
       },
       {
-        "no": 5,
+        "no": "5",
         "petak": "EMPL CKR",
         "km": "43 + 800 S/D 42 + 500",
-        "kecepatan": 70
+        "kecepatan": "70"
       }
     ]
   },
