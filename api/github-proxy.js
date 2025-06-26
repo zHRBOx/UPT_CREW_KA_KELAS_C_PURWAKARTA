@@ -1,4 +1,4 @@
-// File: api/github-proxy.js (VERSI UNTUK VERCEL)
+// ===== KODE YANG BENAR UNTUK VERCEL - Salin semua di bawah ini =====
 
 import fetch from 'node-fetch';
 
@@ -7,7 +7,7 @@ const { GITHUB_OWNER, GITHUB_REPO, GITHUB_PATH, GITHUB_TOKEN } = process.env;
 
 const API_URL = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${GITHUB_PATH}`;
 
-// Ini adalah format yang benar untuk Vercel
+// Ini adalah format export yang benar untuk Vercel
 export default async function handler(req, res) {
     // Mengatur header CORS agar browser tidak menolak permintaan
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -19,7 +19,7 @@ export default async function handler(req, res) {
         return res.status(204).end();
     }
 
-    // --- Menangani permintaan GET (untuk membaca data) ---
+    // Menangani permintaan GET (membaca data)
     if (req.method === 'GET') {
         try {
             const response = await fetch(API_URL, {
@@ -34,7 +34,6 @@ export default async function handler(req, res) {
             }
 
             const data = await response.text();
-            // Mengatur header content-type agar browser tahu ini adalah JSON
             res.setHeader('Content-Type', 'application/json');
             return res.status(200).send(data);
 
@@ -43,12 +42,11 @@ export default async function handler(req, res) {
         }
     }
 
-    // --- Menangani permintaan PUT (untuk menyimpan data) ---
+    // Menangani permintaan PUT (menyimpan data)
     if (req.method === 'PUT') {
         try {
-            const dataToSave = req.body; // Vercel otomatis mem-parsing JSON
-            
-            // 1. Dapatkan SHA file saat ini
+            const dataToSave = req.body;
+
             const getFileResponse = await fetch(API_URL, {
                 headers: { 'Authorization': `token ${GITHUB_TOKEN}` },
             });
@@ -61,10 +59,8 @@ export default async function handler(req, res) {
                 throw new Error(`Gagal mendapatkan info file: ${getFileResponse.statusText}`);
             }
 
-            // 2. Encode konten ke Base64
             const contentEncoded = Buffer.from(JSON.stringify(dataToSave, null, 2)).toString('base64');
 
-            // 3. Kirim permintaan update
             const saveResponse = await fetch(API_URL, {
                 method: 'PUT',
                 headers: {
@@ -92,6 +88,5 @@ export default async function handler(req, res) {
         }
     }
 
-    // Jika metode request bukan GET, PUT, atau OPTIONS
     return res.status(405).json({ error: 'Metode HTTP tidak didukung.' });
 }
