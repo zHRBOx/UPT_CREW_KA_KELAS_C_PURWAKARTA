@@ -1,0 +1,162 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+.sidebar {
+    background-color: #0D2B4F;
+}
+.sidebar-item {
+    transition: all 0.2s ease-in-out;
+}
+.sidebar-item:hover, .sidebar-item.active {
+    background-color: #F28500;
+    color: white;
+    transform: translateX(4px);
+}
+.content-section {
+    display: none;
+}
+.content-section.active {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.kpi-card {
+    border-left: 5px solid #F28500;
+}
+.table-header {
+    background-color: #0D2B4F;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.tab-button {
+    transition: all 0.3s;
+}
+.tab-button.active {
+    border-bottom-color: #F28500;
+    color: #F28500;
+    font-weight: 600;
+}
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.alert-toast {
+    opacity: 1;
+    transition: opacity 0.5s, transform 0.5s;
+}
+.alert-toast.fade-out {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* GAYA UNTUK FORM PENGATURAN */
+.form-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #D1D5DB; /* border-gray-300 */
+    border-radius: 6px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #3B82F6; /* border-blue-500 */
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.4);
+}
+
+/* GAYA UNTUK EDIT MODE */
+#app-container.edit-mode .sidebar-item:hover {
+    background-color: #dc2626; /* red-600 */
+    cursor: not-allowed;
+}
+#app-container.edit-mode #settings-button {
+     background-color: #16a34a; /* green-600 */
+}
+
+.edit-input {
+    width: 100%;
+    padding: 4px;
+    border: 1px solid #9CA3AF;
+    border-radius: 4px;
+    background-color: #F9FAFB;
+}
+
+.edit-textarea {
+     width: 100%;
+    padding: 4px;
+    border: 1px solid #9CA3AF;
+    border-radius: 4px;
+    background-color: #F9FAFB;
+    min-height: 80px;
+}
+
+.delete-row-btn {
+    background-color: #EF4444; /* red-500 */
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+.delete-row-btn:hover {
+    background-color: #DC2626; /* red-600 */
+}
+
+.add-row-btn {
+    background-color: #22C55E; /* green-500 */
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.add-row-btn:hover {
+    background-color: #16A34A; /* green-600 */
+}
+
+#pegawaiTable tbody tr td:nth-child(2) {
+    text-align: left;
+}
+/* -- Efek Zoom untuk Smartcard -- */
+
+/* 1. Jadikan sel tabel sebagai 'jangkar' posisi */
+.smartcard-cell {
+    position: relative;
+}
+
+/* 2. Atur gaya dasar dan transisi untuk gambar */
+.smartcard-image {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+/* 3. Atur efek saat mouse menyentuh area sel */
+.smartcard-cell:hover .smartcard-image {
+    position: absolute; /* Mengangkat gambar dari layout tabel */
+    z-index: 50;      /* Memastikan gambar tampil di atas elemen lain */
+    transform: scale(2.5); /* Memperbesar gambar 2.5 kali lipat */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* Menambah bayangan agar terlihat melayang */
+}

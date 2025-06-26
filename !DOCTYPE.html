@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasbor UPT Crew KA Kelas C Purwakarta</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="bg-gray-300 font-['Inter']">
+
+    <div id="app-container">
+        <div id="alert-container" class="fixed bottom-5 right-5 z-50 w-full max-w-sm"></div>
+
+        <div class="flex h-screen">
+            <aside class="w-64 sidebar text-white flex flex-col flex-shrink-0 bg-sky-800">
+                
+                <div class="p-4 bg-sky-900 flex flex-col items-center justify-center h-[104px]">
+                    <h1 class="text-xl font-bold">MENU NAVIGASI</h1>
+                    <div id="dropbox-status" class="mt-2 px-3 py-1 text-xs font-bold text-white rounded-md bg-gray-500">
+                        Menghubungkan...
+                    </div>
+                </div>
+
+                <nav id="sidebar-nav" class="flex-1 p-2 space-y-1 overflow-y-auto">
+                    <a href="#dashboard" class="sidebar-item flex items-center p-2 rounded-lg space-x-3"><i class="fas fa-tachometer-alt fa-fw"></i><span>Dasbor Utama</span></a>
+                    <a href="#profil" class="sidebar-item flex items-center p-2 rounded-lg space-x-3"><i class="fas fa-building fa-fw"></i><span>Profil UPT Crew KA</span></a>
+                    <a href="#struktur" class="sidebar-item flex items-center p-2 rounded-lg space-x-3"><i class="fas fa-sitemap fa-fw"></i><span>Struktur Organisasi</span></a>
+                    <a href="#tupoksi" class="sidebar-item flex items-center p-2 rounded-lg space-x-3"><i class="fas fa-user-tie fa-fw"></i><span>Tupoksi</span></a>
+                    <a href="#rekapitulasi-pegawai" class="sidebar-item flex items-center p-2 rounded-lg space-x-3"><i class="fas fa-chart-pie fa-fw"></i><span>Rekapitulasi & Program</span></a>
+                    <a href="#pegawai" class="sidebar-item flex items-center p-2 rounded-lg space-x-3"><i class="fas fa-users fa-fw"></i><span>Nominatif Pegawai</span></a>
+                    <a href="#jadwal" class="sidebar-item flex items-center p-2 rounded-lg space-x-3"><i class="fas fa-calendar-alt fa-fw"></i><span>Jadwal Dinasan</span></a>
+                    <a href="#kompetensi" class="sidebar-item flex items-center p-2 rounded-lg space-x-3"><i class="fas fa-award fa-fw"></i><span>Uji Kompetensi</span></a>
+                    <a href="#sertifikasi" class="sidebar-item flex items-center p-2 rounded-lg space-x-3"><i class="fas fa-certificate fa-fw"></i><span>Pantauan Sertifikasi</span></a>
+                    <a href="#pantauan-lintas" class="sidebar-item flex items-center p-2 rounded-lg space-x-3"><i class="fas fa-road fa-fw"></i><span>Pantauan Lintas</span></a>
+                    <a href="#keselamatan" class="sidebar-item flex items-center p-2 rounded-lg space-x-3"><i class="fas fa-shield-alt fa-fw"></i><span>Keselamatan (HSSE)</span></a>
+                </nav>
+
+                <div class="p-2 border-t border-sky-700">
+                    <a href="#" id="settings-button" class="sidebar-item flex items-center p-2 rounded-lg space-x-3"><i class="fas fa-cog fa-fw"></i><span>Pengaturan</span></a>
+                    <p class="text-xs text-center text-sky-300 mt-2">&copy; 2025 UPT Crew KA Kelas C Purwakarta</p>
+                </div>
+            </aside>
+
+            <main class="flex-1 flex flex-col overflow-hidden">
+                <header class="bg-gray-300 shadow p-2 md:p-3 flex justify-between items-center flex-shrink-0 h-[104px]">
+                    
+                    <div class="w-1/4 flex justify-start">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Danantara_Indonesia.svg/2560px-Danantara_Indonesia.svg.png" alt="Logo Danantara" class="h-8 md:h-12 w-auto">
+                    </div>
+
+                    <div class="text-center text-gray-800">
+                        <h1 class="text-xl md:text-3xl font-bold">UPT Crew KA Kelas C Purwakarta</h1>
+                        <div class="mt-1">
+                            <p id="clock-time" class="text-2xl font-bold text-gray-800"></p>
+                            <p id="clock-date" class="text-sm text-gray-600"></p>
+                        </div>
+                        <h2 id="page-title" class="mt-2 text-xl font-bold hidden">Dasbor Utama</h2>
+                    </div>
+
+                    <div class="w-1/4 flex justify-end">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Logo_PT_Kereta_Api_Indonesia_%28Persero%29_2020.svg/2560px-Logo_PT_Kereta_Api_Indonesia_%28Persero%29_2020.svg.png" alt="Logo KAI" class="h-8 md:h-12 w-auto">
+                    </div>
+                    
+                </header>
+
+                <div id="content-area" class="flex-1 p-6 overflow-y-auto">
+                    </div>
+            </main>
+        </div>
+    </div>
+    
+    <div id="login-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white p-8 rounded-lg shadow-xl w-full max-w-sm">
+            <h2 class="text-2xl font-bold mb-6 text-center text-[#0D2B4F]">Akses Mode Edit</h2>
+            <p id="login-edit-message" class="text-center text-gray-600 mb-4"></p>
+            <form id="login-form">
+                <div class="mb-4">
+                    <label for="username" class="block text-sm font-medium text-gray-700 mb-1">Username</label>
+                    <input type="text" id="username" class="w-full p-2 border rounded-md" required>
+                </div>
+                <div class="mb-6">
+                    <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                    <input type="password" id="password" class="w-full p-2 border rounded-md" required>
+                </div>
+                <div class="flex items-center justify-between">
+                    <button type="button" id="cancel-login" class="bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-lg hover:bg-gray-400">Batal</button>
+                    <button type="submit" class="bg-[#F28500] text-white font-bold py-2 px-4 rounded-lg hover:bg-orange-600">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
