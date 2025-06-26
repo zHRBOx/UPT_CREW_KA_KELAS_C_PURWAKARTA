@@ -1094,53 +1094,53 @@
     "wam": {
       "jalan": [
         {
-          "no": "1",
-          "tanggal": "18/06/2025",
-          "ka": "KLB/1A",
-          "relasi": "PWK-BD",
-          "dasar": "Surat Edaran No.123/OPS/2025",
-          "keterangan": "KLB Rombongan VVIP"
+          "no": "",
+          "tanggal": "",
+          "ka": "",
+          "relasi": "",
+          "dasar": "",
+          "keterangan": "NIHIL"
         }
       ],
       "batal": [
         {
-          "no": "1",
-          "tanggal": "19/06/2025",
-          "ka": "PLB 33C",
-          "relasi": "CKP-PWK",
-          "dasar": "Okupansi Rendah",
-          "keterangan": "Rangkaian idle di CKP"
+          "no": "",
+          "tanggal": "",
+          "ka": "",
+          "relasi": "",
+          "dasar": "",
+          "keterangan": "NIHIL"
         }
       ]
     },
     "ppk": {
       "jalan": [
         {
-          "no": "1",
-          "tanggal": "22/06/2025",
-          "ka": "2501",
-          "relasi": "PWK-TG",
-          "dasar": "Permintaan Angkutan Barang",
-          "keterangan": "Berangkat tepat waktu"
+          "no": "",
+          "tanggal": "",
+          "ka": "",
+          "relasi": "",
+          "dasar": "",
+          "keterangan": ""
         }
       ],
       "batal": [
         {
-          "no": "1",
-          "tanggal": "23/06/2025",
-          "ka": "2708F",
-          "relasi": "CBR-PWK",
-          "dasar": "Gangguan sarana",
-          "keterangan": "Lokomotif mogok"
+          "no": "",
+          "tanggal": "",
+          "ka": "",
+          "relasi": "",
+          "dasar": "",
+          "keterangan": "NIHIL"
         }
       ]
     },
     "wad": [
       {
-        "no": "1",
-        "tanggal": "10/06/2025",
-        "dasar": "WAD.10/VI/25-DAOP2",
-        "keterangan": "Perubahan Gapeka Parsial Mulai 12 Juni 2025"
+        "no": "",
+        "tanggal": "",
+        "dasar": "",
+        "keterangan": "NIHIL"
       }
     ]
   },
