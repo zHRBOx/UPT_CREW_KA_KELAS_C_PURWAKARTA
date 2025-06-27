@@ -741,14 +741,18 @@ function calculateKeteranganDinasan() {
     // Dinasan Reguler, Libur, Serep
     if (jadwal.reguler && Array.isArray(jadwal.reguler)) {
         jadwal.reguler.forEach(row => {
-            if (row.nipp_mas || row.nipp_as) {
-                const noKa = (row.nomor_ka || '').toUpperCase();
+            const noKa = (row.nomor_ka || '').toUpperCase();
+            let count = 0;
+            if (row.nipp_mas) count++;
+            if (row.nipp_as) count++;
+
+            if (count > 0) {
                 if (noKa.includes('LIBUR')) {
-                    result.libur += 2;
+                    result.libur += count;
                 } else if (noKa.includes('SEREP')) {
-                    result.serep += 2;
+                    result.serep += count;
                 } else if (noKa !== '') {
-                    result.dinasanReguler += 2;
+                    result.dinasanReguler += count;
                 }
             }
         });
@@ -757,8 +761,11 @@ function calculateKeteranganDinasan() {
     // Dinasan KLB
     if (jadwal.klb && Array.isArray(jadwal.klb)) {
         jadwal.klb.forEach(row => {
-            if ((row.nipp_mas || row.nipp_as) && row.nomor_ka) {
-                result.dinasanKlb += 2;
+            if (row.nomor_ka) {
+                let count = 0;
+                if (row.nipp_mas) count++;
+                if (row.nipp_as) count++;
+                result.dinasanKlb += count;
             }
         });
     }
