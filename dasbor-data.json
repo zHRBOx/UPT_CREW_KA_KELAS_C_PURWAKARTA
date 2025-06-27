@@ -672,16 +672,16 @@
   "jadwalHariIni": {
     "penyelia": {
       "dinas1": {
-        "nama": "SUHADI ASMARA",
-        "nipp": "44726"
+        "nama": "",
+        "nipp": ""
       },
       "dinas2": {
-        "nama": "YADI SUPRIADI",
-        "nipp": "44662"
+        "nama": "",
+        "nipp": ""
       },
       "dinas3": {
-        "nama": "FAZHAR SEPTIA ILLHAM",
-        "nipp": "48552"
+        "nama": "",
+        "nipp": ""
       }
     },
     "reguler": [
@@ -692,10 +692,10 @@
         "lintas": "PWK-CKR-CKP, CKP-CKR-PWK",
         "mulai": "12:35",
         "habis": "20:42",
-        "masinis": "ALIF SUHARDIMAN",
-        "nipp_mas": "60567",
-        "asisten": "APEP ANDRIANTO",
-        "nipp_as": "55037"
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
       },
       {
         "no": "2",
@@ -704,10 +704,10 @@
         "lintas": "PWK-BD, BD-PWK",
         "mulai": "03:25",
         "habis": "18:05",
-        "masinis": "UNGGUL HENDRA EKA PRANOTO",
-        "nipp_mas": "54730",
-        "asisten": "PUTUT RESTU WIBOWO",
-        "nipp_as": "50298"
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
       },
       {
         "no": "3",
@@ -716,10 +716,10 @@
         "lintas": "PWK-CKP-CKR, CKR-PWK",
         "mulai": "03:05",
         "habis": "07:55",
-        "masinis": "NOPIYANA",
-        "nipp_mas": "60676",
-        "asisten": "ANDRI NURJANA",
-        "nipp_as": "64928"
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
       },
       {
         "no": "4",
@@ -728,10 +728,10 @@
         "lintas": "PWK-CKR-CKP, CKP-PWK",
         "mulai": "17:05",
         "habis": "04:45",
-        "masinis": "NOPIYANA",
-        "nipp_mas": "60676",
-        "asisten": "ANDRI NURJANA",
-        "nipp_as": "64928"
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
       },
       {
         "no": "5",
@@ -740,10 +740,10 @@
         "lintas": "PWK-CKR, CKR-PWK",
         "mulai": "04:10",
         "habis": "10:06",
-        "masinis": "CECEP ARI NUGRAHA",
-        "nipp_mas": "68089",
-        "asisten": "AGUNG PANGESTU",
-        "nipp_as": "75699"
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
       },
       {
         "no": "6",
@@ -752,10 +752,10 @@
         "lintas": "",
         "mulai": "",
         "habis": "",
-        "masinis": "HERI ISKANDAR",
-        "nipp_mas": "55042",
-        "asisten": "UJANG SURYA",
-        "nipp_as": "50162"
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
       },
       {
         "no": "7",
@@ -764,10 +764,10 @@
         "lintas": "PWK-BD, PWK-BD",
         "mulai": "15:25",
         "habis": "01:05",
-        "masinis": "ARIS SETIAWAN",
-        "nipp_mas": "69943",
-        "asisten": "MAHESA BIMA ADI PANGESTU",
-        "nipp_as": "73831"
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
       },
       {
         "no": "8",
@@ -776,10 +776,10 @@
         "lintas": "PWK-CKR, PWK-CKR",
         "mulai": "09:15",
         "habis": "15:20",
-        "masinis": "ANDRIANA",
-        "nipp_mas": "65975",
-        "asisten": "ARIEF KURNIAWAN",
-        "nipp_as": "42003"
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
       },
       {
         "no": "9",
@@ -788,9 +788,9 @@
         "lintas": "CREW KA PWK",
         "mulai": "08:00",
         "habis": "16:00",
-        "masinis": "A2",
+        "masinis": "",
         "nipp_mas": "",
-        "asisten": "CT",
+        "asisten": "",
         "nipp_as": ""
       },
       {
@@ -800,10 +800,10 @@
         "lintas": "PWK-CKR, PWK-CKR",
         "mulai": "09:20",
         "habis": "13:38",
-        "masinis": "JUNAEDI",
-        "nipp_mas": "60722",
-        "asisten": "FAYZA HAFIZH ARDIANSYAH",
-        "nipp_as": "74126"
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
       },
       {
         "no": "11",
@@ -812,10 +812,10 @@
         "lintas": "",
         "mulai": "",
         "habis": "",
-        "masinis": "MURDANI",
-        "nipp_mas": "55045",
-        "asisten": "RIYAD FIRDAUS",
-        "nipp_as": "47335"
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
       }
     ],
     "klb": [
@@ -833,8 +833,9 @@
     ],
     "cuti": [
       {
+        "no": 1,
         "diklap": "",
-        "cuti": "ANTO KRISTANTO / CT (27-28)",
+        "cuti": "",
         "csk": "",
         "pembinaan": "",
         "sertifikasi": ""
