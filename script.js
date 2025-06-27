@@ -721,14 +721,127 @@ function saveTableData(tbodyId) {
 
 // --- RENDER DAN SAVE FUNCTIONS (TIDAK ADA PERUBAHAN DI DALAM FUNGSI-FUNGSI INI) ---
 
+function calculateKeteranganDinasan() {
+    const jadwal = appData.jadwalHariIni;
+    const result = {
+        dinasanReguler: 0,
+        dinasanKlb: 0,
+        libur: 0,
+        serep: 0,
+        cutiTahunan: 0,
+        cutiPenting: 0,
+        cutiSakit: 0,
+        diklap: 0,
+        pembinaan: 0,
+        sertifikasi: 0
+    };
+
+    if (!jadwal) return result;
+
+    // Dinasan Reguler, Libur, Serep
+    if (jadwal.reguler && Array.isArray(jadwal.reguler)) {
+        jadwal.reguler.forEach(row => {
+            if (row.nipp_mas || row.nipp_as) {
+                const noKa = (row.nomor_ka || '').toUpperCase();
+                if (noKa.includes('LIBUR')) {
+                    result.libur += 2;
+                } else if (noKa.includes('SEREP')) {
+                    result.serep += 2;
+                } else if (noKa !== '') {
+                    result.dinasanReguler += 2;
+                }
+            }
+        });
+    }
+
+    // Dinasan KLB
+    if (jadwal.klb && Array.isArray(jadwal.klb)) {
+        jadwal.klb.forEach(row => {
+            if ((row.nipp_mas || row.nipp_as) && row.nomor_ka) {
+                result.dinasanKlb += 2;
+            }
+        });
+    }
+
+    // Lain-lain
+    if (jadwal.cuti && Array.isArray(jadwal.cuti)) {
+        jadwal.cuti.forEach(row => {
+            if (row.cuti) {
+                const lines = row.cuti.split('\n').filter(line => line.trim() !== '');
+                lines.forEach(line => {
+                    if (line.toUpperCase().includes('/ CT')) result.cutiTahunan++;
+                    if (line.toUpperCase().includes('/ CP')) result.cutiPenting++;
+                });
+            }
+            if (row.csk) {
+                result.cutiSakit += row.csk.split('\n').filter(line => line.trim() !== '').length;
+            }
+            if (row.diklap) {
+                result.diklap += row.diklap.split('\n').filter(line => line.trim() !== '').length;
+            }
+            if (row.pembinaan) {
+                result.pembinaan += row.pembinaan.split('\n').filter(line => line.trim() !== '').length;
+            }
+            if (row.sertifikasi) {
+                result.sertifikasi += row.sertifikasi.split('\n').filter(line => line.trim() !== '').length;
+            }
+        });
+    }
+
+    return result;
+}
+
+
 function render_dashboard() {
     const contentEl = document.getElementById('dashboard');
     const jumlahAwakDinas = calculateAwakDinas();
     const jumlahPasangan = jumlahAwakDinas / 2;
     let kpiCardsHtml = `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"><div class="kpi-card bg-white p-5 rounded-lg shadow"><h3 class="text-gray-500 text-sm font-medium">Total Pegawai</h3><p class="text-3xl font-bold text-gray-800">24</p><p class="text-green-500 text-xs mt-1">Data Terpenuhi</p></div><div class="kpi-card bg-white p-5 rounded-lg shadow"><h3 class="text-gray-500 text-sm font-medium">Awak KA Dinas Hari Ini</h3><p class="text-3xl font-bold text-gray-800">${jumlahAwakDinas}</p><p class="text-gray-500 text-xs mt-1">${jumlahPasangan} Pasang Masinis & Asisten</p></div><div class="kpi-card bg-white p-5 rounded-lg shadow"><h3 class="text-gray-500 text-sm font-medium">Sertifikasi Segera Habis</h3><p class="text-3xl font-bold text-gray-800">6</p><p class="text-yellow-500 text-xs mt-1">Dalam 1 tahun ke depan</p></div><div class="kpi-card bg-white p-5 rounded-lg shadow"><h3 class="text-gray-500 text-sm font-medium">Insiden Bulan Ini</h3><p class="text-3xl font-bold text-gray-800">0</p><p class="text-green-500 text-xs mt-1">Target Zero Accident</p></div></div>`;
-    let mainContentHtml = `<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6"><div class="lg:col-span-2 bg-white p-8 rounded-xl shadow-lg"><div class="grid grid-cols-1 md:grid-cols-5 gap-8"><div class="md:col-span-2 md:border-r md:pr-8 border-gray-200"><h4 class="text-2xl font-bold text-[#F28500] mb-4">VISI</h4><p class="text-xl font-medium text-gray-800 leading-relaxed">Menggerakkan transportasi berkelanjutan, meningkatkan kualitas hidup masyarakat.</p><p class="text-md italic text-gray-500 mt-2">Driving Sustainable Transportation, Enhancing People's Lives.</p></div><div class="md:col-span-3"><h4 class="text-2xl font-bold text-[#0D2B4F] mb-4">MISI</h4><ul class="space-y-4"><li class="flex items-start"><i class="fas fa-check-circle text-lg text-green-500 mr-3 mt-1 flex-shrink-0"></i><div><p class="text-gray-700">Menyediakan jasa yang mengedepankan keselamatan, ketepatan waktu dan kenyamanan.</p><em class="text-gray-500 text-sm">Providing services that prioritize safety, punctuality and comfort.</em></div></li><li class="flex items-start"><i class="fas fa-check-circle text-lg text-green-500 mr-3 mt-1 flex-shrink-0"></i><div><p class="text-gray-700">Mengembangkan sumber daya dan teknologi dengan mengedepankan ESG.</p><em class="text-gray-500 text-sm">Develop resources and technology by prioritizing ESG.</em></div></li><li class="flex items-start"><i class="fas fa-check-circle text-lg text-green-500 mr-3 mt-1 flex-shrink-0"></i><div><p class="text-gray-700">Berperan aktif dalam pengembangan transportasi antarmoda berkelanjutan bersama pemangku kepentingan.</p><em class="text-gray-500 text-sm">Play an active role in the development of sustainable intermodal transport with stakeholders.</em></div></li></ul></div></div></div><div class="space-y-6"><div class="bg-white p-4 rounded-lg shadow"><h3 class="font-bold text-lg text-center mb-4">Komposisi Pegawai</h3><div class="h-64 flex justify-center items-center"><canvas id="pegawaiChart"></canvas></div></div><div class="bg-white p-6 rounded-lg shadow" id="best-employee-container"></div></div></div>`;
+    
+    const keterangan = calculateKeteranganDinasan();
+    let keteranganHtml = `
+    <div class="bg-white p-6 rounded-xl shadow-lg">
+        <h4 class="text-lg font-bold text-center text-[#0D2B4F] mb-4">Keterangan Dinasan ASP</h4>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-4 text-sm">
+            <div class="space-y-2">
+                <h5 class="font-bold text-gray-800 border-b pb-1 mb-2">DINASAN KA</h5>
+                <p class="flex justify-between"><span>REGULER</span> <span class="font-bold">${keterangan.dinasanReguler}</span></p>
+                <p class="flex justify-between"><span>KLB</span> <span class="font-bold">${keterangan.dinasanKlb}</span></p>
+            </div>
+            <div class="space-y-2">
+                <h5 class="font-bold text-gray-800 border-b pb-1 mb-2">STANDBY / OFF</h5>
+                <p class="flex justify-between"><span>LIBUR</span> <span class="font-bold">${keterangan.libur}</span></p>
+                <p class="flex justify-between"><span>SEREP</span> <span class="font-bold">${keterangan.serep}</span></p>
+            </div>
+            <div class="space-y-2">
+                <h5 class="font-bold text-gray-800 border-b pb-1 mb-2">LAIN-LAIN</h5>
+                <p class="flex justify-between"><span>CUTI TAHUNAN (CT)</span> <span class="font-bold">${keterangan.cutiTahunan}</span></p>
+                <p class="flex justify-between"><span>CUTI PENTING (CP)</span> <span class="font-bold">${keterangan.cutiPenting}</span></p>
+                <p class="flex justify-between"><span>CUTI SAKIT (CSK)</span> <span class="font-bold">${keterangan.cutiSakit}</span></p>
+                <p class="flex justify-between"><span>DIKLAT</span> <span class="font-bold">${keterangan.diklap}</span></p>
+                <p class="flex justify-between"><span>PEMBINAAN</span> <span class="font-bold">${keterangan.pembinaan}</span></p>
+                <p class="flex justify-between"><span>SERTIFIKASI</span> <span class="font-bold">${keterangan.sertifikasi}</span></p>
+            </div>
+        </div>
+    </div>`;
+
+    let mainContentHtml = `
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
+        <div class="lg:col-span-2 space-y-6">
+            <div class="bg-white p-8 rounded-xl shadow-lg"><div class="grid grid-cols-1 md:grid-cols-5 gap-8"><div class="md:col-span-2 md:border-r md:pr-8 border-gray-200"><h4 class="text-2xl font-bold text-[#F28500] mb-4">VISI</h4><p class="text-xl font-medium text-gray-800 leading-relaxed">Menggerakkan transportasi berkelanjutan, meningkatkan kualitas hidup masyarakat.</p><p class="text-md italic text-gray-500 mt-2">Driving Sustainable Transportation, Enhancing People's Lives.</p></div><div class="md:col-span-3"><h4 class="text-2xl font-bold text-[#0D2B4F] mb-4">MISI</h4><ul class="space-y-4"><li class="flex items-start"><i class="fas fa-check-circle text-lg text-green-500 mr-3 mt-1 flex-shrink-0"></i><div><p class="text-gray-700">Menyediakan jasa yang mengedepankan keselamatan, ketepatan waktu dan kenyamanan.</p><em class="text-gray-500 text-sm">Providing services that prioritize safety, punctuality and comfort.</em></div></li><li class="flex items-start"><i class="fas fa-check-circle text-lg text-green-500 mr-3 mt-1 flex-shrink-0"></i><div><p class="text-gray-700">Mengembangkan sumber daya dan teknologi dengan mengedepankan ESG.</p><em class="text-gray-500 text-sm">Develop resources and technology by prioritizing ESG.</em></div></li><li class="flex items-start"><i class="fas fa-check-circle text-lg text-green-500 mr-3 mt-1 flex-shrink-0"></i><div><p class="text-gray-700">Berperan aktif dalam pengembangan transportasi antarmoda berkelanjutan bersama pemangku kepentingan.</p><em class="text-gray-500 text-sm">Play an active role in the development of sustainable intermodal transport with stakeholders.</em></div></li></ul></div></div></div>
+            ${keteranganHtml}
+        </div>
+
+        <div class="space-y-6">
+            <div class="bg-white p-4 rounded-lg shadow"><h3 class="font-bold text-lg text-center mb-4">Komposisi Pegawai</h3><div class="h-64 flex justify-center items-center"><canvas id="pegawaiChart"></canvas></div><div id="pegawaiChart-legend" class="mt-4 px-4"></div></div>
+            <div class="bg-white p-6 rounded-lg shadow" id="best-employee-container"></div>
+        </div>
+    </div>`;
+
     let akhlakHtml = `<div class="mt-6 bg-white p-6 rounded-lg shadow"><h4 class="text-lg font-bold text-center text-[#0D2B4F] mb-4">Nilai-Nilai Utama (AKHLAK)</h4><div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center"><div class="p-4 rounded-lg bg-blue-50 border border-blue-200"><p class="text-2xl font-bold text-[#0D2B4F]">A</p><p class="font-semibold text-sm">Amanah</p><p class="text-xs text-gray-600 mt-1">Memegang teguh kepercayaan yang diberikan</p></div><div class="p-4 rounded-lg bg-blue-50 border border-blue-200"><p class="text-2xl font-bold text-[#0D2B4F]">K</p><p class="font-semibold text-sm">Kompeten</p><p class="text-xs text-gray-600 mt-1">Terus belajar dan mengembangkan kapabilitas</p></div><div class="p-4 rounded-lg bg-blue-50 border border-blue-200"><p class="text-2xl font-bold text-[#0D2B4F]">H</p><p class="font-semibold text-sm">Harmonis</p><p class="text-xs text-gray-600 mt-1">Saling peduli dan menghargai perbedaan</p></div><div class="p-4 rounded-lg bg-blue-50 border border-blue-200"><p class="text-2xl font-bold text-[#0D2B4F]">L</p><p class="font-semibold text-sm">Loyal</p><p class="text-xs text-gray-600 mt-1">Berdedikasi dan mengutamakan kepentingan Bangsa dan Negara</p></div><div class="p-4 rounded-lg bg-blue-50 border border-blue-200"><p class="text-2xl font-bold text-[#0D2B4F]">A</p><p class="font-semibold text-sm">Adaptif</p><p class="text-xs text-gray-600 mt-1">Terus berinovasi dan antusias dalam menggerakkan ataupun menghadapi perubahan</p></div><div class="p-4 rounded-lg bg-blue-50 border border-blue-200"><p class="text-2xl font-bold text-[#0D2B4F]">K</p><p class="font-semibold text-sm">Kolaboratif</p><p class="text-xs text-gray-600 mt-1">Membangun kerja sama yang sinergis</p></div></div></div>`;
+    
     contentEl.innerHTML = kpiCardsHtml + mainContentHtml + akhlakHtml;
+    
     const best = appData.pageData.dashboard.bestEmployee;
     let bestEmployeeHtml;
     if (isEditMode) {
@@ -1312,7 +1425,30 @@ function createDashboardCharts() {
                     hoverOffset: 4 
                 }] 
             },
-            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } } }
+            options: { 
+                responsive: true, 
+                maintainAspectRatio: false, 
+                plugins: { 
+                    legend: { 
+                        display: false 
+                    } 
+                } 
+            }
         });
+
+        const legendContainer = document.getElementById('pegawaiChart-legend');
+        if (legendContainer) {
+            const legendItems = composition.labels.map((label, index) => {
+                const color = colorMap[label] || '#ccc';
+                return `<div class="flex items-center justify-between py-1 text-sm">
+                          <div class="flex items-center">
+                            <span class="h-3 w-3 inline-block rounded-full mr-2" style="background-color: ${color};"></span>
+                            <span>${label}</span>
+                          </div>
+                          <span class="font-bold text-gray-700">${composition.data[index]}</span>
+                        </div>`;
+            });
+            legendContainer.innerHTML = legendItems.join('');
+        }
     }
 }
