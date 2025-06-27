@@ -2242,12 +2242,12 @@
   },
   "wartaDinas": [
     {
-      "no": 1,
+      "no": "1",
       "warta": "EO/97",
       "tentang": "Go no go item mengalami gangguan sewaktu di perjalanan"
     },
     {
-      "no": 2,
+      "no": "2",
       "warta": "OR/14",
       "tentang": "Pengalihan tugas dan fungsi kdr ke mas dan assmas utuk ka barang"
     }
@@ -2632,7 +2632,7 @@
       ],
       "briefing": {
         "pesan": "Selalu waspada saat melintas di perlintasan sebidang dan perhatikan batas kecepatan. Pastikan komunikasi dengan PPKA berjalan lancar di setiap stasiun.",
-        "review": "<b>[20 Juni 2025]</b> - Anjlokan KA Barang di Lintas Utara. Penyebab: Kerusakan bantalan rel. <i>Tindakan: Peningkatan kewaspadaan saat melewati petak jalan tersebut.</i>"
+        "review": "NIHIL"
       }
     }
   }
