@@ -672,16 +672,16 @@
   "jadwalHariIni": {
     "penyelia": {
       "dinas1": {
-        "nama": "FAZHAR SEPTIA ILLHAM",
-        "nipp": "48552"
-      },
-      "dinas2": {
         "nama": "ARIEF KURNIAWAN",
         "nipp": "42003"
       },
+      "dinas2": {
+        "nama": "FAZHAR SEPTIA ILLHAM",
+        "nipp": "48552"
+      },
       "dinas3": {
-        "nama": "SUHADI ASMARA",
-        "nipp": "44726"
+        "nama": "MUHAMAD FITRA",
+        "nipp": "65933"
       }
     },
     "reguler": [
@@ -838,6 +838,13 @@
         "csk": "",
         "pembinaan": "",
         "sertifikasi": ""
+      },
+      {
+        "diklap": "",
+        "cuti": "ANTO KRISTANTO / CT (27-28)",
+        "csk": "",
+        "pembinaan": "",
+        "sertifikasi": ""
       }
     ],
     "catatanPenting": ""
@@ -845,16 +852,16 @@
   "jadwalBesok": {
     "penyelia": {
       "dinas1": {
-        "nama": "",
-        "nipp": ""
+        "nama": "FAZHAR SEPTIA ILLHAM",
+        "nipp": "48552"
       },
       "dinas2": {
-        "nama": "",
-        "nipp": ""
+        "nama": "ARIEF KURNIAWAN",
+        "nipp": "42003"
       },
       "dinas3": {
-        "nama": "",
-        "nipp": ""
+        "nama": "SUHADI ASMARA",
+        "nipp": "44726"
       }
     },
     "reguler": [
@@ -1007,7 +1014,7 @@
     "cuti": [
       {
         "diklap": "",
-        "cuti": "",
+        "cuti": "ANTONIUS TRI SETYANTO / CT (28-29)",
         "csk": "",
         "pembinaan": "",
         "sertifikasi": ""
