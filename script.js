@@ -644,14 +644,17 @@ function manageScheduleRotation() {
     if (dayDifference === 1) {
         console.log("Rotasi jadwal normal terdeteksi.");
         appData.jadwalHariIni = JSON.parse(JSON.stringify(appData.jadwalBesok));
+        // [BUG FIX]: Memperbaiki kesalahan pengetikan dari 'appDara' menjadi 'appData'.
         clearScheduleData(appData.jadwalBesok);
     } else if (dayDifference > 1) {
         console.log("Data jadwal basi terdeteksi. Mengosongkan kedua jadwal.");
         clearScheduleData(appData.jadwalHariIni);
         clearScheduleData(appData.jadwalBesok);
     } else {
+        // Jika tidak ada perbedaan hari, tidak melakukan apa-apa.
         return;
     }
+    // Simpan data yang sudah dirotasi dan tanggal kunjungan terakhir.
     localStorage.setItem('lastVisitDate', today.toISOString());
     localStorage.setItem('appData', JSON.stringify(appData));
     uploadDataSecurely(appData).catch(err => console.error("Gagal sinkronisasi otomatis setelah rotasi:", err));
@@ -756,9 +759,9 @@ function saveTableData(tbodyId) {
     return newArray;
 }
 
-// --- RENDER DAN SAVE FUNCTIONS (TIDAK ADA PERUBAHAN DI DALAM FUNGSI-FUNGSI INI) ---
+// --- FUNGSI KALKULASI & RENDER ---
 
-// KODE FUNGSI YANG DIPERBAIKI
+// [PERBAIKAN] Fungsi kalkulasi yang telah diperbaiki
 function calculateKeteranganDinasan() {
     const jadwal = appData.jadwalHariIni;
     const result = {
@@ -810,8 +813,8 @@ function calculateKeteranganDinasan() {
         jadwal.reguler.forEach(row => {
             const noKa = (row.nomor_ka || '').toUpperCase();
             let crewCount = 0;
-            if (row.nipp_mas) crewCount++;
-            if (row.nipp_as) crewCount++;
+            if (row.nipp_mas && row.nipp_mas.trim() !== '') crewCount++;
+            if (row.nipp_as && row.nipp_as.trim() !== '') crewCount++;
 
             if (crewCount > 0) {
                 if (noKa.includes('LIBUR')) {
@@ -830,7 +833,7 @@ function calculateKeteranganDinasan() {
     // Proses Jadwal KLB
     if (jadwal.klb && Array.isArray(jadwal.klb)) {
         jadwal.klb.forEach(row => {
-            if (row.nomor_ka) {
+            if (row.nomor_ka && row.nomor_ka.trim() !== '') {
                 // Proses masinis dan asisten untuk dinasan KLB
                 processAwakKA(row.nipp_mas, 'klb');
                 processAwakKA(row.nipp_as, 'klb');
@@ -838,7 +841,7 @@ function calculateKeteranganDinasan() {
         });
     }
 
-    // Proses data lain-lain (cuti, dll) - tidak ada perubahan
+    // Proses data lain-lain (cuti, dll)
     if (jadwal.cuti && Array.isArray(jadwal.cuti)) {
         jadwal.cuti.forEach(row => {
             if (row.cuti) {
@@ -872,17 +875,14 @@ function render_dashboard() {
     const dinasInfo = calculateAwakKADinas();
     const jumlahAwakDinas = dinasInfo.total;
     
-    // Get management counts, also needed for the KPI cards.
     const keterangan = calculateKeteranganDinasan();
     const manajemenDinas = keterangan.manajemenInstrukturDinas + keterangan.manajemenPenyeliaDinas;
     const totalOrangBertugas = jumlahAwakDinas + manajemenDinas;
 
-    // Redefined the KPI cards with the new logic and additional card.
-    // The grid is changed to 'lg:grid-cols-5' to accommodate the new card.
     let kpiCardsHtml = `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
         <div class="kpi-card bg-white p-5 rounded-lg shadow">
             <h3 class="text-gray-500 text-sm font-medium">Total Pegawai</h3>
-            <p class="text-3xl font-bold text-gray-800">24</p>
+            <p class="text-3xl font-bold text-gray-800">${appData.pegawai.length}</p>
             <p class="text-green-500 text-xs mt-1">Data Terpenuhi</p>
         </div>
         <div class="kpi-card bg-white p-5 rounded-lg shadow">
