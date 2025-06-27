@@ -733,10 +733,30 @@ function calculateKeteranganDinasan() {
         cutiSakit: 0,
         diklap: 0,
         pembinaan: 0,
-        sertifikasi: 0
+        sertifikasi: 0,
+        manajemenInstrukturDinas: 0,
+        manajemenPenyeliaDinas: 0,
     };
 
     if (!jadwal) return result;
+
+    const penyeliaInstrukturNipps = appData.pegawai
+        .filter(p => p.jabatan.toUpperCase() === 'PENYELIA INSTRUKTUR')
+        .map(p => p.nipp);
+    const penyeliaDinasanNipps = appData.pegawai
+        .filter(p => p.jabatan.toUpperCase() === 'PENYELIA DINASAN')
+        .map(p => p.nipp);
+
+    const checkManajemenDinas = (row) => {
+        if (row.nipp_mas) {
+            if (penyeliaInstrukturNipps.includes(row.nipp_mas)) result.manajemenInstrukturDinas++;
+            if (penyeliaDinasanNipps.includes(row.nipp_mas)) result.manajemenPenyeliaDinas++;
+        }
+        if (row.nipp_as) {
+            if (penyeliaInstrukturNipps.includes(row.nipp_as)) result.manajemenInstrukturDinas++;
+            if (penyeliaDinasanNipps.includes(row.nipp_as)) result.manajemenPenyeliaDinas++;
+        }
+    };
 
     // Dinasan Reguler, Libur, Serep
     if (jadwal.reguler && Array.isArray(jadwal.reguler)) {
@@ -753,6 +773,7 @@ function calculateKeteranganDinasan() {
                     result.serep += count;
                 } else if (noKa !== '') {
                     result.dinasanReguler += count;
+                    checkManajemenDinas(row);
                 }
             }
         });
@@ -766,6 +787,10 @@ function calculateKeteranganDinasan() {
                 if (row.nipp_mas) count++;
                 if (row.nipp_as) count++;
                 result.dinasanKlb += count;
+
+                if(count > 0) {
+                    checkManajemenDinas(row);
+                }
             }
         });
     }
@@ -810,10 +835,17 @@ function render_dashboard() {
     <div class="bg-white p-6 rounded-xl shadow-lg">
         <h4 class="text-lg font-bold text-center text-[#0D2B4F] mb-4">Keterangan Dinasan ASP</h4>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-4 text-sm">
-            <div class="space-y-2">
-                <h5 class="font-bold text-gray-800 border-b pb-1 mb-2">DINASAN KA</h5>
-                <p class="flex justify-between"><span>REGULER</span> <span class="font-bold">${keterangan.dinasanReguler}</span></p>
-                <p class="flex justify-between"><span>KLB</span> <span class="font-bold">${keterangan.dinasanKlb}</span></p>
+            <div class="space-y-4">
+                <div>
+                    <h5 class="font-bold text-gray-800 border-b pb-1 mb-2">MANAJEMEN DINAS</h5>
+                    <p class="flex justify-between"><span>Penyelia Instruktur</span> <span class="font-bold">${keterangan.manajemenInstrukturDinas}</span></p>
+                    <p class="flex justify-between"><span>Penyelia Dinasan</span> <span class="font-bold">${keterangan.manajemenPenyeliaDinas}</span></p>
+                </div>
+                 <div>
+                    <h5 class="font-bold text-gray-800 border-b pb-1 mb-2">DINASAN KA</h5>
+                    <p class="flex justify-between"><span>REGULER</span> <span class="font-bold">${keterangan.dinasanReguler}</span></p>
+                    <p class="flex justify-between"><span>KLB</span> <span class="font-bold">${keterangan.dinasanKlb}</span></p>
+                </div>
             </div>
             <div class="space-y-2">
                 <h5 class="font-bold text-gray-800 border-b pb-1 mb-2">STANDBY / OFF</h5>
