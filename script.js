@@ -903,22 +903,22 @@ function render_dashboard() {
     
     let keteranganHtml = `
     <div class="bg-white p-6 rounded-xl shadow-lg">
-        <h4 class="text-lg font-bold text-center text-[#0D2B4F] mb-4">Keterangan Dinasan ASP</h4>
+        <h4 class="text-lg font-bold text-center text-[#0D2B4F] mb-4">KETERANGAN DINASAN HARI INI</h4>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-4 text-sm">
             <div class="space-y-4">
                 <div>
-                    <h5 class="font-bold text-gray-800 border-b pb-1 mb-2">MANAJEMEN DINAS</h5>
+                    <h5 class="font-bold text-gray-800 border-b pb-1 mb-2">MANAJEMEN DINAS KA</h5>
                     <p class="flex justify-between"><span>Penyelia Instruktur</span> <span class="font-bold">${keterangan.manajemenInstrukturDinas}</span></p>
                     <p class="flex justify-between"><span>Penyelia Dinasan</span> <span class="font-bold">${keterangan.manajemenPenyeliaDinas}</span></p>
                 </div>
                  <div>
-                    <h5 class="font-bold text-gray-800 border-b pb-1 mb-2">DINASAN KA</h5>
+                    <h5 class="font-bold text-gray-800 border-b pb-1 mb-2">ASP DINAS KA</h5>
                     <p class="flex justify-between"><span>REGULER</span> <span class="font-bold">${keterangan.dinasanReguler}</span></p>
                     <p class="flex justify-between"><span>KLB</span> <span class="font-bold">${keterangan.dinasanKlb}</span></p>
                 </div>
             </div>
             <div class="space-y-2">
-                <h5 class="font-bold text-gray-800 border-b pb-1 mb-2">STANDBY / OFF</h5>
+                <h5 class="font-bold text-gray-800 border-b pb-1 mb-2">SEREP / LIBUR</h5>
                 <p class="flex justify-between"><span>LIBUR</span> <span class="font-bold">${keterangan.libur}</span></p>
                 <p class="flex justify-between"><span>SEREP</span> <span class="font-bold">${keterangan.serep}</span></p>
             </div>
