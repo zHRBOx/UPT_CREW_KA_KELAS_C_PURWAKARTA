@@ -845,16 +845,16 @@
   "jadwalBesok": {
     "penyelia": {
       "dinas1": {
-        "nama": "",
-        "nipp": ""
+        "nama": "SUHADI ASMARA",
+        "nipp": "44726"
       },
       "dinas2": {
-        "nama": "",
-        "nipp": ""
+        "nama": "YADI SUPRIADI",
+        "nipp": "44662"
       },
       "dinas3": {
-        "nama": "",
-        "nipp": ""
+        "nama": "FAZHAR SEPTIA ILLHAM",
+        "nipp": "48552"
       }
     },
     "reguler": [
@@ -1007,7 +1007,7 @@
     "cuti": [
       {
         "diklap": "",
-        "cuti": "ANTO ",
+        "cuti": "ANTO KRISTANTO / CT (27-28)",
         "csk": "",
         "pembinaan": "",
         "sertifikasi": ""
