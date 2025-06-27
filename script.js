@@ -493,15 +493,52 @@ function switchTab(group, tabId) {
     contentContainer.querySelector(`#${tabId}-content`).classList.add('active');
 }
 
-function calculateAwakDinas() {
-    const jadwalReguler = appData.jadwalHariIni.reguler || [];
-    const jadwalKlb = appData.jadwalHariIni.klb || [];
-    const kaReg = jadwalReguler.filter(dinas => {
-        const noKa = dinas.nomor_ka.trim().toUpperCase();
-        return noKa !== 'LIBUR' && noKa !== 'SEREP PAGI' && noKa !== '';
-    }).length;
-    const kaKlb = jadwalKlb.filter(dinas => dinas.nomor_ka.trim() !== '').length;
-    return (kaReg + kaKlb) * 2;
+function calculateAwakKADinas() {
+    const jadwal = appData.jadwalHariIni;
+    let awakCount = 0;
+    let pasanganCount = 0;
+
+    if (!jadwal) return { total: 0, pasangan: 0 };
+
+    const manajemenNipps = appData.pegawai
+        .filter(p => {
+            const jabatan = p.jabatan.toUpperCase();
+            return jabatan === 'PENYELIA INSTRUKTUR' || jabatan === 'PENYELIA DINASAN';
+        })
+        .map(p => p.nipp);
+
+    const isAwakKA = (nipp) => nipp && !manajemenNipps.includes(nipp);
+
+    const processRow = (row) => {
+        const masinisIsAwak = isAwakKA(row.nipp_mas);
+        const asistenIsAwak = isAwakKA(row.nipp_as);
+        
+        if (masinisIsAwak) awakCount++;
+        if (asistenIsAwak) awakCount++;
+
+        if (masinisIsAwak || asistenIsAwak) {
+            pasanganCount++;
+        }
+    };
+
+    if (jadwal.reguler && Array.isArray(jadwal.reguler)) {
+        jadwal.reguler.forEach(row => {
+            const noKa = (row.nomor_ka || '').toUpperCase();
+            if (noKa !== '' && !noKa.includes('LIBUR') && !noKa.includes('SEREP')) {
+                processRow(row);
+            }
+        });
+    }
+
+    if (jadwal.klb && Array.isArray(jadwal.klb)) {
+        jadwal.klb.forEach(row => {
+            if (row.nomor_ka) {
+                processRow(row);
+            }
+        });
+    }
+
+    return { total: awakCount, pasangan: pasanganCount };
 }
 
 function searchTable(tableId) {
@@ -826,8 +863,9 @@ function calculateKeteranganDinasan() {
 
 function render_dashboard() {
     const contentEl = document.getElementById('dashboard');
-    const jumlahAwakDinas = calculateAwakDinas();
-    const jumlahPasangan = jumlahAwakDinas / 2;
+    const dinasInfo = calculateAwakKADinas();
+    const jumlahAwakDinas = dinasInfo.total;
+    const jumlahPasangan = dinasInfo.pasangan;
     let kpiCardsHtml = `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"><div class="kpi-card bg-white p-5 rounded-lg shadow"><h3 class="text-gray-500 text-sm font-medium">Total Pegawai</h3><p class="text-3xl font-bold text-gray-800">24</p><p class="text-green-500 text-xs mt-1">Data Terpenuhi</p></div><div class="kpi-card bg-white p-5 rounded-lg shadow"><h3 class="text-gray-500 text-sm font-medium">Awak KA Dinas Hari Ini</h3><p class="text-3xl font-bold text-gray-800">${jumlahAwakDinas}</p><p class="text-gray-500 text-xs mt-1">${jumlahPasangan} Pasang Masinis & Asisten</p></div><div class="kpi-card bg-white p-5 rounded-lg shadow"><h3 class="text-gray-500 text-sm font-medium">Sertifikasi Segera Habis</h3><p class="text-3xl font-bold text-gray-800">6</p><p class="text-yellow-500 text-xs mt-1">Dalam 1 tahun ke depan</p></div><div class="kpi-card bg-white p-5 rounded-lg shadow"><h3 class="text-gray-500 text-sm font-medium">Insiden Bulan Ini</h3><p class="text-3xl font-bold text-gray-800">0</p><p class="text-green-500 text-xs mt-1">Target Zero Accident</p></div></div>`;
     
     const keterangan = calculateKeteranganDinasan();
