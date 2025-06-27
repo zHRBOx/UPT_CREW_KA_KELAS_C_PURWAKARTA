@@ -18,7 +18,7 @@ let appData = {
         { "no": 7, "nama": "RIYAD FIRDAUS", "nipp": "47335", "jabatan": "MASINIS MUDA", "ttl": "BANDUNG, 16 AGUSTUS 1981", "ijazah": "STM", "mulai_bekerja": "", "diklat_fungsional": "", "lulus": "", "o62": "", "o64": "2798/TU.1-12/DIKLAT-12", "sert_madya": "", "sert_muda": "12/01/2021", "sert_pertama": "", "diklat_nama": "", "diklat_tgl": "", "pensiun": "2039-08" },
         { "no": 8, "nama": "UJANG SURYA", "nipp": "50162", "jabatan": "MASINIS MUDA", "ttl": "BANDUNG, APRIL 1983", "ijazah": "SMK", "mulai_bekerja": "", "diklat_fungsional": "", "lulus": "", "o62": "", "o64": "2798/TU.1-12/DIKLAT-12", "sert_madya": "", "sert_muda": "16/07/2021", "sert_pertama": "", "diklat_nama": "", "diklat_tgl": "", "pensiun": "2041-04" },
         { "no": 9, "nama": "PUTUT RESTU WIBOWO", "nipp": "50298", "jabatan": "MASINIS MUDA", "ttl": "PURWAKARTA, MEI 1985", "ijazah": "SMK", "mulai_bekerja": "", "diklat_fungsional": "", "lulus": "", "o62": "", "o64": "2798/TU.1-12/DIKLAT-12", "sert_madya": "", "sert_muda": "21/07/2027", "sert_pertama": "", "diklat_nama": "", "diklat_tgl": "", "pensiun": "2043-05" },
-        { "no": 10, "nama": "UNGGUL HENDRA EKA PRANOTO", "nipp": "54730", "jabatan": "MASINIS MUDA", "ttl": "BANDUNG, SEPTEMBER 1985", "ijazah": "SMK", "mulai_bekerja": "", "diklat_fungsional": "", "lulus": "", "o62": "090/LL.006/III-2015/DIKLAT", "o64": "", "sert_madya": "", "sert_muda": "16/07/2021", "sert_pertama": "", "diklat_nama": "", "diklat_tgl": "", "pensiun": "2043-09" },
+        { "no": 10, "nama": "UNGGUL HENDRA EKA PRATAMA", "nipp": "54730", "jabatan": "MASINIS MUDA", "ttl": "BANDUNG, SEPTEMBER 1985", "ijazah": "SMK", "mulai_bekerja": "", "diklat_fungsional": "", "lulus": "", "o62": "090/LL.006/III-2015/DIKLAT", "o64": "", "sert_madya": "", "sert_muda": "16/07/2021", "sert_pertama": "", "diklat_nama": "", "diklat_tgl": "", "pensiun": "2043-09" },
         { "no": 11, "nama": "APEP ANDRIANTO", "nipp": "55037", "jabatan": "MASINIS MUDA", "ttl": "BANDUNG, OKTOBER 1986", "ijazah": "SMK", "mulai_bekerja": "", "diklat_fungsional": "", "lulus": "", "o62": "090/LL.006/III-2015/DIKLAT", "o64": "", "sert_madya": "", "sert_muda": "13/01/2028", "sert_pertama": "", "diklat_nama": "", "diklat_tgl": "", "pensiun": "2044-10" },
         { "no": 12, "nama": "HERI ISKANDAR", "nipp": "55042", "jabatan": "MASINIS MUDA", "ttl": "BANDUNG, JANUARI 1989", "ijazah": "SMK", "mulai_bekerja": "", "diklat_fungsional": "", "lulus": "", "o62": "090/LL.006/III-2015/DIKLAT", "o64": "", "sert_madya": "", "sert_muda": "25/10/2025", "sert_pertama": "", "diklat_nama": "", "diklat_tgl": "", "pensiun": "2047-01" },
         { "no": 13, "nama": "MURDANI", "nipp": "55045", "jabatan": "MASINIS MUDA", "ttl": "BANDUNG, SEPTEMBER 1991", "ijazah": "SMK", "mulai_bekerja": "", "diklat_fungsional": "", "lulus": "", "o62": "46/SETU/II-16/DIKLAT", "o64": "", "sert_madya": "", "sert_muda": "05/07/2025", "sert_pertama": "", "diklat_nama": "", "diklat_tgl": "", "pensiun": "2049-09" },
@@ -100,10 +100,52 @@ let appData = {
     nilaiUtsUpo: [
         { no: 1, nama: 'ROFI NOVIYANUS', nipp: 54706, jabatan: 'P. INSTRUKTUR', jan_uts: '-', jan_upo: 90, feb_uts: 100, feb_upo: '-', apr_uts: 100, apr_upo: 100 },
         { no: 2, nama: 'ARIEF KURNIAWAN', nipp: 42003, jabatan: 'P. DINASAN', mar_uts: 100, mar_upo: 94, apr_uts: 100, apr_upo: 96 },
+	{ no: 3, nama: 'SUHADI ASMARA', nipp: 44726, jabatan: 'PENYELIA DINASAN', jan_uts: '-', jan_upo: 90, feb_uts: 100, feb_upo: '-', apr_uts: 100, apr_upo: 100 },
+	{ no: 4, nama: 'FAZHAR SEPTIA ILLHAM', nipp: 48552, jabatan: 'PENYELIA DINASAN', jan_uts: '-', jan_upo: 90, feb_uts: 100, feb_upo: '-', apr_uts: 100, apr_upo: 100 },
+	{ no: 5, nnama: 'MUHAMAD FITRA', nipp: 65933, jabatan: 'PENYELIA DINASAN', jan_uts: '-', jan_upo: 90, feb_uts: 100, feb_upo: '-', apr_uts: 100, apr_upo: 100 },
+	{ no: 6, nama: 'RIYAD FIRDAUS', nipp: 47335, jabatan: 'MASINIS MUDA', jan_uts: '-', jan_upo: 90, feb_uts: 100, feb_upo: '-', apr_uts: 100, apr_upo: 100 },
+	{ no: 7, nama: 'UJANG SURYA', nipp: 50162, jabatan: 'MASINIS MUDA', jan_uts: '-', jan_upo: 90, feb_uts: 100, feb_upo: '-', apr_uts: 100, apr_upo: 100 },
+	{ no: 8, nama: 'PUTUT RESTU WIBOWO', nipp: 50298, jabatan: 'MASINIS MUDA', jan_uts: '-', jan_upo: 90, feb_uts: 100, feb_upo: '-', apr_uts: 100, apr_upo: 100 },
+	{ no: 9, nama: nama: 'UNGGUL HENDRA EKA PRATAMA', nipp: 54730, jabatan: 'MASINIS MUDA', jan_uts: '-', jan_upo: 90, feb_uts: 100, feb_upo: '-', apr_uts: 100, apr_upo: 100 },
+	{ no: 10, nama: 'APEP ANDRIANTO', nipp: 55037, jabatan: 'MASINIS MUDA', jan_uts: '-', jan_upo: 90, feb_uts: 100, feb_upo: '-', apr_uts: 100, apr_upo: 100 },
+	{ no: 11, nama: 'HERI ISKANDAR', nipp: 55042, jabatan: 'MASINIS MUDA', jan_uts: '-', jan_upo: 90, feb_uts: 100, feb_upo: '-', apr_uts: 100, apr_upo: 100 },
+	{ no: 12, nama: 'MURDANI', nipp: 55045, jabatan: 'MASINIS MUDA', jan_uts: '-', jan_upo: 90, feb_uts: 100, feb_upo: '-', apr_uts: 100, apr_upo: 100 },
+	{ no: 13, nama: 'ALIF SUHARDIMAN', nipp: 60567, jabatan: 'MASINIS MUDA', jan_uts: '-', jan_upo: 90, feb_uts: 100, feb_upo: '-', apr_uts: 100, apr_upo: 100 },
+	{ no: 14, nama: 'NOPIYANA', nipp: 60676, jabatan: 'MASINIS MUDA', jan_uts: '-', jan_upo: 90, feb_uts: 100, feb_upo: '-', apr_uts: 100, apr_upo: 100 },
+	{ no: 15, nama: 'JUNAEDI', nipp: 60722, jabatan: 'MASINIS MUDA', jan_uts: '-', jan_upo: 90, feb_uts: 100, feb_upo: '-', apr_uts: 100, apr_upo: 100 },
+	{ no: 16, nama: 'ANDRI NURJANA', nipp: 64928, jabatan: 'MASINIS MUDA', jan_uts: '-', jan_upo: 90, feb_uts: 100, feb_upo: '-', apr_uts: 100, apr_upo: 100 },
+	{ no: 17, nama: 'ANDRIANA', nipp: 65975, jabatan: 'MASINIS MUDA', jan_uts: '-', jan_upo: 90, feb_uts: 100, feb_upo: '-', apr_uts: 100, apr_upo: 100 },
+	{ no: 18, nama: 'ANTO KRISTANTO', nipp: 67833, jabatan: 'MASINIS MUDA', jan_uts: '-', jan_upo: 90, feb_uts: 100, feb_upo: '-', apr_uts: 100, apr_upo: 100 },
+	{ no: 19, nama: 'CECEP ARI NUGRAHA', nipp: 68089, jabatan: 'MASINIS MUDA', jan_uts: '-', jan_upo: 90, feb_uts: 100, feb_upo: '-', apr_uts: 100, apr_upo: 100 },
+	{ no: 20, nama: 'ARIS SETIAWAN', nipp: 65943, jabatan: 'MASINIS MUDA', jan_uts: '-', jan_upo: 90, feb_uts: 100, feb_upo: '-', apr_uts: 100, apr_upo: 100 },
+	{ no: 21, nama: 'ANTONIUS TRI SETYANTO', nipp: 73829, jabatan: 'MASINIS PERTAMA', jan_uts: '-', jan_upo: 90, feb_uts: 100, feb_upo: '-', apr_uts: 100, apr_upo: 100 },
+	{ no: 22, nama: 'MAHESA BIMA ADI PANGESTU', nipp: 73831, jabatan: 'MASINIS PERTAMA', jan_uts: '-', jan_upo: 90, feb_uts: 100, feb_upo: '-', apr_uts: 100, apr_upo: 100 },
+	{ no: 23, nama: 'FAYZA HAFIZH ARDIANSYAH', nipp: 74126, jabatan: 'MASINIS PERTAMA', jan_uts: '-', jan_upo: 90, feb_uts: 100, feb_upo: '-', apr_uts: 100, apr_upo: 100 },
     ],
     ujiUlang: [
         { no: 1, nama: 'ROFI NOVIYANUS', nipp: 54706, jabatan: 'MASINIS MADYA', tgl_uji: '03 MARET', nilai_teori: 100, waw_sarana: '', waw_operasi: '', prak_perka: 100, prak_adm: '', keterangan: 'LULUS', penguji: '', ka: '' },
-        { no: 6, nama: 'RIYAD FIRDAUS', nipp: '47335', jabatan: 'MASINIS MUDA', tgl_uji: '10 MARET', nilai_teori: 88, waw_sarana: 96, waw_operasi: '19 FEBRUARI', prak_perka: 100, prak_adm: 96, keterangan: 'LULUS', penguji: 'INSTRUKTUR', ka: 330 },
+        {{ no: 2, nama: 'ARIEF KURNIAWAN', nipp: 42003, jabatan: 'MASINIS MADYA', tgl_uji: '07 MARET', nilai_teori: 96, waw_sarana: null, waw_operasi: '', prak_perka: 100, prak_adm: '', keterangan: 'LULUS', penguji: '', ka: '' },
+        { no: 3, nama: 'SUHADI ASMARA', nipp: 44726, jabatan: 'MASINIS MADYA', tgl_uji: '07 MARET', nilai_teori: 98, waw_sarana: '', waw_operasi: '', prak_perka: 100, prak_adm: '', keterangan: 'LULUS', penguji: '', ka: '' },
+        { no: 4, nama: 'FAZHAR SEPTIA ILLHAM', nipp: 48552, jabatan: 'MASINIS MADYA', tgl_uji: '07 MARET', nilai_teori: 96, waw_sarana: '', waw_operasi: '', prak_perka: 100, prak_adm: '', keterangan: 'LULUS', penguji: '', ka: '' },
+        { no: 5, nama: 'MUHAMAD FITRA', nipp: 65933, jabatan: 'MASINIS MUDA', tgl_uji: '03 MARET', nilai_teori: 92, waw_sarana: '', waw_operasi: '', prak_perka: 100, prak_adm: '', keterangan: 'LULUS', penguji: '', ka: '' },
+        { no: 6, nama: 'RIYAD FIRDAUS', nipp: 47335, jabatan: 'MASINIS MUDA', tgl_uji: '10 MARET', nilai_teori: 88, waw_sarana: 96, waw_operasi: '19 FEBRUARI', prak_perka: 100, prak_adm: 96, keterangan: 'LULUS', penguji: 'INSTRUKTUR', ka: 330 },
+        { no: 7, nama: 'UJANG SURYA', nipp: '50162', jabatan: 'MASINIS MUDA', tgl_uji: '10 MARET', nilai_teori: 96, waw_sarana: 96, waw_operasi: '20 FEBRUARI', prak_perka: 100, prak_adm: 96, keterangan: 'LULUS', penguji: 'INSTRUKTUR', ka: 348 },
+        { no: 8, nama: 'PUTUT RESTU W', nipp: '50298', jabatan: 'MASINIS MUDA', tgl_uji: '28 FEBRUARI', nilai_teori: 94, waw_sarana: 94, waw_operasi: '13 FEBRUARI', prak_perka: 100, prak_adm: 96, keterangan: 'LULUS', penguji: 'INSTRUKTUR', ka: 329 },
+        { no: 9, nama: 'UNGGUL HENDRA EKA PRATAMA', nipp: '54730', jabatan: 'MASINIS MUDA', tgl_uji: '03 MARET', nilai_teori: 86, waw_sarana: 92, waw_operasi: '17 FEBRUARI', prak_perka: 100, prak_adm: 96, keterangan: 'LULUS', penguji: 'INSTRUKTUR', ka: 330 },
+        { no: 10, nama: 'APEP ANDRIANTO', nipp: '55037', jabatan: 'MASINIS MUDA', tgl_uji: '17 FEBRUARI', nilai_teori: 76, waw_sarana: 85, waw_operasi: '17 FEBRUARI', prak_perka: 100, prak_adm: 96, keterangan: 'LULUS', penguji: 'INSTRUKTUR', ka: 331 },
+        { no: 11, nama: 'HERI ISKANDAR', nipp: '55042', jabatan: 'MASINIS MUDA', tgl_uji: '10 MARET', nilai_teori: 92, waw_sarana: 96, waw_operasi: '19 FEBRUARI', prak_perka: 100, prak_adm: 96, keterangan: 'LULUS', penguji: 'INSTRUKTUR', ka: 332 },
+        { no: 12, nama: 'MURDANI', nipp: '55045', jabatan: 'MASINIS MUDA', tgl_uji: '10 MARET', nilai_teori: 94, waw_sarana: 95, waw_operasi: '19 FEBRUARI', prak_perka: 100, prak_adm: 96, keterangan: 'LULUS', penguji: 'INSTRUKTUR', ka: 333 },
+        { no: 13, nama: 'ALIF SUHARDIMAN', nipp: '60567', jabatan: 'MASINIS MUDA', tgl_uji: '28 FEBRUARI', nilai_teori: 96, waw_sarana: 95, waw_operasi: '20 FEBRUARI', prak_perka: 100, prak_adm: 96, keterangan: 'LULUS', penguji: 'INSTRUKTUR', ka: 328 },
+        { no: 14, nama: 'NOPIYANA', nipp: '60676', jabatan: 'MASINIS MUDA', tgl_uji: '01 MARET', nilai_teori: 96, waw_sarana: 94, waw_operasi: '14 FEBRUARI', prak_perka: 100, prak_adm: 96, keterangan: 'LULUS', penguji: 'INSTRUKTUR', ka: 350 },
+        { no: 15, nama: 'JUNAEDI', nipp: '60722', jabatan: 'MASINIS MUDA', tgl_uji: '10 MARET', nilai_teori: 94, waw_sarana: 94, waw_operasi: '13 FEBRUARI', prak_perka: 100, prak_adm: 96, keterangan: 'LULUS', penguji: 'INSTRUKTUR', ka: 348 },
+        { no: 16, nama: 'ANDRI NURJANA', nipp: '64928', jabatan: 'MASINIS MUDA', tgl_uji: '03 MARET', nilai_teori: 90, waw_sarana: 97, waw_operasi: '14 FEBRUARI', prak_perka: 100, prak_adm: 96, keterangan: 'LULUS', penguji: 'INSTRUKTUR', ka: 329 },
+        { no: 17, nama: 'ANDRIANA', nipp: '65975', jabatan: 'MASINIS MUDA', tgl_uji: '01 MARET', nilai_teori: 92, waw_sarana: 95, waw_operasi: '13 FEBRUARI', prak_perka: 100, prak_adm: 96, keterangan: 'LULUS', penguji: 'INSTRUKTUR', ka: 330 },
+        { no: 18, nama: 'ANTO KRISTANTO', nipp: '67833', jabatan: 'MASINIS MUDA', tgl_uji: '27 FEBRUARI', nilai_teori: 90, waw_sarana: 92, waw_operasi: '17 FEBRUARI', prak_perka: 100, prak_adm: 96, keterangan: 'LULUS', penguji: 'INSTRUKTUR', ka: 331 },
+        { no: 19, nama: 'CECEP ARI NUGRAHA', nipp: '68089', jabatan: 'MASINIS MUDA', tgl_uji: '27 FEBRUARI', nilai_teori: 98, waw_sarana: 95, waw_operasi: '19 FEBRUARI', prak_perka: 100, prak_adm: 96, keterangan: 'LULUS', penguji: 'INSTRUKTUR', ka: 332 },
+        { no: 20, nama: 'ARIS SETIAWAN', nipp: '65943', jabatan: 'MASINIS MUDA', tgl_uji: '10 MARET', nilai_teori: 92, waw_sarana: 90, waw_operasi: '21 FEBRUARI', prak_perka: 100, prak_adm: 96, keterangan: 'LULUS', penguji: 'INSTRUKTUR', ka: 333 },
+        { no: 21, nama: 'ANTONIUS TRI SETYANTO', nipp: '73829', jabatan: 'MASINIS PERTAMA', tgl_uji: '10 MARET', nilai_teori: 88, waw_sarana: 94, waw_operasi: '19 FEBRUARI', prak_perka: 100, prak_adm: 96, keterangan: 'LULUS', penguji: 'INSTRUKTUR', ka: 328 },
+        { no: 22, nama: 'MAHESA BIMA ADI PANGESTU', nipp: '73831', jabatan: 'MASINIS PERTAMA', tgl_uji: '19 FEBRUARI', nilai_teori: 94, waw_sarana: 95, waw_operasi: '14 FEBRUARI', prak_perka: 100, prak_adm: 96, keterangan: 'LULUS', penguji: 'INSTRUKTUR', ka: 327 },
+        { no: 23, nama: 'FAYZA HAFIZH ARDIANSYAH', nipp: '74126', jabatan: 'MASINIS PERTAMA', tgl_uji: '27 FEBRUARI', nilai_teori: 92, waw_sarana: 96, waw_operasi: '19 FEBRUARI', prak_perka: 100, prak_adm: 96, keterangan: 'LULUS', penguji: 'INSTRUKTUR', ka: 332 },
     ],
     pantauanKejadian: [
         { no: 1, tanggal: '20/06/2025', no_ka: '331', kejadian: 'Lampu kabin padam di KMP 3', tindak_lanjut: 'Perbaikan oleh TPK di Cikampek', keterangan: 'Selesai ditangani' },
@@ -121,7 +163,7 @@ let appData = {
             jalan: [ { no: 1, tanggal: '22/06/2025', ka: '2501', relasi: 'PWK-TG', dasar: 'Permintaan Angkutan Barang', keterangan: 'Berangkat tepat waktu' } ],
             batal: [ { no: 1, tanggal: '23/06/2025', ka: '2708F', relasi: 'CBR-PWK', dasar: 'Gangguan sarana', keterangan: 'Lokomotif mogok' } ]
         },
-        wad: [ { no: 1, tanggal: '10/06/2025', dasar: 'WAD.10/VI/25-DAOP2', keterangan: 'Perubahan Gapeka Parsial Mulai 12 Juni 2025' } ]
+        wad: [ { no: 1, tanggal: '10/06/2025', dasar: 'WAD.10/VI/25-DAOP2', keterangan: 'Perubahan Gapeka Parsial Mulai 12 Juni 2025' }]
     },
     pantauanTaspat: {
         hilir_bd: [ { no: 1, petak: 'BD - BD', km: '155 + 400 S/D 154 + 500', kecepatan: 20 }, { no: 2, petak: 'CMI - PDL', km: '144 + 700 S/D 144 + 000', kecepatan: 100 }, { no: 3, petak: 'SKT - MSI', km: '144 + 100 S/D 142 + 700', kecepatan: 50 } ],
@@ -132,6 +174,23 @@ let appData = {
     wartaDinas: [
         { no: 1, warta: 'EO/97', tentang: 'Go no go item mengalami gangguan sewaktu di perjalanan' },
         { no: 2, warta: 'OR/14', tentang: 'Pengalihan tugas dan fungsi kdr ke mas dan assmas utuk ka barang' },
+	{ no: 3, warta: 'O/140', tentang: 'Pengalihan tugas TKA kepada mass dan assmas' },
+        { no: 4, warta: 'O/141', tentang: 'Pengaturan premi ka barang terkait pengalihan tugas tka ke mas dan assmas' },
+        { no: 5, warta: 'EO/156', tentang: 'Pemasir tidak berfungsi' },
+        { no: 6, warta: 'EO/409', tentang: 'BH bila ppj belum masuk stasiun' },
+        { no: 7, warta: 'TS/33', tentang: 'Penggunaan radio traindispatching/radio perka' },
+        { no: 8, warta: 'EO/238', tentang: 'Pendinasan orang ke tiga/belajar jalan' },
+        { no: 9, warta: 'OT/69', tentang: 'Meninggalkan kabin lokomotif(mencabut RH sebelum turun dari kabin lok)' },
+        { no: 10, warta: 'OT/338', tentang: 'Pembentukan masinis dinas langsir dan masinis dinas ka' },
+        { no: 11, warta: 'O/319', tentang: 'Masinis harus menyalakan lampu kabin(malam hari) dan membunyikan S.35 saat melewati stasiun dan meyakinkan S.1' },
+        { no: 12, warta: 'OT/159', tentang: 'Hp harus off didepan penyelia,dilarang merokok di dalam kabin dan pakaian dinas rapi tanpa jaket' },
+        { no: 13, warta: 'O/325', tentang: 'Locotrack tidak terpantau saat dilintas' },
+        { no: 14, warta: 'OT/470', tentang: 'Batas lintas O.23' },
+        { no: 15, warta: 'O/538', tentang: 'Kecepatan maksimal untuk KRD,KRDI,KRDE dan RAILBUS' },
+        { no: 16, warta: 'OT/426', tentang: 'Tata cara meninggalkan lok bila lebih dari 60 menit tidak ada kegiatan baik lok dinas langsir atau dinas ka' },
+        { no: 17, warta: 'O/224', tentang: 'Tunjuk sebut wesel dengan berdiri saat dinas langsir & dinas ka, assmas wajib memastikan masinis dalam keadaan terjaga dan siaga' },
+        { no: 18, warta: 'EO/67', tentang: 'Tukar menukar dinas' },
+        { no: 19, warta: 'EOC/360', tentang: 'Pengaturan premi lok traksi ganda ka barang' }
     ],
     programGapeka: {
         program: {
@@ -296,23 +355,31 @@ document.addEventListener('DOMContentLoaded', async function() {
         contentArea.appendChild(sectionEl);
     }
     setupCoreListeners();
-    showSection(window.location.hash || '#dashboard');
+    // Set initial section based on hash or default to dashboard
+    const initialHash = window.location.hash || '#dashboard';
+    showSection(initialHash);
+    // Update sidebar to reflect the initial state
+    document.querySelectorAll('.sidebar-item').forEach(item => {
+        item.classList.toggle('active', item.getAttribute('href') === initialHash);
+    });
+    
     window.addEventListener('popstate', () => showSection(window.location.hash));
     updateClock();
     setInterval(updateClock, 1000);
 });
 
+
 window.addEventListener('beforeunload', () => {
+    // This logic is mostly handled by the final save, but can be a fallback
     if (isEditMode) {
         console.log('Menyimpan data sebelum menutup halaman...');
-        const saveFunction = window[`saveChanges_${activeSectionForEdit.replace(/-/g, '_')}`];
-        if (typeof saveFunction === 'function') {
-            saveFunction();
-        }
+        saveTemporaryChanges(); // Use the temporary save function
         localStorage.setItem('appData', JSON.stringify(appData));
-        uploadDataSecurely(appData); 
+        // Note: Asynchronous upload might not complete before page closes.
+        // The main "Simpan & Keluar" button is more reliable for remote saving.
     }
 });
+
 
 function updateClock() {
     const timeEl = document.getElementById('clock-time');
@@ -332,17 +399,38 @@ function setupCoreListeners() {
     document.getElementById('cancel-login').addEventListener('click', () => document.getElementById('login-modal').classList.add('hidden'));
 }
 
+/**
+ * [BARU] Fungsi untuk menyimpan perubahan sementara dari input fields ke appData.
+ * Ini dipanggil sebelum setiap render ulang dalam mode edit.
+ */
+function saveTemporaryChanges() {
+    if (!isEditMode || !activeSectionForEdit) return;
+
+    try {
+        const saveFunction = window[`saveChanges_${activeSectionForEdit.replace(/-/g, '_')}`];
+        if (typeof saveFunction === 'function') {
+            saveFunction();
+            console.log(`Perubahan sementara untuk ${activeSectionForEdit} berhasil disimpan ke appData.`);
+        }
+    } catch (error) {
+        console.error("Terjadi error saat menyimpan perubahan sementara:", error);
+    }
+}
+
+
 function handleSettingsClick(e) {
     e.preventDefault();
     if (isEditMode) {
         exitEditMode();
         return;
     }
+    // [DIPERBAIKI] Pastikan activeSectionForEdit adalah seksi yang sedang dilihat
     activeSectionForEdit = document.querySelector('.content-section.active').id;
     const pageTitle = sections[activeSectionForEdit].title;
     document.getElementById('login-edit-message').textContent = `Anda akan mengedit halaman: ${pageTitle}`;
     document.getElementById('login-modal').classList.remove('hidden');
 }
+
 
 function handleLogin(e) {
     e.preventDefault();
@@ -361,6 +449,11 @@ function handleLogin(e) {
 function handleNavigation(e) {
     const link = e.target.closest('a');
     if (!link || link.getAttribute('href') === '#') return;
+    
+    // Pindah ke seksi baru, URL hash akan berubah dan event 'popstate' atau
+    // pemanggilan langsung 'showSection' akan menanganinya.
+    // Jika tidak menggunakan hash-based routing, panggil showSection di sini.
+    // Untuk kode ini, hash change sudah cukup.
 }
 
 function enterEditMode() {
@@ -373,14 +466,12 @@ function enterEditMode() {
 
 function exitEditMode() {
     if (!isEditMode) return;
+    
+    // [DIPERBAIKI] Panggil saveTemporaryChanges() sebagai langkah final untuk
+    // memastikan semua input terakhir tersimpan sebelum keluar.
+    saveTemporaryChanges();
+
     try {
-        const saveFunction = window[`saveChanges_${activeSectionForEdit.replace(/-/g, '_')}`];
-        if (typeof saveFunction === 'function') {
-            saveFunction();
-            console.log(`Perubahan untuk ${activeSectionForEdit} berhasil diproses.`);
-        } else {
-            console.warn(`Tidak ditemukan fungsi save untuk seksi: ${activeSectionForEdit}`);
-        }
         localStorage.setItem('appData', JSON.stringify(appData));
         console.log('Data berhasil disimpan ke Local Storage.');
 
@@ -399,15 +490,27 @@ function exitEditMode() {
         showCustomAlert(`Error Kritis: Gagal menyimpan data. Periksa console untuk detail.`, 'error');
         return;
     }
+    
     isEditMode = false;
     document.getElementById('app-container').classList.remove('edit-mode');
     document.getElementById('settings-button').innerHTML = `<i class="fas fa-cog fa-fw"></i><span>Pengaturan</span>`;
     rerenderCurrentSection();
 }
 
+
 function showSection(hash) {
+    // [DIPERBAIKI] Simpan perubahan dari seksi sebelumnya jika dalam mode edit
+    if (isEditMode) {
+        saveTemporaryChanges();
+    }
+
     const targetHash = hash || '#dashboard';
     const targetKey = targetHash.substring(1);
+
+    // [DIPERBAIKI] Set activeSectionForEdit ke seksi yang baru SEBELUM render ulang
+    // Ini penting agar saveTemporaryChanges berikutnya tahu seksi mana yang harus disimpan.
+    activeSectionForEdit = targetKey;
+
     document.querySelectorAll('.sidebar-item').forEach(item => {
         item.classList.toggle('active', item.getAttribute('href') === targetHash);
     });
@@ -421,8 +524,11 @@ function showSection(hash) {
         activeSectionEl.classList.add('active');
     }
     document.getElementById('page-title').textContent = sections[targetKey]?.title || 'Dasbor';
+    
+    // Render konten untuk seksi yang baru diaktifkan
     rerenderCurrentSection();
 }
+
 
 function rerenderCurrentSection() {
     const activeSectionId = document.querySelector('.content-section.active')?.id;
@@ -574,6 +680,9 @@ function manageScheduleRotation() {
 }
 
 function addTableRow(dataKey, subKey = null, thirdKey = null) {
+    // [DIPERBAIKI] Simpan data yang ada di tabel sebelum menambahkan baris baru
+    saveTemporaryChanges();
+
     let targetArray;
     let newObject = {};
     let prototypeObject = null;
@@ -630,6 +739,9 @@ function addTableRow(dataKey, subKey = null, thirdKey = null) {
 }
 
 function deleteTableRow(dataKey, index, subKey = null, thirdKey = null) {
+    // [DIPERBAIKI] Simpan data yang ada di tabel sebelum menghapus baris
+    saveTemporaryChanges();
+
     let targetArray;
     if (subKey) {
         if (thirdKey && thirdKey !== 'null') { targetArray = appData[dataKey][subKey][thirdKey]; } 
@@ -665,6 +777,8 @@ function saveTableData(tbodyId) {
 
     return newArray;
 }
+
+// --- RENDER DAN SAVE FUNCTIONS (TIDAK ADA PERUBAHAN DI DALAM FUNGSI-FUNGSI INI) ---
 
 function render_dashboard() {
     const contentEl = document.getElementById('dashboard');
