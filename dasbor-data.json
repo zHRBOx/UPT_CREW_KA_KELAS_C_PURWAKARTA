@@ -1,0 +1,1657 @@
+{
+  "rekapitulasiPegawai": {
+    "nominatif": {
+      "kupt": 1,
+      "penyeliaInstruktur": 1,
+      "penyeliaDinasan": 4,
+      "masinis": 15,
+      "asistenMasinis": 3,
+      "jumlah": 24
+    },
+    "cukupanMasinis": {
+      "dinasanMurni": 9,
+      "lhs": 3,
+      "dibutuhkan": 12,
+      "adanyaPegawai": 15,
+      "serep": 1,
+      "kurangLebih": 3
+    },
+    "cukupanAsisten": {
+      "dinasanMurni": 9,
+      "lhs": 3,
+      "dibutuhkan": 12,
+      "adanyaPegawai": 3,
+      "serep": 1,
+      "kurangLebih": -9
+    }
+  },
+  "pegawai": [
+    {
+      "no": "1",
+      "nama": "YADI SUPRIADI",
+      "nipp": "44662",
+      "jabatan": "KUPT",
+      "ttl": "BANDUNG, 17 SEPTEMBER 1971",
+      "ijazah": "SLTA",
+      "mulai_bekerja": "",
+      "diklat_fungsional": "",
+      "lulus": "",
+      "o62": "ASP.04/7/2-CII/II/19",
+      "o64": "",
+      "sert_madya": "24/09/2021",
+      "sert_muda": "",
+      "sert_pertama": "",
+      "diklat_nama": "",
+      "diklat_tgl": "",
+      "pensiun": "2027-09"
+    },
+    {
+      "no": "2",
+      "nama": "ROFI NOVIYANUS",
+      "nipp": "54706",
+      "jabatan": "PENYELIA INSTRUKTUR",
+      "ttl": "PURWOKERTO, 20 NOVEMBER 1978",
+      "ijazah": "SLTA",
+      "mulai_bekerja": "",
+      "diklat_fungsional": "",
+      "lulus": "",
+      "o62": "",
+      "o64": "21/EVOP/I/KA-2019/JAB",
+      "sert_madya": "19/04/2024",
+      "sert_muda": "",
+      "sert_pertama": "",
+      "diklat_nama": "",
+      "diklat_tgl": "",
+      "pensiun": "2036-11"
+    },
+    {
+      "no": "3",
+      "nama": "ARIEF KURNIAWAN",
+      "nipp": "42003",
+      "jabatan": "PENYELIA DINASAN",
+      "ttl": "BANDUNG, 5 JULI 1973",
+      "ijazah": "STM",
+      "mulai_bekerja": "",
+      "diklat_fungsional": "",
+      "lulus": "",
+      "o62": "",
+      "o64": "21/EVOP/I-KA-2019/JAB",
+      "sert_madya": "12/01/2021",
+      "sert_muda": "",
+      "sert_pertama": "",
+      "diklat_nama": "",
+      "diklat_tgl": "",
+      "pensiun": "2029-08"
+    },
+    {
+      "no": "4",
+      "nama": "SUHADI ASMARA",
+      "nipp": "44726",
+      "jabatan": "PENYELIA DINASAN",
+      "ttl": "BANDUNG, 28 JULI 1975",
+      "ijazah": "SMK",
+      "mulai_bekerja": "",
+      "diklat_fungsional": "",
+      "lulus": "",
+      "o62": "1668/TU-42/DIKLAT-08",
+      "o64": "",
+      "sert_madya": "",
+      "sert_muda": "12/01/2021",
+      "sert_pertama": "",
+      "diklat_nama": "",
+      "diklat_tgl": "",
+      "pensiun": "2033-07"
+    },
+    {
+      "no": "5",
+      "nama": "FAZHAR SEPTIA ILLHAM",
+      "nipp": "48552",
+      "jabatan": "PENYELIA DINASAN",
+      "ttl": "BANDUNG, 20 SEPTEMBER 1985",
+      "ijazah": "SMK",
+      "mulai_bekerja": "",
+      "diklat_fungsional": "",
+      "lulus": "",
+      "o62": "",
+      "o64": "21/EVOP/I/KA-2019/JAB",
+      "sert_madya": "12/01/2021",
+      "sert_muda": "",
+      "sert_pertama": "",
+      "diklat_nama": "",
+      "diklat_tgl": "",
+      "pensiun": "2043-09"
+    },
+    {
+      "no": "6",
+      "nama": "MUHAMAD FITRA",
+      "nipp": "65933",
+      "jabatan": "PENYELIA DINASAN",
+      "ttl": "SEKAYU, 8 MEI 1981",
+      "ijazah": "SMA",
+      "mulai_bekerja": "",
+      "diklat_fungsional": "",
+      "lulus": "",
+      "o62": "1668/TU-42/DIKLAT-08",
+      "o64": "",
+      "sert_madya": "",
+      "sert_muda": "30/03/2029",
+      "sert_pertama": "",
+      "diklat_nama": "",
+      "diklat_tgl": "",
+      "pensiun": "2039-05"
+    },
+    {
+      "no": "7",
+      "nama": "RIYAD FIRDAUS",
+      "nipp": "47335",
+      "jabatan": "MASINIS MUDA",
+      "ttl": "BANDUNG, 16 AGUSTUS 1981",
+      "ijazah": "STM",
+      "mulai_bekerja": "",
+      "diklat_fungsional": "",
+      "lulus": "",
+      "o62": "",
+      "o64": "2798/TU.1-12/DIKLAT-12",
+      "sert_madya": "",
+      "sert_muda": "12/01/2021",
+      "sert_pertama": "",
+      "diklat_nama": "",
+      "diklat_tgl": "",
+      "pensiun": "2039-08"
+    },
+    {
+      "no": "8",
+      "nama": "UJANG SURYA",
+      "nipp": "50162",
+      "jabatan": "MASINIS MUDA",
+      "ttl": "BANDUNG, APRIL 1983",
+      "ijazah": "SMK",
+      "mulai_bekerja": "",
+      "diklat_fungsional": "",
+      "lulus": "",
+      "o62": "",
+      "o64": "2798/TU.1-12/DIKLAT-12",
+      "sert_madya": "",
+      "sert_muda": "16/07/2021",
+      "sert_pertama": "",
+      "diklat_nama": "",
+      "diklat_tgl": "",
+      "pensiun": "2041-04"
+    },
+    {
+      "no": "9",
+      "nama": "PUTUT RESTU WIBOWO",
+      "nipp": "50298",
+      "jabatan": "MASINIS MUDA",
+      "ttl": "PURWAKARTA, MEI 1985",
+      "ijazah": "SMK",
+      "mulai_bekerja": "",
+      "diklat_fungsional": "",
+      "lulus": "",
+      "o62": "",
+      "o64": "2798/TU.1-12/DIKLAT-12",
+      "sert_madya": "",
+      "sert_muda": "21/07/2027",
+      "sert_pertama": "",
+      "diklat_nama": "",
+      "diklat_tgl": "",
+      "pensiun": "2043-05"
+    },
+    {
+      "no": "10",
+      "nama": "UNGGUL HENDRA EKA PRATAMA",
+      "nipp": "54730",
+      "jabatan": "MASINIS MUDA",
+      "ttl": "BANDUNG, SEPTEMBER 1985",
+      "ijazah": "SMK",
+      "mulai_bekerja": "",
+      "diklat_fungsional": "",
+      "lulus": "",
+      "o62": "090/LL.006/III-2015/DIKLAT",
+      "o64": "",
+      "sert_madya": "",
+      "sert_muda": "16/07/2021",
+      "sert_pertama": "",
+      "diklat_nama": "",
+      "diklat_tgl": "",
+      "pensiun": "2043-09"
+    },
+    {
+      "no": "11",
+      "nama": "APEP ANDRIANTO",
+      "nipp": "55037",
+      "jabatan": "MASINIS MUDA",
+      "ttl": "BANDUNG, OKTOBER 1986",
+      "ijazah": "SMK",
+      "mulai_bekerja": "",
+      "diklat_fungsional": "",
+      "lulus": "",
+      "o62": "090/LL.006/III-2015/DIKLAT",
+      "o64": "",
+      "sert_madya": "",
+      "sert_muda": "13/01/2028",
+      "sert_pertama": "",
+      "diklat_nama": "",
+      "diklat_tgl": "",
+      "pensiun": "2044-10"
+    },
+    {
+      "no": "12",
+      "nama": "HERI ISKANDAR",
+      "nipp": "55042",
+      "jabatan": "MASINIS MUDA",
+      "ttl": "BANDUNG, JANUARI 1989",
+      "ijazah": "SMK",
+      "mulai_bekerja": "",
+      "diklat_fungsional": "",
+      "lulus": "",
+      "o62": "090/LL.006/III-2015/DIKLAT",
+      "o64": "",
+      "sert_madya": "",
+      "sert_muda": "25/10/2025",
+      "sert_pertama": "",
+      "diklat_nama": "",
+      "diklat_tgl": "",
+      "pensiun": "2047-01"
+    },
+    {
+      "no": "13",
+      "nama": "MURDANI",
+      "nipp": "55045",
+      "jabatan": "MASINIS MUDA",
+      "ttl": "BANDUNG, SEPTEMBER 1991",
+      "ijazah": "SMK",
+      "mulai_bekerja": "",
+      "diklat_fungsional": "",
+      "lulus": "",
+      "o62": "46/SETU/II-16/DIKLAT",
+      "o64": "",
+      "sert_madya": "",
+      "sert_muda": "05/07/2025",
+      "sert_pertama": "",
+      "diklat_nama": "",
+      "diklat_tgl": "",
+      "pensiun": "2049-09"
+    },
+    {
+      "no": "14",
+      "nama": "ALIF SUHARDIMAN",
+      "nipp": "60567",
+      "jabatan": "MASINIS MUDA",
+      "ttl": "BANDUNG, NOVEMBER 1991",
+      "ijazah": "SMK",
+      "mulai_bekerja": "",
+      "diklat_fungsional": "",
+      "lulus": "",
+      "o62": "46/SETU/II-16/DIKLAT",
+      "o64": "",
+      "sert_madya": "",
+      "sert_muda": "25/10/2025",
+      "sert_pertama": "",
+      "diklat_nama": "",
+      "diklat_tgl": "",
+      "pensiun": "2049-11"
+    },
+    {
+      "no": "15",
+      "nama": "NOPIYANA",
+      "nipp": "60676",
+      "jabatan": "MASINIS MUDA",
+      "ttl": "CIANJUR, DESEMBER 1992",
+      "ijazah": "SMK",
+      "mulai_bekerja": "",
+      "diklat_fungsional": "",
+      "lulus": "",
+      "o62": "3668/TU.1-16/DIKLAT-16",
+      "o64": "",
+      "sert_madya": "",
+      "sert_muda": "28/08/2027",
+      "sert_pertama": "",
+      "diklat_nama": "",
+      "diklat_tgl": "",
+      "pensiun": "2050-12"
+    },
+    {
+      "no": "16",
+      "nama": "JUNAEDI",
+      "nipp": "60722",
+      "jabatan": "MASINIS MUDA",
+      "ttl": "BANDUNG, FEBRUARI 1993",
+      "ijazah": "SMK",
+      "mulai_bekerja": "",
+      "diklat_fungsional": "",
+      "lulus": "",
+      "o62": "3668/TU.1-16/DIKLAT-16",
+      "o64": "",
+      "sert_madya": "",
+      "sert_muda": "05/04/2028",
+      "sert_pertama": "",
+      "diklat_nama": "",
+      "diklat_tgl": "",
+      "pensiun": "2051-02"
+    },
+    {
+      "no": "17",
+      "nama": "ANDRI NURJANA",
+      "nipp": "64928",
+      "jabatan": "MASINIS MUDA",
+      "ttl": "BANDUNG, MARET 1994",
+      "ijazah": "SMK",
+      "mulai_bekerja": "",
+      "diklat_fungsional": "",
+      "lulus": "",
+      "o62": "1668/TU-42/DIKLAT-08",
+      "o64": "",
+      "sert_madya": "",
+      "sert_muda": "21/12/2027",
+      "sert_pertama": "",
+      "diklat_nama": "",
+      "diklat_tgl": "",
+      "pensiun": "2052-03"
+    },
+    {
+      "no": "18",
+      "nama": "ANDRIANA",
+      "nipp": "65975",
+      "jabatan": "MASINIS MUDA",
+      "ttl": "BANDUNG, AGUS 1994",
+      "ijazah": "SMA",
+      "mulai_bekerja": "",
+      "diklat_fungsional": "",
+      "lulus": "",
+      "o62": "1668/TU-42/DIKLAT-08",
+      "o64": "",
+      "sert_madya": "",
+      "sert_muda": "18/12/2025",
+      "sert_pertama": "",
+      "diklat_nama": "",
+      "diklat_tgl": "",
+      "pensiun": "2052-08"
+    },
+    {
+      "no": "19",
+      "nama": "ANTO KRISTANTO",
+      "nipp": "67833",
+      "jabatan": "MASINIS MUDA",
+      "ttl": "MALANG, SEPTEMBER 1994",
+      "ijazah": "D3",
+      "mulai_bekerja": "",
+      "diklat_fungsional": "",
+      "lulus": "",
+      "o62": "1668/TU-42/DIKLAT-08",
+      "o64": "",
+      "sert_madya": "",
+      "sert_muda": "25/03/2028",
+      "sert_pertama": "",
+      "diklat_nama": "",
+      "diklat_tgl": "",
+      "pensiun": "2052-09"
+    },
+    {
+      "no": "20",
+      "nama": "CECEP ARI NUGRAHA",
+      "nipp": "68089",
+      "jabatan": "MASINIS MUDA",
+      "ttl": "BANDUNG, OKTOBER 1994",
+      "ijazah": "SMK",
+      "mulai_bekerja": "",
+      "diklat_fungsional": "",
+      "lulus": "",
+      "o62": "062/LL-2019/DIKLAT",
+      "o64": "",
+      "sert_madya": "",
+      "sert_muda": "21/12/2027",
+      "sert_pertama": "",
+      "diklat_nama": "",
+      "diklat_tgl": "",
+      "pensiun": "2052-10"
+    },
+    {
+      "no": "21",
+      "nama": "ARIS SETIAWAN",
+      "nipp": "69943",
+      "jabatan": "MASINIS MUDA",
+      "ttl": "BANDUNG, JUNI 1995",
+      "ijazah": "SMA",
+      "mulai_bekerja": "",
+      "diklat_fungsional": "",
+      "lulus": "",
+      "o62": "062/LL-2019/DIKLAT",
+      "o64": "",
+      "sert_madya": "",
+      "sert_muda": "02/06/2028",
+      "sert_pertama": "",
+      "diklat_nama": "",
+      "diklat_tgl": "",
+      "pensiun": "2053-06"
+    },
+    {
+      "no": "22",
+      "nama": "ANTONIUS TRI SETYANTO",
+      "nipp": "73829",
+      "jabatan": "MASINIS PERTAMA",
+      "ttl": "PADANG, JUNI 1996",
+      "ijazah": "SMK",
+      "mulai_bekerja": "",
+      "diklat_fungsional": "",
+      "lulus": "",
+      "o62": "026/SETU/II-22/DIKLAT",
+      "o64": "",
+      "sert_madya": "",
+      "sert_muda": "",
+      "sert_pertama": "15/12/2025",
+      "diklat_nama": "",
+      "diklat_tgl": "",
+      "pensiun": "2054-06"
+    },
+    {
+      "no": "23",
+      "nama": "MAHESA BIMA ADI PANGESTU",
+      "nipp": "73831",
+      "jabatan": "MASINIS PERTAMA",
+      "ttl": "SEMARANG, MEI 1997",
+      "ijazah": "SMK",
+      "mulai_bekerja": "",
+      "diklat_fungsional": "",
+      "lulus": "",
+      "o62": "026/SETU/II-22/DIKLAT",
+      "o64": "",
+      "sert_madya": "",
+      "sert_muda": "",
+      "sert_pertama": "15/12/2025",
+      "diklat_nama": "",
+      "diklat_tgl": "",
+      "pensiun": "2055-05"
+    },
+    {
+      "no": "24",
+      "nama": "FAYZA HAFIZH ARDIANSYAH",
+      "nipp": "74126",
+      "jabatan": "MASINIS PERTAMA",
+      "ttl": "PURWAKARTA, MARET 1998",
+      "ijazah": "SMK",
+      "mulai_bekerja": "",
+      "diklat_fungsional": "",
+      "lulus": "",
+      "o62": "026/SETU/II-22/DIKLAT",
+      "o64": "",
+      "sert_madya": "",
+      "sert_muda": "",
+      "sert_pertama": "08/08/2027",
+      "diklat_nama": "",
+      "diklat_tgl": "",
+      "pensiun": "2056-03"
+    }
+  ],
+  "sertifikasi": [
+    {
+      "nama": "ROFI NOVIYANUS",
+      "nipp": "54706",
+      "jabatan": "PENYELIA INSTRUKTUR",
+      "jenis": "ASP MADYA",
+      "berlaku": "20/10/2028",
+      "smartcard_url": "https://www.dropbox.com/scl/fi/gck5kbyawzo1d6jokm2zw/2.jpg?rlkey=pfwcg6an9dyh2c24y1i7os4vj&raw=1"
+    },
+    {
+      "nama": "ARIEF KURNIAWAN",
+      "nipp": "42003",
+      "jabatan": "PENYELIA DINASAN",
+      "jenis": "ASP MADYA",
+      "berlaku": "27/12/2028",
+      "smartcard_url": "https://www.dropbox.com/scl/fi/6hclvgw4cp94xrqcdibft/3.jpg?rlkey=voauxn7ltnra3sxu5ncr19tdd&raw=1"
+    },
+    {
+      "nama": "SUHADI ASMARA",
+      "nipp": "44726",
+      "jabatan": "PENYELIA DINASAN",
+      "jenis": "ASP MADYA",
+      "berlaku": "30/03/2029",
+      "smartcard_url": "https://www.dropbox.com/scl/fi/v483o4osveb7zwwe5s0rx/4.jpg?rlkey=e312q71zmd8hzlo7x0bytr6hj&raw=1"
+    },
+    {
+      "nama": "FAZHAR SEPTIA ILLHAM",
+      "nipp": "48552",
+      "jabatan": "PENYELIA DINASAN",
+      "jenis": "ASP MADYA",
+      "berlaku": "24/04/2029",
+      "smartcard_url": "https://www.dropbox.com/scl/fi/y86bg9vxxwmtfom3fpg17/5.jpg?rlkey=1xjh0jyxod3t9gqyjdpdi2h8n&raw=1"
+    },
+    {
+      "nama": "MUHAMAD FITRA",
+      "nipp": "65933",
+      "jabatan": "PENYELIA DINASAN",
+      "jenis": "ASP MADYA",
+      "berlaku": "23/12/2028",
+      "smartcard_url": "https://www.dropbox.com/scl/fi/59e70vaqd4tew2iewq6r4/6.jpg?rlkey=xvdstqnhra3as7kc0tubknddf&raw=1"
+    },
+    {
+      "nama": "RIYAD FIRDAUS",
+      "nipp": "47335",
+      "jabatan": "MASINIS MUDA",
+      "jenis": "ASP MUDA",
+      "berlaku": "16/07/2028",
+      "smartcard_url": "https://placehold.co/100x63/0D2B4F/FFFFFF?text=Card"
+    },
+    {
+      "nama": "UJANG SURYA",
+      "nipp": "50162",
+      "jabatan": "MASINIS MUDA",
+      "jenis": "ASP MUDA",
+      "berlaku": "16/07/2028",
+      "smartcard_url": "https://placehold.co/100x63/0D2B4F/FFFFFF?text=Card"
+    },
+    {
+      "nama": "PUTUT RESTU WIBOWO",
+      "nipp": "50298",
+      "jabatan": "MASINIS MUDA",
+      "jenis": "ASP MUDA",
+      "berlaku": "28/12/2027",
+      "smartcard_url": "https://placehold.co/100x63/0D2B4F/FFFFFF?text=Card"
+    },
+    {
+      "nama": "UNGGUL HENDRA EKA PRATAMA",
+      "nipp": "54730",
+      "jabatan": "MASINIS MUDA",
+      "jenis": "ASP MUDA",
+      "berlaku": "09/07/2028",
+      "smartcard_url": "https://placehold.co/100x63/0D2B4F/FFFFFF?text=Card"
+    },
+    {
+      "nama": "HERI ISKANDAR",
+      "nipp": "55042",
+      "jabatan": "MASINIS MUDA",
+      "jenis": "ASP MUDA",
+      "berlaku": "25/10/2025",
+      "smartcard_url": "https://placehold.co/100x63/0D2B4F/FFFFFF?text=Card"
+    },
+    {
+      "nama": "MURDANI",
+      "nipp": "55045",
+      "jabatan": "MASINIS MUDA",
+      "jenis": "ASP MUDA",
+      "berlaku": "05/07/2025",
+      "smartcard_url": "https://placehold.co/100x63/0D2B4F/FFFFFF?text=Card"
+    },
+    {
+      "nama": "ALIF SUHARDIMAN",
+      "nipp": "60567",
+      "jabatan": "MASINIS MUDA",
+      "jenis": "ASP MUDA",
+      "berlaku": "25/10/2025",
+      "smartcard_url": "https://placehold.co/100x63/0D2B4F/FFFFFF?text=Card"
+    },
+    {
+      "nama": "NOPIYANA",
+      "nipp": "60676",
+      "jabatan": "MASINIS MUDA",
+      "jenis": "ASP MUDA",
+      "berlaku": "30/03/2027",
+      "smartcard_url": "https://placehold.co/100x63/0D2B4F/FFFFFF?text=Card"
+    },
+    {
+      "nama": "JUNAEDI",
+      "nipp": "60722",
+      "jabatan": "MASINIS MUDA",
+      "jenis": "ASP MUDA",
+      "berlaku": "05/04/2028",
+      "smartcard_url": "https://placehold.co/100x63/0D2B4F/FFFFFF?text=Card"
+    },
+    {
+      "nama": "ANDRI NURJANA",
+      "nipp": "64928",
+      "jabatan": "MASINIS MUDA",
+      "jenis": "ASP MUDA",
+      "berlaku": "21/12/2027",
+      "smartcard_url": "https://placehold.co/100x63/0D2B4F/FFFFFF?text=Card"
+    },
+    {
+      "nama": "ARIS SETIAWAN",
+      "nipp": "69943",
+      "jabatan": "MASINIS MUDA",
+      "jenis": "ASP MUDA",
+      "berlaku": "02/06/2028",
+      "smartcard_url": "https://placehold.co/100x63/0D2B4F/FFFFFF?text=Card"
+    },
+    {
+      "nama": "ANDRIANA",
+      "nipp": "65975",
+      "jabatan": "MASINIS MUDA",
+      "jenis": "ASP MUDA",
+      "berlaku": "18/12/2025",
+      "smartcard_url": "https://placehold.co/100x63/0D2B4F/FFFFFF?text=Card"
+    },
+    {
+      "nama": "APEP ANDRIANTO",
+      "nipp": "55037",
+      "jabatan": "MASINIS MUDA",
+      "jenis": "ASP MUDA",
+      "berlaku": "05/04/2028",
+      "smartcard_url": "https://placehold.co/100x63/0D2B4F/FFFFFF?text=Card"
+    },
+    {
+      "nama": "CECEP ARI NUGRAHA",
+      "nipp": "68089",
+      "jabatan": "MASINIS MUDA",
+      "jenis": "ASP MUDA",
+      "berlaku": "21/12/2027",
+      "smartcard_url": "https://placehold.co/100x63/0D2B4F/FFFFFF?text=Card"
+    },
+    {
+      "nama": "ANTO KRISTANTO",
+      "nipp": "67833",
+      "jabatan": "MASINIS MUDA",
+      "jenis": "ASP MUDA",
+      "berlaku": "25/03/2028",
+      "smartcard_url": "https://placehold.co/100x63/0D2B4F/FFFFFF?text=Card"
+    },
+    {
+      "nama": "ANTONIUS TRI SETYANTO",
+      "nipp": "73829",
+      "jabatan": "MASINIS PERTAMA",
+      "jenis": "ASP PERTAMA",
+      "berlaku": "15/12/2025",
+      "smartcard_url": "https://placehold.co/100x63/0D2B4F/FFFFFF?text=Card"
+    },
+    {
+      "nama": "MAHESA BIMA ADI PANGESTU",
+      "nipp": "73831",
+      "jabatan": "MASINIS PERTAMA",
+      "jenis": "ASP PERTAMA",
+      "berlaku": "15/12/2025",
+      "smartcard_url": "https://placehold.co/100x63/0D2B4F/FFFFFF?text=Card"
+    },
+    {
+      "nama": "FAYZA HAFIZH ARDIANSYAH",
+      "nipp": "74126",
+      "jabatan": "MASINIS PERTAMA",
+      "jenis": "ASP PERTAMA",
+      "berlaku": "08/08/2027",
+      "smartcard_url": "https://placehold.co/100x63/0D2B4F/FFFFFF?text=Card"
+    }
+  ],
+  "jadwalHariIni": {
+    "penyelia": {
+      "dinas1": {
+        "nama": "",
+        "nipp": ""
+      },
+      "dinas2": {
+        "nama": "",
+        "nipp": ""
+      },
+      "dinas3": {
+        "nama": "",
+        "nipp": ""
+      }
+    },
+    "reguler": [
+      {
+        "no": "1",
+        "kode": "4",
+        "nomor_ka": "331-336, 337-334",
+        "lintas": "PWK-CKR-CKP, CKP-CKR-PWK",
+        "mulai": "12:35",
+        "habis": "20:42",
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
+      },
+      {
+        "no": "2",
+        "kode": "8AB",
+        "nomor_ka": "348-349",
+        "lintas": "PWK-BD, BD-PWK",
+        "mulai": "03:25",
+        "habis": "18:05",
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
+      },
+      {
+        "no": "3",
+        "kode": "5",
+        "nomor_ka": "R335-335-326",
+        "lintas": "PWK-CKP-CKR, CKR-PWK",
+        "mulai": "03:05",
+        "habis": "07:55",
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
+      },
+      {
+        "no": "4",
+        "kode": "6-7",
+        "nomor_ka": "333-338, R325-2",
+        "lintas": "PWK-CKR-CKP, CKP-PWK",
+        "mulai": "17:05",
+        "habis": "04:45",
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
+      },
+      {
+        "no": "5",
+        "kode": "1",
+        "nomor_ka": "325-328",
+        "lintas": "PWK-CKR, CKR-PWK",
+        "mulai": "04:10",
+        "habis": "10:06",
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
+      },
+      {
+        "no": "6",
+        "kode": "",
+        "nomor_ka": "LIBUR",
+        "lintas": "",
+        "mulai": "",
+        "habis": "",
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
+      },
+      {
+        "no": "7",
+        "kode": "9AB",
+        "nomor_ka": "350-367",
+        "lintas": "PWK-BD, PWK-BD",
+        "mulai": "15:25",
+        "habis": "01:05",
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
+      },
+      {
+        "no": "8",
+        "kode": "2",
+        "nomor_ka": "329-332",
+        "lintas": "PWK-CKR, PWK-CKR",
+        "mulai": "09:15",
+        "habis": "15:20",
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
+      },
+      {
+        "no": "9",
+        "kode": "10",
+        "nomor_ka": "SEREP PAGI",
+        "lintas": "CREW KA PWK",
+        "mulai": "08:00",
+        "habis": "16:00",
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
+      },
+      {
+        "no": "10",
+        "kode": "3",
+        "nomor_ka": "327-330",
+        "lintas": "PWK-CKR, PWK-CKR",
+        "mulai": "09:20",
+        "habis": "13:38",
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
+      },
+      {
+        "no": "11",
+        "kode": "",
+        "nomor_ka": "LIBUR",
+        "lintas": "",
+        "mulai": "",
+        "habis": "",
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
+      }
+    ],
+    "klb": [
+      {
+        "no": "",
+        "nomor_ka": "",
+        "lintas": "",
+        "mulai": "",
+        "habis": "",
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
+      }
+    ],
+    "cuti": [
+      {
+        "diklap": "",
+        "cuti": "",
+        "csk": "",
+        "pembinaan": "",
+        "sertifikasi": ""
+      }
+    ],
+    "catatanPenting": ""
+  },
+  "jadwalBesok": {
+    "penyelia": {
+      "dinas1": {
+        "nama": "",
+        "nipp": ""
+      },
+      "dinas2": {
+        "nama": "",
+        "nipp": ""
+      },
+      "dinas3": {
+        "nama": "",
+        "nipp": ""
+      }
+    },
+    "reguler": [
+      {
+        "no": "1",
+        "kode": "4",
+        "nomor_ka": "331-336, 337-334",
+        "lintas": "PWK-CKR-CKP, CKP-CKR-PWK",
+        "mulai": "12:35",
+        "habis": "20:42",
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
+      },
+      {
+        "no": "2",
+        "kode": "8AB",
+        "nomor_ka": "348-349",
+        "lintas": "PWK-BD, BD-PWK",
+        "mulai": "03:25",
+        "habis": "18:05",
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
+      },
+      {
+        "no": "3",
+        "kode": "5",
+        "nomor_ka": "R335-335-326",
+        "lintas": "PWK-CKP-CKR, CKR-PWK",
+        "mulai": "03:05",
+        "habis": "07:55",
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
+      },
+      {
+        "no": "4",
+        "kode": "6-7",
+        "nomor_ka": "333-338, R325-2",
+        "lintas": "PWK-CKR-CKP, CKP-PWK",
+        "mulai": "17:05",
+        "habis": "04:45",
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
+      },
+      {
+        "no": "5",
+        "kode": "1",
+        "nomor_ka": "325-328",
+        "lintas": "PWK-CKR, CKR-PWK",
+        "mulai": "04:10",
+        "habis": "10:06",
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
+      },
+      {
+        "no": "6",
+        "kode": "",
+        "nomor_ka": "LIBUR",
+        "lintas": "",
+        "mulai": "",
+        "habis": "",
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
+      },
+      {
+        "no": "7",
+        "kode": "9AB",
+        "nomor_ka": "350-367",
+        "lintas": "PWK-BD, PWK-BD",
+        "mulai": "15:25",
+        "habis": "01:05",
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
+      },
+      {
+        "no": "8",
+        "kode": "2",
+        "nomor_ka": "329-332",
+        "lintas": "PWK-CKR, PWK-CKR",
+        "mulai": "09:15",
+        "habis": "15:20",
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
+      },
+      {
+        "no": "9",
+        "kode": "10",
+        "nomor_ka": "SEREP PAGI",
+        "lintas": "CREW KA PWK",
+        "mulai": "08:00",
+        "habis": "16:00",
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
+      },
+      {
+        "no": "10",
+        "kode": "3",
+        "nomor_ka": "327-330",
+        "lintas": "PWK-CKR, PWK-CKR",
+        "mulai": "09:20",
+        "habis": "13:38",
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
+      },
+      {
+        "no": "11",
+        "kode": "",
+        "nomor_ka": "LIBUR",
+        "lintas": "",
+        "mulai": "",
+        "habis": "",
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
+      }
+    ],
+    "klb": [
+      {
+        "no": "1",
+        "nomor_ka": "",
+        "lintas": "",
+        "mulai": "",
+        "habis": "",
+        "masinis": "",
+        "nipp_mas": "",
+        "asisten": "",
+        "nipp_as": ""
+      }
+    ],
+    "cuti": [
+      {
+        "diklap": "",
+        "cuti": "",
+        "csk": "",
+        "pembinaan": "",
+        "sertifikasi": ""
+      }
+    ],
+    "catatanPenting": ""
+  },
+  "nilaiUtsUpo": [
+    {
+      "no": 1,
+      "nama": "ROFI NOVIYANUS",
+      "nipp": 54706,
+      "jabatan": "P. INSTRUKTUR",
+      "jan_uts": "-",
+      "jan_upo": 90,
+      "feb_uts": 100,
+      "feb_upo": "-",
+      "apr_uts": 100,
+      "apr_upo": 100
+    },
+    {
+      "no": 2,
+      "nama": "ARIEF KURNIAWAN",
+      "nipp": 42003,
+      "jabatan": "P. DINASAN",
+      "mar_uts": 100,
+      "mar_upo": 94,
+      "apr_uts": 100,
+      "apr_upo": 96
+    }
+  ],
+  "ujiUlang": [
+    {
+      "no": 1,
+      "nama": "ROFI NOVIYANUS",
+      "nipp": 54706,
+      "jabatan": "MASINIS MADYA",
+      "tgl_uji": "03 MARET",
+      "nilai_teori": 100,
+      "waw_sarana": "",
+      "waw_operasi": "",
+      "prak_perka": 100,
+      "prak_adm": "",
+      "keterangan": "LULUS",
+      "penguji": "",
+      "ka": ""
+    },
+    {
+      "no": 6,
+      "nama": "RIYAD FIRDAUS",
+      "nipp": "47335",
+      "jabatan": "MASINIS MUDA",
+      "tgl_uji": "10 MARET",
+      "nilai_teori": 88,
+      "waw_sarana": 96,
+      "waw_operasi": "19 FEBRUARI",
+      "prak_perka": 100,
+      "prak_adm": 96,
+      "keterangan": "LULUS",
+      "penguji": "INSTRUKTUR",
+      "ka": 330
+    }
+  ],
+  "pantauanKejadian": [
+    {
+      "no": 1,
+      "tanggal": "20/06/2025",
+      "no_ka": "331",
+      "kejadian": "Lampu kabin padam di KMP 3",
+      "tindak_lanjut": "Perbaikan oleh TPK di Cikampek",
+      "keterangan": "Selesai ditangani"
+    },
+    {
+      "no": 2,
+      "tanggal": "21/06/2025",
+      "no_ka": "328",
+      "kejadian": "AC tidak dingin",
+      "tindak_lanjut": "Pengecekan freon di Purwakarta",
+      "keterangan": "Dalam proses"
+    }
+  ],
+  "pantauanKKA": [
+    {
+      "no": 1,
+      "tanggal": "15/06/2025",
+      "kejadian": "KA 348 melewati sinyal aspek merah di Stasiun X",
+      "tindak_lanjut": "Masinis di-grounded dan dilakukan pembinaan",
+      "keterangan": "Selesai"
+    }
+  ],
+  "pantauanPerka": {
+    "wam": {
+      "jalan": [
+        {
+          "no": 1,
+          "tanggal": "18/06/2025",
+          "ka": "KLB/1A",
+          "relasi": "PWK-BD",
+          "dasar": "Surat Edaran No.123/OPS/2025",
+          "keterangan": "KLB Rombongan VVIP"
+        }
+      ],
+      "batal": [
+        {
+          "no": 1,
+          "tanggal": "19/06/2025",
+          "ka": "PLB 33C",
+          "relasi": "CKP-PWK",
+          "dasar": "Okupansi Rendah",
+          "keterangan": "Rangkaian idle di CKP"
+        }
+      ]
+    },
+    "ppk": {
+      "jalan": [
+        {
+          "no": 1,
+          "tanggal": "22/06/2025",
+          "ka": "2501",
+          "relasi": "PWK-TG",
+          "dasar": "Permintaan Angkutan Barang",
+          "keterangan": "Berangkat tepat waktu"
+        }
+      ],
+      "batal": [
+        {
+          "no": 1,
+          "tanggal": "23/06/2025",
+          "ka": "2708F",
+          "relasi": "CBR-PWK",
+          "dasar": "Gangguan sarana",
+          "keterangan": "Lokomotif mogok"
+        }
+      ]
+    },
+    "wad": [
+      {
+        "no": 1,
+        "tanggal": "10/06/2025",
+        "dasar": "WAD.10/VI/25-DAOP2",
+        "keterangan": "Perubahan Gapeka Parsial Mulai 12 Juni 2025"
+      }
+    ]
+  },
+  "pantauanTaspat": {
+    "hilir_bd": [
+      {
+        "no": 1,
+        "petak": "BD - BD",
+        "km": "155 + 400 S/D 154 + 500",
+        "kecepatan": 20
+      },
+      {
+        "no": 2,
+        "petak": "CMI - PDL",
+        "km": "144 + 700 S/D 144 + 000",
+        "kecepatan": 100
+      },
+      {
+        "no": 3,
+        "petak": "SKT - MSI",
+        "km": "144 + 100 S/D 142 + 700",
+        "kecepatan": 50
+      }
+    ],
+    "hulu_bd": [
+      {
+        "no": 1,
+        "petak": "BD - BD",
+        "km": "155 + 400 S/D 154 + 500",
+        "kecepatan": 20
+      },
+      {
+        "no": 2,
+        "petak": "PDL - CMI",
+        "km": "144 + 100 S/D 144 + 700",
+        "kecepatan": 100
+      },
+      {
+        "no": 3,
+        "petak": "SKT - MSI",
+        "km": "144 + 100 S/D 142 + 700",
+        "kecepatan": 50
+      }
+    ],
+    "hilir_ckr": [
+      {
+        "no": 1,
+        "petak": "PWK - CBR",
+        "km": "103 + 100 S/D 95 + 600",
+        "kecepatan": 80
+      },
+      {
+        "no": 2,
+        "petak": "CBR - CBR",
+        "km": "92 + 200 S/D 88 + 600",
+        "kecepatan": 80
+      },
+      {
+        "no": 3,
+        "petak": "EMPL CKP",
+        "km": "84 + 400 S/D 85 + 200",
+        "kecepatan": 30
+      },
+      {
+        "no": 4,
+        "petak": "KW - KDH",
+        "km": "58 + 200 S/D 56 + 300",
+        "kecepatan": 90
+      },
+      {
+        "no": 5,
+        "petak": "EMPL CKR",
+        "km": "42 + 500 S/D 43 + 800",
+        "kecepatan": 70
+      }
+    ],
+    "hulu_ckr": [
+      {
+        "no": 1,
+        "petak": "CBR - PWK",
+        "km": "95+ 600 S/D 103 + 100",
+        "kecepatan": 80
+      },
+      {
+        "no": 2,
+        "petak": "CBR - CBR",
+        "km": "88 + 600 S/D 92 + 200",
+        "kecepatan": 80
+      },
+      {
+        "no": 3,
+        "petak": "EMPL CKP",
+        "km": "85 + 200 S/D 84 + 400",
+        "kecepatan": 30
+      },
+      {
+        "no": 4,
+        "petak": "KDH - KW",
+        "km": "56 + 800 S/D 58 + 000",
+        "kecepatan": 90
+      },
+      {
+        "no": 5,
+        "petak": "EMPL CKR",
+        "km": "43 + 800 S/D 42 + 500",
+        "kecepatan": 70
+      }
+    ]
+  },
+  "wartaDinas": [
+    {
+      "no": 1,
+      "warta": "EO/97",
+      "tentang": "Go no go item mengalami gangguan sewaktu di perjalanan"
+    },
+    {
+      "no": 2,
+      "warta": "OR/14",
+      "tentang": "Pengalihan tugas dan fungsi kdr ke mas dan assmas utuk ka barang"
+    }
+  ],
+  "programGapeka": {
+    "program": {
+      "jadwal": [
+        {
+          "no_dinasan": 1,
+          "kode_dinasan": "1",
+          "no_ka": "325",
+          "namaka": "COMMUTER LINE WALAHAR",
+          "relasi": "PWK-CKR",
+          "lintas": "PWK-CKR",
+          "mulai_dinas": "04:10",
+          "jam_ber": "04:20",
+          "jam_dat": "06:20",
+          "habis_dinas": "06:59",
+          "jam_atas_ka": "01:19",
+          "jam_dinas_crew": "02:49",
+          "istirahat": "03:19"
+        },
+        {
+          "no_dinasan": 1,
+          "kode_dinasan": "1",
+          "no_ka": "328",
+          "namaka": "COMMUTER LINE WALAHAR",
+          "relasi": "CKR-PWK",
+          "lintas": "CKR-PWK",
+          "mulai_dinas": "06:48",
+          "jam_ber": "07:48",
+          "jam_dat": "09:36",
+          "habis_dinas": "10:06",
+          "jam_atas_ka": "01:48",
+          "jam_dinas_crew": "03:18",
+          "istirahat": ""
+        },
+        {
+          "no_dinasan": 2,
+          "kode_dinasan": "2",
+          "no_ka": "329",
+          "namaka": "COMMUTER LINE WALAHAR",
+          "relasi": "PWK-CKR",
+          "lintas": "PWK-CKR",
+          "mulai_dinas": "09:15",
+          "jam_ber": "09:45",
+          "jam_dat": "12:15",
+          "habis_dinas": "12:45",
+          "jam_atas_ka": "01:26",
+          "jam_dinas_crew": "03:51",
+          "istirahat": "01:02"
+        },
+        {
+          "no_dinasan": 2,
+          "kode_dinasan": "2",
+          "no_ka": "332",
+          "namaka": "COMMUTER LINE WALAHAR",
+          "relasi": "CKR-PWK",
+          "lintas": "CKR-PWK",
+          "mulai_dinas": "12:36",
+          "jam_ber": "13:26",
+          "jam_dat": "14:50",
+          "habis_dinas": "15:20",
+          "jam_atas_ka": "01:24",
+          "jam_dinas_crew": "02:54",
+          "istirahat": ""
+        },
+        {
+          "no_dinasan": 3,
+          "kode_dinasan": "3",
+          "no_ka": "327",
+          "namaka": "COMMUTER LINE WALAHAR",
+          "relasi": "PWK-CKR",
+          "lintas": "PWK-CKR",
+          "mulai_dinas": "08:30",
+          "jam_ber": "09:20",
+          "jam_dat": "10:44",
+          "habis_dinas": "11:14",
+          "jam_atas_ka": "01:24",
+          "jam_dinas_crew": "02:54",
+          "istirahat": "02:52"
+        },
+        {
+          "no_dinasan": 3,
+          "kode_dinasan": "3",
+          "no_ka": "330",
+          "namaka": "COMMUTER LINE WALAHAR",
+          "relasi": "CKR-PWK",
+          "lintas": "CKR-PWK",
+          "mulai_dinas": "10:36",
+          "jam_ber": "11:36",
+          "jam_dat": "13:08",
+          "habis_dinas": "13:38",
+          "jam_atas_ka": "01:32",
+          "jam_dinas_crew": "03:02",
+          "istirahat": ""
+        },
+        {
+          "no_dinasan": 4,
+          "kode_dinasan": "4",
+          "no_ka": "331",
+          "namaka": "COMMUTER LINE JATILUHUR",
+          "relasi": "PWK-CKR",
+          "lintas": "PWK-CKR",
+          "mulai_dinas": "12:35",
+          "jam_ber": "13:35",
+          "jam_dat": "14:59",
+          "habis_dinas": "15:29",
+          "jam_atas_ka": "01:24",
+          "jam_dinas_crew": "02:54",
+          "istirahat": "02:27"
+        },
+        {
+          "no_dinasan": 4,
+          "kode_dinasan": "4",
+          "no_ka": "336",
+          "namaka": "COMMUTER LINE JATILUHUR",
+          "relasi": "CKP-CKR",
+          "lintas": "CKP-CKR",
+          "mulai_dinas": "14:35",
+          "jam_ber": "15:35",
+          "jam_dat": "16:27",
+          "habis_dinas": "16:57",
+          "jam_atas_ka": "00:52",
+          "jam_dinas_crew": "02:22",
+          "istirahat": ""
+        },
+        {
+          "no_dinasan": 4,
+          "kode_dinasan": "4",
+          "no_ka": "337",
+          "namaka": "COMMUTER LINE JATILUHUR",
+          "relasi": "CKP-CKR",
+          "lintas": "CKP-CKR",
+          "mulai_dinas": "15:56",
+          "jam_ber": "16:56",
+          "jam_dat": "17:56",
+          "habis_dinas": "18:26",
+          "jam_atas_ka": "01:00",
+          "jam_dinas_crew": "02:30",
+          "istirahat": ""
+        },
+        {
+          "no_dinasan": 4,
+          "kode_dinasan": "4",
+          "no_ka": "334",
+          "namaka": "COMMUTER LINE JATILUHUR",
+          "relasi": "CKR-PWK",
+          "lintas": "CKR-PWK",
+          "mulai_dinas": "17:35",
+          "jam_ber": "18:35",
+          "jam_dat": "20:12",
+          "habis_dinas": "20:42",
+          "jam_atas_ka": "01:37",
+          "jam_dinas_crew": "03:07",
+          "istirahat": ""
+        },
+        {
+          "no_dinasan": 5,
+          "kode_dinasan": "5",
+          "no_ka": "R335",
+          "namaka": "DINAS RANGKAIAN COMMUTER LINE JATILUHUR",
+          "relasi": "PWK-CKP",
+          "lintas": "PWK-CKP",
+          "mulai_dinas": "03:05",
+          "jam_ber": "04:05",
+          "jam_dat": "04:25",
+          "habis_dinas": "04:55",
+          "jam_atas_ka": "00:20",
+          "jam_dinas_crew": "01:50",
+          "istirahat": "02:12"
+        },
+        {
+          "no_dinasan": 5,
+          "kode_dinasan": "5",
+          "no_ka": "335",
+          "namaka": "COMMUTER LINE JATILUHUR",
+          "relasi": "CKP-CKR",
+          "lintas": "CKP-CKR",
+          "mulai_dinas": "03:48",
+          "jam_ber": "04:48",
+          "jam_dat": "05:32",
+          "habis_dinas": "06:02",
+          "jam_atas_ka": "00:44",
+          "jam_dinas_crew": "02:14",
+          "istirahat": "02:55"
+        },
+        {
+          "no_dinasan": 5,
+          "kode_dinasan": "5",
+          "no_ka": "326",
+          "namaka": "COMMUTER LINE WALAHAR",
+          "relasi": "CKR-PWK",
+          "lintas": "CKR-PWK",
+          "mulai_dinas": "05:00",
+          "jam_ber": "06:00",
+          "jam_dat": "07:25",
+          "habis_dinas": "07:55",
+          "jam_atas_ka": "01:25",
+          "jam_dinas_crew": "02:55",
+          "istirahat": ""
+        },
+        {
+          "no_dinasan": 6,
+          "kode_dinasan": "6",
+          "no_ka": "338",
+          "namaka": "COMMUTER LINE JATILUHUR",
+          "relasi": "CKP-CKR",
+          "lintas": "CKP-CKR",
+          "mulai_dinas": "17:55",
+          "jam_ber": "18:05",
+          "jam_dat": "19:47",
+          "habis_dinas": "20:17",
+          "jam_atas_ka": "01:42",
+          "jam_dinas_crew": "03:12",
+          "istirahat": "02:40"
+        },
+        {
+          "no_dinasan": 7,
+          "kode_dinasan": "7",
+          "no_ka": "R325-2",
+          "namaka": "DINAS RANGKAIAN COMMUTER LINE R WALAHAR",
+          "relasi": "CKP-PWK",
+          "lintas": "CKP-PWK",
+          "mulai_dinas": "02:55",
+          "jam_ber": "03:55",
+          "jam_dat": "04:15",
+          "habis_dinas": "04:45",
+          "jam_atas_ka": "01:20",
+          "jam_dinas_crew": "02:40",
+          "istirahat": ""
+        },
+        {
+          "no_dinasan": 8,
+          "kode_dinasan": "8AB",
+          "no_ka": "348",
+          "namaka": "COMMUTER LINE GARUT",
+          "relasi": "PWK-GRT",
+          "lintas": "PWK-BD",
+          "mulai_dinas": "03:25",
+          "jam_ber": "04:25",
+          "jam_dat": "06:55",
+          "habis_dinas": "07:25",
+          "jam_atas_ka": "02:30",
+          "jam_dinas_crew": "04:00",
+          "istirahat": "06:26"
+        },
+        {
+          "no_dinasan": 8,
+          "kode_dinasan": "8AB",
+          "no_ka": "349",
+          "namaka": "COMMUTER LINE GARUT",
+          "relasi": "GRT-PWK",
+          "lintas": "BD-PWK",
+          "mulai_dinas": "13:51",
+          "jam_ber": "14:51",
+          "jam_dat": "17:35",
+          "habis_dinas": "18:05",
+          "jam_atas_ka": "02:44",
+          "jam_dinas_crew": "04:14",
+          "istirahat": ""
+        },
+        {
+          "no_dinasan": 9,
+          "kode_dinasan": "9AB",
+          "no_ka": "350",
+          "namaka": "COMMUTER LINE GARUT",
+          "relasi": "PWK-GRT",
+          "lintas": "PWK-BD",
+          "mulai_dinas": "15:25",
+          "jam_ber": "16:25",
+          "jam_dat": "18:54",
+          "habis_dinas": "19:24",
+          "jam_atas_ka": "02:29",
+          "jam_dinas_crew": "03:59",
+          "istirahat": "01:55"
+        },
+        {
+          "no_dinasan": 9,
+          "kode_dinasan": "9AB",
+          "no_ka": "367",
+          "namaka": "COMMUTER LINE BANDUNG RAYA",
+          "relasi": "CCL-PWK",
+          "lintas": "BD-PWK",
+          "mulai_dinas": "21:19",
+          "jam_ber": "22:19",
+          "jam_dat": "00:35",
+          "habis_dinas": "01:05",
+          "jam_atas_ka": "02:16",
+          "jam_dinas_crew": "03:46",
+          "istirahat": ""
+        },
+        {
+          "no_dinasan": 10,
+          "kode_dinasan": "10",
+          "no_ka": "SEREP PAGI",
+          "namaka": "-",
+          "relasi": "PWK",
+          "lintas": "-",
+          "mulai_dinas": "08:00",
+          "jam_ber": "-",
+          "jam_dat": "-",
+          "habis_dinas": "16:00",
+          "jam_atas_ka": "-",
+          "jam_dinas_crew": "08:00",
+          "istirahat": ""
+        }
+      ],
+      "summary": {
+        "dinasan": 9,
+        "lis": 2,
+        "dibutuhkan": 12,
+        "adanya": 9,
+        "serep": 1,
+        "kurangLebih": -3
+      }
+    },
+    "realisasi": {
+      "jadwal": [],
+      "summary": {
+        "dinasan": 0,
+        "lis": 0,
+        "dibutuhkan": 0,
+        "adanya": 0,
+        "serep": 0,
+        "kurangLebih": 0
+      }
+    }
+  },
+  "pageData": {
+    "dashboard": {
+      "bestEmployee": {
+        "nama": "HERI ISKANDAR",
+        "nipp": "55042",
+        "foto": "https://www.dropbox.com/scl/fi/jctkl5g1bcw0ipv5m9vff/7.jpg?rlkey=o8yxba0spafp087rwftfyv4gw&st=sjrta404&dl=1"
+      }
+    },
+    "tupoksi": {
+      "kupt": {
+        "nama": "Yadi Supriadi",
+        "nipp": "44662",
+        "foto": "https://www.dropbox.com/scl/fi/u1ecdsbxlv5k1c0phz4s9/1.jpg?rlkey=52el3zbql0ttpn0q6gtid1f0j&st=q5mx46gw&dl=1"
+      },
+      "instruktur": {
+        "nama": "Rofi Noviyanus",
+        "nipp": "54706",
+        "foto": "https://www.dropbox.com/scl/fi/gck5kbyawzo1d6jokm2zw/2.jpg?rlkey=pfwcg6an9dyh2c24y1i7os4vj&st=klkxiwni&dl=1"
+      },
+      "penyelia": [
+        {
+          "nama": "Arief Kurniawan",
+          "nipp": "42003",
+          "foto": "https://www.dropbox.com/scl/fi/6hclvgw4cp94xrqcdibft/3.jpg?rlkey=voauxn7ltnra3sxu5ncr19tdd&st=ff08r8yu&dl=1"
+        },
+        {
+          "nama": "Suhadi Asmara",
+          "nipp": "44726",
+          "foto": "https://www.dropbox.com/scl/fi/v483o4osveb7zwwe5s0rx/4.jpg?rlkey=e312q71zmd8hzlo7x0bytr6hj&st=ltk3jidk&dl=1"
+        },
+        {
+          "nama": "Fazhar Septia Illham",
+          "nipp": "48552",
+          "foto": "https://www.dropbox.com/scl/fi/y86bg9vxxwmtfom3fpg17/5.jpg?rlkey=1xjh0jyxod3t9gqyjdpdi2h8n&st=iinnso0d&dl=1"
+        },
+        {
+          "nama": "Muhamad Fitra",
+          "nipp": "65933",
+          "foto": "https://www.dropbox.com/scl/fi/59e70vaqd4tew2iewq6r4/6.jpg?rlkey=xvdstqnhra3as7kc0tubknddf&st=t2m7ta6v&dl=1"
+        }
+      ]
+    },
+    "keselamatan": {
+      "ibpr": [
+        "https://www.dropbox.com/scl/fi/foubkekd9xjnxp5dnbay4/9-1.jpg?rlkey=ypa3luo4vbnflpptp0h30cp80&st=884bngiq&dl=1",
+        "https://www.dropbox.com/scl/fi/3rz9ukokcl5a0a8vjaw42/10-1.jpg?rlkey=xylwfnpzfm5d7o4nk8041dlv8&st=mmmq3yy8&dl=1"
+      ],
+      "kebijakan": [
+        "https://www.dropbox.com/scl/fi/34x5ljtq290tpowvn87be/22-1.jpg?rlkey=fojfe2pl9pkqnse4x3w5qojbq&st=ufqisnju&dl=1"
+      ],
+      "integritas": [
+        "https://www.dropbox.com/scl/fi/xm45ztfcnaeq29hf7nhip/24-1.jpg?rlkey=p8rqamlhqu19qkow06rwx4dvb&st=o80ega9d&dl=1"
+      ],
+      "briefing": {
+        "pesan": "Selalu waspada saat melintas di perlintasan sebidang dan perhatikan batas kecepatan. Pastikan komunikasi dengan PPKA berjalan lancar di setiap stasiun.",
+        "review": "<b>[20 Juni 2025]</b> - Anjlokan KA Barang di Lintas Utara. Penyebab: Kerusakan bantalan rel. <i>Tindakan: Peningkatan kewaspadaan saat melewati petak jalan tersebut.</i>"
+      }
+    }
+  }
+}
