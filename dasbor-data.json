@@ -1024,58 +1024,96 @@
   },
   "nilaiUtsUpo": [
     {
-      "no": 1,
+      "no": "1",
       "nama": "ROFI NOVIYANUS",
-      "nipp": 54706,
+      "nipp": "54706",
       "jabatan": "P. INSTRUKTUR",
       "jan_uts": "-",
-      "jan_upo": 90,
-      "feb_uts": 100,
+      "jan_upo": "90",
+      "feb_uts": "100",
       "feb_upo": "-",
-      "apr_uts": 100,
-      "apr_upo": 100
+      "mar_uts": "",
+      "mar_upo": "",
+      "apr_uts": "100",
+      "apr_upo": "100",
+      "mei_uts": "",
+      "mei_upo": "",
+      "jun_uts": "",
+      "jun_upo": "",
+      "jul_uts": "",
+      "jul_upo": "",
+      "agu_uts": "",
+      "agu_upo": "",
+      "sep_uts": "",
+      "sep_upo": "",
+      "okt_uts": "",
+      "okt_upo": "",
+      "nov_uts": "",
+      "nov_upo": "",
+      "des_uts": "",
+      "des_upo": ""
     },
     {
-      "no": 2,
+      "no": "2",
       "nama": "ARIEF KURNIAWAN",
-      "nipp": 42003,
+      "nipp": "42003",
       "jabatan": "P. DINASAN",
-      "mar_uts": 100,
-      "mar_upo": 94,
-      "apr_uts": 100,
-      "apr_upo": 96
+      "jan_uts": "",
+      "jan_upo": "",
+      "feb_uts": "",
+      "feb_upo": "",
+      "mar_uts": "100",
+      "mar_upo": "94",
+      "apr_uts": "100",
+      "apr_upo": "96",
+      "mei_uts": "",
+      "mei_upo": "",
+      "jun_uts": "",
+      "jun_upo": "",
+      "jul_uts": "",
+      "jul_upo": "",
+      "agu_uts": "",
+      "agu_upo": "",
+      "sep_uts": "",
+      "sep_upo": "",
+      "okt_uts": "",
+      "okt_upo": "",
+      "nov_uts": "",
+      "nov_upo": "",
+      "des_uts": "",
+      "des_upo": ""
     }
   ],
   "ujiUlang": [
     {
-      "no": 1,
+      "no": "1",
       "nama": "ROFI NOVIYANUS",
-      "nipp": 54706,
+      "nipp": "54706",
       "jabatan": "MASINIS MADYA",
       "tgl_uji": "03 MARET",
-      "nilai_teori": 100,
+      "nilai_teori": "100",
       "waw_sarana": "",
       "waw_operasi": "",
-      "prak_perka": 100,
+      "prak_perka": "100",
       "prak_adm": "",
       "keterangan": "LULUS",
       "penguji": "",
       "ka": ""
     },
     {
-      "no": 6,
+      "no": "6",
       "nama": "RIYAD FIRDAUS",
       "nipp": "47335",
       "jabatan": "MASINIS MUDA",
       "tgl_uji": "10 MARET",
-      "nilai_teori": 88,
-      "waw_sarana": 96,
+      "nilai_teori": "88",
+      "waw_sarana": "96",
       "waw_operasi": "19 FEBRUARI",
-      "prak_perka": 100,
-      "prak_adm": 96,
+      "prak_perka": "100",
+      "prak_adm": "96",
       "keterangan": "LULUS",
       "penguji": "INSTRUKTUR",
-      "ka": 330
+      "ka": "330"
     }
   ],
   "pantauanKejadian": [
@@ -1281,7 +1319,7 @@
     "program": {
       "jadwal": [
         {
-          "no_dinasan": 1,
+          "no_dinasan": "1",
           "kode_dinasan": "1",
           "no_ka": "325",
           "namaka": "COMMUTER LINE WALAHAR",
@@ -1296,7 +1334,7 @@
           "istirahat": "03:19"
         },
         {
-          "no_dinasan": 1,
+          "no_dinasan": "1",
           "kode_dinasan": "1",
           "no_ka": "328",
           "namaka": "COMMUTER LINE WALAHAR",
@@ -1311,7 +1349,7 @@
           "istirahat": ""
         },
         {
-          "no_dinasan": 2,
+          "no_dinasan": "2",
           "kode_dinasan": "2",
           "no_ka": "329",
           "namaka": "COMMUTER LINE WALAHAR",
@@ -1326,7 +1364,7 @@
           "istirahat": "01:02"
         },
         {
-          "no_dinasan": 2,
+          "no_dinasan": "2",
           "kode_dinasan": "2",
           "no_ka": "332",
           "namaka": "COMMUTER LINE WALAHAR",
@@ -1341,7 +1379,7 @@
           "istirahat": ""
         },
         {
-          "no_dinasan": 3,
+          "no_dinasan": "3",
           "kode_dinasan": "3",
           "no_ka": "327",
           "namaka": "COMMUTER LINE WALAHAR",
@@ -1356,7 +1394,7 @@
           "istirahat": "02:52"
         },
         {
-          "no_dinasan": 3,
+          "no_dinasan": "3",
           "kode_dinasan": "3",
           "no_ka": "330",
           "namaka": "COMMUTER LINE WALAHAR",
@@ -1371,7 +1409,7 @@
           "istirahat": ""
         },
         {
-          "no_dinasan": 4,
+          "no_dinasan": "4",
           "kode_dinasan": "4",
           "no_ka": "331",
           "namaka": "COMMUTER LINE JATILUHUR",
@@ -1386,7 +1424,7 @@
           "istirahat": "02:27"
         },
         {
-          "no_dinasan": 4,
+          "no_dinasan": "4",
           "kode_dinasan": "4",
           "no_ka": "336",
           "namaka": "COMMUTER LINE JATILUHUR",
@@ -1401,7 +1439,7 @@
           "istirahat": ""
         },
         {
-          "no_dinasan": 4,
+          "no_dinasan": "4",
           "kode_dinasan": "4",
           "no_ka": "337",
           "namaka": "COMMUTER LINE JATILUHUR",
@@ -1416,7 +1454,7 @@
           "istirahat": ""
         },
         {
-          "no_dinasan": 4,
+          "no_dinasan": "4",
           "kode_dinasan": "4",
           "no_ka": "334",
           "namaka": "COMMUTER LINE JATILUHUR",
@@ -1431,7 +1469,7 @@
           "istirahat": ""
         },
         {
-          "no_dinasan": 5,
+          "no_dinasan": "5",
           "kode_dinasan": "5",
           "no_ka": "R335",
           "namaka": "DINAS RANGKAIAN COMMUTER LINE JATILUHUR",
@@ -1446,7 +1484,7 @@
           "istirahat": "02:12"
         },
         {
-          "no_dinasan": 5,
+          "no_dinasan": "5",
           "kode_dinasan": "5",
           "no_ka": "335",
           "namaka": "COMMUTER LINE JATILUHUR",
@@ -1461,7 +1499,7 @@
           "istirahat": "02:55"
         },
         {
-          "no_dinasan": 5,
+          "no_dinasan": "5",
           "kode_dinasan": "5",
           "no_ka": "326",
           "namaka": "COMMUTER LINE WALAHAR",
@@ -1476,7 +1514,7 @@
           "istirahat": ""
         },
         {
-          "no_dinasan": 6,
+          "no_dinasan": "6",
           "kode_dinasan": "6",
           "no_ka": "338",
           "namaka": "COMMUTER LINE JATILUHUR",
@@ -1491,7 +1529,7 @@
           "istirahat": "02:40"
         },
         {
-          "no_dinasan": 7,
+          "no_dinasan": "7",
           "kode_dinasan": "7",
           "no_ka": "R325-2",
           "namaka": "DINAS RANGKAIAN COMMUTER LINE R WALAHAR",
@@ -1506,7 +1544,7 @@
           "istirahat": ""
         },
         {
-          "no_dinasan": 8,
+          "no_dinasan": "8",
           "kode_dinasan": "8AB",
           "no_ka": "348",
           "namaka": "COMMUTER LINE GARUT",
@@ -1521,7 +1559,7 @@
           "istirahat": "06:26"
         },
         {
-          "no_dinasan": 8,
+          "no_dinasan": "8",
           "kode_dinasan": "8AB",
           "no_ka": "349",
           "namaka": "COMMUTER LINE GARUT",
@@ -1536,7 +1574,7 @@
           "istirahat": ""
         },
         {
-          "no_dinasan": 9,
+          "no_dinasan": "9",
           "kode_dinasan": "9AB",
           "no_ka": "350",
           "namaka": "COMMUTER LINE GARUT",
@@ -1551,7 +1589,7 @@
           "istirahat": "01:55"
         },
         {
-          "no_dinasan": 9,
+          "no_dinasan": "9",
           "kode_dinasan": "9AB",
           "no_ka": "367",
           "namaka": "COMMUTER LINE BANDUNG RAYA",
@@ -1566,7 +1604,7 @@
           "istirahat": ""
         },
         {
-          "no_dinasan": 10,
+          "no_dinasan": "10",
           "kode_dinasan": "10",
           "no_ka": "SEREP PAGI",
           "namaka": "-",
