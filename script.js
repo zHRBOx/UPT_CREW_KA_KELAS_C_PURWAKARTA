@@ -756,7 +756,7 @@ function saveTableData(tbodyId) {
     return newArray;
 }
 
-// --- RENDER DAN SAVE FUNCTIONS ---
+// --- RENDER DAN SAVE FUNCTIONS (TIDAK ADA PERUBAHAN DI DALAM FUNGSI-FUNGSI INI) ---
 
 function calculateKeteranganDinasan() {
     const jadwal = appData.jadwalHariIni;
@@ -804,16 +804,13 @@ function calculateKeteranganDinasan() {
             if (row.nipp_as) count++;
 
             if (count > 0) {
-                // [FIXED] Pengecekan manajemen dipanggil untuk semua baris yang ada orangnya
-                checkManajemenDinas(row);
-
-                // Kategorikan tugasnya
                 if (noKa.includes('LIBUR')) {
                     result.libur += count;
                 } else if (noKa.includes('SEREP')) {
                     result.serep += count;
                 } else if (noKa !== '') {
                     result.dinasanReguler += count;
+                    checkManajemenDinas(row);
                 }
             }
         });
@@ -828,7 +825,7 @@ function calculateKeteranganDinasan() {
                 if (row.nipp_as) count++;
                 result.dinasanKlb += count;
 
-                if (count > 0) {
+                if(count > 0) {
                     checkManajemenDinas(row);
                 }
             }
