@@ -758,6 +758,9 @@ function saveTableData(tbodyId) {
 
 // --- RENDER DAN SAVE FUNCTIONS (TIDAK ADA PERUBAHAN DI DALAM FUNGSI-FUNGSI INI) ---
 
+// =========================================================================================
+// == FUNGSI YANG DIPERBARUI ==
+// =========================================================================================
 function calculateKeteranganDinasan() {
     const jadwal = appData.jadwalHariIni;
     const result = {
@@ -784,55 +787,71 @@ function calculateKeteranganDinasan() {
         .filter(p => p.jabatan.toUpperCase() === 'PENYELIA DINASAN')
         .map(p => p.nipp);
 
-    const checkManajemenDinas = (row) => {
-        if (row.nipp_mas) {
-            if (penyeliaInstrukturNipps.includes(row.nipp_mas)) result.manajemenInstrukturDinas++;
-            if (penyeliaDinasanNipps.includes(row.nipp_mas)) result.manajemenPenyeliaDinas++;
-        }
-        if (row.nipp_as) {
-            if (penyeliaInstrukturNipps.includes(row.nipp_as)) result.manajemenInstrukturDinas++;
-            if (penyeliaDinasanNipps.includes(row.nipp_as)) result.manajemenPenyeliaDinas++;
-        }
-    };
-
-    // Dinasan Reguler, Libur, Serep
+    // Proses Dinasan Reguler, Libur, Serep
     if (jadwal.reguler && Array.isArray(jadwal.reguler)) {
         jadwal.reguler.forEach(row => {
             const noKa = (row.nomor_ka || '').toUpperCase();
-            let count = 0;
-            if (row.nipp_mas) count++;
-            if (row.nipp_as) count++;
-
-            if (count > 0) {
-                if (noKa.includes('LIBUR')) {
-                    result.libur += count;
-                } else if (noKa.includes('SEREP')) {
-                    result.serep += count;
-                } else if (noKa !== '') {
-                    result.dinasanReguler += count;
-                    checkManajemenDinas(row);
+            
+            if (noKa.includes('LIBUR')) {
+                if (row.nipp_mas) result.libur++;
+                if (row.nipp_as) result.libur++;
+            } else if (noKa.includes('SEREP')) {
+                if (row.nipp_mas) result.serep++;
+                if (row.nipp_as) result.serep++;
+            } else if (noKa !== '') {
+                // Cek Masinis
+                if (row.nipp_mas) {
+                    if (penyeliaInstrukturNipps.includes(row.nipp_mas)) {
+                        result.manajemenInstrukturDinas++;
+                    } else if (penyeliaDinasanNipps.includes(row.nipp_mas)) {
+                        result.manajemenPenyeliaDinas++;
+                    } else {
+                        result.dinasanReguler++; // Dihitung sebagai ASP
+                    }
+                }
+                // Cek Asisten
+                if (row.nipp_as) {
+                    if (penyeliaInstrukturNipps.includes(row.nipp_as)) {
+                        result.manajemenInstrukturDinas++;
+                    } else if (penyeliaDinasanNipps.includes(row.nipp_as)) {
+                        result.manajemenPenyeliaDinas++;
+                    } else {
+                        result.dinasanReguler++; // Dihitung sebagai ASP
+                    }
                 }
             }
         });
     }
 
-    // Dinasan KLB
+    // Proses Dinasan KLB
     if (jadwal.klb && Array.isArray(jadwal.klb)) {
         jadwal.klb.forEach(row => {
             if (row.nomor_ka) {
-                let count = 0;
-                if (row.nipp_mas) count++;
-                if (row.nipp_as) count++;
-                result.dinasanKlb += count;
-
-                if(count > 0) {
-                    checkManajemenDinas(row);
+                 // Cek Masinis
+                 if (row.nipp_mas) {
+                    if (penyeliaInstrukturNipps.includes(row.nipp_mas)) {
+                        result.manajemenInstrukturDinas++;
+                    } else if (penyeliaDinasanNipps.includes(row.nipp_mas)) {
+                        result.manajemenPenyeliaDinas++;
+                    } else {
+                        result.dinasanKlb++; // Dihitung sebagai ASP
+                    }
+                }
+                // Cek Asisten
+                if (row.nipp_as) {
+                    if (penyeliaInstrukturNipps.includes(row.nipp_as)) {
+                        result.manajemenInstrukturDinas++;
+                    } else if (penyeliaDinasanNipps.includes(row.nipp_as)) {
+                        result.manajemenPenyeliaDinas++;
+                    } else {
+                        result.dinasanKlb++; // Dihitung sebagai ASP
+                    }
                 }
             }
         });
     }
 
-    // Lain-lain
+    // Proses Lain-lain (Cuti, Diklat, dll.)
     if (jadwal.cuti && Array.isArray(jadwal.cuti)) {
         jadwal.cuti.forEach(row => {
             if (row.cuti) {
