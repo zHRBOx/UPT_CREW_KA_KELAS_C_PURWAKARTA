@@ -672,16 +672,16 @@
   "jadwalHariIni": {
     "penyelia": {
       "dinas1": {
+        "nama": "YADI SUPRIADI",
+        "nipp": "44662"
+      },
+      "dinas2": {
         "nama": "FAZHAR SEPTIA ILLHAM",
         "nipp": "48552"
       },
-      "dinas2": {
-        "nama": "ARIEF KURNIAWAN",
-        "nipp": "42003"
-      },
       "dinas3": {
-        "nama": "SUHADI ASMARA",
-        "nipp": "44726"
+        "nama": "MUHAMAD FITRA",
+        "nipp": "65933"
       }
     },
     "reguler": [
@@ -692,10 +692,10 @@
         "lintas": "PWK-CKR-CKP, CKP-CKR-PWK",
         "mulai": "12:35",
         "habis": "20:42",
-        "masinis": "JUNAEDI",
-        "nipp_mas": "60722",
-        "asisten": "FAYZA HAFIZH ARDIANSYAH",
-        "nipp_as": "74126"
+        "masinis": "MURDANI",
+        "nipp_mas": "55045",
+        "asisten": "RIYAD FIRDAUS",
+        "nipp_as": "47335"
       },
       {
         "no": "2",
@@ -704,10 +704,10 @@
         "lintas": "PWK-BD, BD-PWK",
         "mulai": "03:25",
         "habis": "18:05",
-        "masinis": "MURDANI",
-        "nipp_mas": "55045",
-        "asisten": "RIYAD FIRDAUS",
-        "nipp_as": "47335"
+        "masinis": "ALIF SUHARDIMAN",
+        "nipp_mas": "60567",
+        "asisten": "APEP ANDRIANTO",
+        "nipp_as": "55037"
       },
       {
         "no": "3",
@@ -716,10 +716,10 @@
         "lintas": "PWK-CKP-CKR, CKR-PWK",
         "mulai": "03:05",
         "habis": "07:55",
-        "masinis": "ALIF SUHARDIMAN",
-        "nipp_mas": "60567",
-        "asisten": "APEP ANDRIANTO",
-        "nipp_as": "55037"
+        "masinis": "ANDRIANA",
+        "nipp_mas": "65975",
+        "asisten": "PUTUT RESTU WIBOWO",
+        "nipp_as": "50298"
       },
       {
         "no": "4",
@@ -728,10 +728,10 @@
         "lintas": "PWK-CKR-CKP, CKP-PWK",
         "mulai": "17:05",
         "habis": "04:45",
-        "masinis": "ALIF SUHARDIMAN",
-        "nipp_mas": "60567",
-        "asisten": "APEP ANDRIANTO",
-        "nipp_as": "55037"
+        "masinis": "ANDRIANA",
+        "nipp_mas": "65975",
+        "asisten": "PUTUT RESTU WIBOWO",
+        "nipp_as": "50298"
       },
       {
         "no": "5",
@@ -740,10 +740,10 @@
         "lintas": "PWK-CKR, CKR-PWK",
         "mulai": "04:10",
         "habis": "10:06",
-        "masinis": "ANDRIANA",
-        "nipp_mas": "65975",
-        "asisten": "PUTUT RESTU WIBOWO",
-        "nipp_as": "50298"
+        "masinis": "NOPIYANA",
+        "nipp_mas": "60676",
+        "asisten": "ANDRI NURJANA",
+        "nipp_as": "64928"
       },
       {
         "no": "6",
@@ -752,10 +752,10 @@
         "lintas": "",
         "mulai": "",
         "habis": "",
-        "masinis": "NOPIYANA",
-        "nipp_mas": "60676",
-        "asisten": "ANDRI NURJANA",
-        "nipp_as": "64928"
+        "masinis": "CECEP ARI NUGRAHA",
+        "nipp_mas": "68089",
+        "asisten": "A10",
+        "nipp_as": ""
       },
       {
         "no": "7",
@@ -764,10 +764,10 @@
         "lintas": "PWK-BD, PWK-BD",
         "mulai": "15:25",
         "habis": "01:05",
-        "masinis": "CECEP ARI NUGRAHA",
-        "nipp_mas": "68089",
-        "asisten": "AGUNG PANGESTU",
-        "nipp_as": "75699"
+        "masinis": "HERI ISKANDAR",
+        "nipp_mas": "55042",
+        "asisten": "UJANG SURYA",
+        "nipp_as": "50162"
       },
       {
         "no": "8",
@@ -776,10 +776,10 @@
         "lintas": "PWK-CKR, PWK-CKR",
         "mulai": "09:15",
         "habis": "15:20",
-        "masinis": "HERI ISKANDAR",
-        "nipp_mas": "55042",
-        "asisten": "UJANG SURYA",
-        "nipp_as": "50162"
+        "masinis": "ARIS SETIAWAN",
+        "nipp_mas": "69943",
+        "asisten": "MAHESA BIMA ADI PANGESTU",
+        "nipp_as": "73831"
       },
       {
         "no": "9",
@@ -788,9 +788,9 @@
         "lintas": "CREW KA PWK",
         "mulai": "08:00",
         "habis": "16:00",
-        "masinis": "A10",
+        "masinis": "A3-A4",
         "nipp_mas": "",
-        "asisten": "A10",
+        "asisten": "CT",
         "nipp_as": ""
       },
       {
@@ -800,10 +800,10 @@
         "lintas": "PWK-CKR, PWK-CKR",
         "mulai": "09:20",
         "habis": "13:38",
-        "masinis": "ARIS SETIAWAN",
-        "nipp_mas": "69943",
-        "asisten": "MAHESA BIMA ADI PANGESTU",
-        "nipp_as": "73831"
+        "masinis": "UNGGUL HENDRA EKA PRATAMA",
+        "nipp_mas": "54730",
+        "asisten": "AGUNG PANGESTU",
+        "nipp_as": "75699"
       },
       {
         "no": "11",
@@ -812,10 +812,10 @@
         "lintas": "",
         "mulai": "",
         "habis": "",
-        "masinis": "UNGGUL HENDRA EKA PRATAMA",
-        "nipp_mas": "54730",
-        "asisten": "ANTO KRISTANTO",
-        "nipp_as": "67833"
+        "masinis": "JUNAEDI",
+        "nipp_mas": "60722",
+        "asisten": "FAYZA HAFIZH ARDIANSYAH",
+        "nipp_as": "74126"
       }
     ],
     "klb": [
@@ -1006,7 +1006,6 @@
     ],
     "cuti": [
       {
-        "no": 1,
         "diklap": "",
         "cuti": "",
         "csk": "",
