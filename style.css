@@ -160,3 +160,131 @@ body {
     transform: scale(2.5); /* Memperbesar gambar 2.5 kali lipat */
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* Menambah bayangan agar terlihat melayang */
 }
+
+/* ======================================================================
+  PENYESUAIAN RESPONSIVE - MOBILE & TABLET 
+======================================================================
+*/
+
+/* Untuk layar dengan lebar maksimum 768px (Tablet portrait dan ponsel) */
+@media (max-width: 768px) {
+    /* 1. Sembunyikan sidebar untuk memberi ruang bagi konten utama */
+    .sidebar {
+        display: none;
+    }
+
+    /* 2. Sesuaikan header agar lebih ringkas */
+    header {
+        flex-direction: row; /* Ubah menjadi baris */
+        justify-content: space-between; /* Sebar item */
+        align-items: center;
+        height: 64px; /* Tinggi header yang lebih ringkas */
+        padding: 0 1rem;
+    }
+
+    header .text-center {
+        order: 1; /* Pindahkan judul ke kiri */
+        text-align: left;
+    }
+
+    header .text-center h1 {
+        font-size: 1rem; /* Perkecil font judul utama */
+        line-height: 1.2rem;
+    }
+
+    /* Sembunyikan jam dan tanggal di mobile untuk menghemat ruang */
+    header #clock-time,
+    header #clock-date,
+    header #page-title {
+        display: none;
+    }
+    
+    header .w-1\/4.flex.justify-start {
+      display: none; /* Sembunyikan logo Danantara */
+    }
+
+    header .w-1\/4.flex.justify-end {
+        order: 2; /* Pindahkan logo KAI ke kanan */
+    }
+    
+    header .w-1\/4.flex.justify-end img {
+      height: 2rem; /* Sesuaikan ukuran logo KAI */
+    }
+
+    /* 3. Kurangi padding di area konten */
+    #content-area {
+        padding: 0.75rem;
+    }
+
+    /* 4. Perkecil ukuran font judul di dalam konten */
+    .content-section h2 {
+        font-size: 1.25rem;
+    }
+
+    .content-section h3 {
+        font-size: 1.1rem;
+    }
+    
+    /* 5. Buat tabel lebih ringkas */
+    table, .table {
+        font-size: 0.75rem; /* Perkecil font dasar tabel */
+    }
+
+    th, td {
+        padding: 0.4rem 0.3rem !important; /* Kurangi padding sel tabel, !important untuk override inline style jika ada */
+        white-space: normal; /* Izinkan teks untuk wrap di dalam sel */
+    }
+    
+    /* Pengecualian untuk tabel nominatif yang sangat padat */
+    #pegawaiTable th, #pegawaiTable td {
+        font-size: 0.65rem;
+        padding: 0.2rem !important;
+    }
+
+    #pegawaiTable {
+        min-width: 1200px; /* Pastikan lebar minimum untuk scrolling yang benar */
+    }
+    
+    /* 6. Atur ulang grid untuk beberapa komponen */
+    #struktur-tabs, #jadwal-tabs, #o20-tabs {
+        display: flex;
+        flex-wrap: wrap; /* Izinkan tombol tab untuk turun baris jika tidak muat */
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    /* 7. Penyesuaian untuk kartu KPI agar tidak terlalu tinggi */
+    .kpi-card p.text-3xl {
+        font-size: 1.5rem; /* Perkecil font angka KPI */
+    }
+
+    /* 8. Buat modal login lebih pas di layar kecil */
+    #login-modal .w-full.max-w-sm {
+        max-width: 90%;
+    }
+}
+
+/* Penyesuaian tambahan untuk layar yang sangat kecil (lebar 480px ke bawah) */
+@media (max-width: 480px) {
+    #content-area {
+        padding: 0.5rem;
+    }
+
+    .content-section h2 {
+        font-size: 1.1rem;
+    }
+    
+    /* Sembunyikan gambar tupoksi untuk menghemat ruang, tampilkan hanya teks */
+    #tupoksi .flex-shrink-0 img {
+        display: none;
+    }
+
+    #tupoksi .flex-col.lg\:flex-row {
+        flex-direction: column;
+    }
+    
+    /* Pastikan gambar di halaman keselamatan tidak terlalu besar */
+    #keselamatan .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* Maksimal 2 kolom */
+    }
+}
