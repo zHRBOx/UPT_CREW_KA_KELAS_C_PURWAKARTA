@@ -1,3 +1,56 @@
+/* ===================================================================
+   KODE BARU UNTUK FUNGSI HAMBURGER MENU
+   Kode ini aman dan terisolasi, tidak akan mengganggu kode di bawahnya.
+====================================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+    // Cari elemen-elemen yang dibutuhkan dari HTML
+    const menuButton = document.getElementById('mobile-menu-button');
+    const sidebar = document.querySelector('.sidebar');
+    const appContainer = document.getElementById('app-container');
+
+    // Pastikan semua elemen ada sebelum menambahkan fungsi (mencegah error)
+    if (menuButton && sidebar && appContainer) {
+        
+        // Fungsi untuk membuka/menutup sidebar
+        const toggleMenu = (event) => {
+            event.stopPropagation(); // Mencegah event klik menyebar
+            sidebar.classList.toggle('is-open');
+            appContainer.classList.toggle('sidebar-is-open');
+        };
+
+        // Tambahkan fungsi 'klik' pada tombol hamburger
+        menuButton.addEventListener('click', toggleMenu);
+
+        // Fungsi untuk menutup menu jika area gelap di luar menu di-klik
+        appContainer.addEventListener('click', () => {
+            if (sidebar.classList.contains('is-open')) {
+                sidebar.classList.remove('is-open');
+                appContainer.classList.remove('sidebar-is-open');
+            }
+        });
+
+        // Pastikan klik di dalam sidebar tidak ikut menutup sidebar
+        sidebar.addEventListener('click', (event) => {
+            event.stopPropagation();
+        });
+
+        // Fungsi agar saat item menu di-klik, menu langsung tertutup
+        const navLinks = sidebar.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (sidebar.classList.contains('is-open')) {
+                    sidebar.classList.remove('is-open');
+                    appContainer.classList.remove('sidebar-is-open');
+                }
+            });
+        });
+    }
+});
+
+
+/* ===================================================================
+   KODE LAMA ANDA DIMULAI DARI SINI
+====================================================================== */
 // Endpoint untuk serverless function kita di Netlify.
 const PROXY_ENDPOINT = '/api/github-proxy';
 
@@ -39,7 +92,7 @@ let appData = {
         { nama: 'ARIEF KURNIAWAN', nipp: '42003', jabatan: 'PENYELIA DINASAN', jenis: 'ASP MADYA', berlaku: '27/12/2028', smartcard_url: 'https://www.dropbox.com/scl/fi/6hclvgw4cp94xrqcdibft/3.jpg?rlkey=voauxn7ltnra3sxu5ncr19tdd&raw=1'},
         { nama: 'SUHADI ASMARA', nipp: '44726', jabatan: 'PENYELIA DINASAN', jenis: 'ASP MADYA', berlaku: '30/03/2029', smartcard_url: 'https://www.dropbox.com/scl/fi/v483o4osveb7zwwe5s0rx/4.jpg?rlkey=e312q71zmd8hzlo7x0bytr6hj&raw=1'},
         { nama: 'FAZHAR SEPTIA ILLHAM', nipp: '48552', jabatan: 'PENYELIA DINASAN', jenis: 'ASP MADYA', berlaku: '24/04/2029', smartcard_url: 'https://www.dropbox.com/scl/fi/y86bg9vxxwmtfom3fpg17/5.jpg?rlkey=1xjh0jyxod3t9gqyjdpdi2h8n&raw=1'},
-        { nama: 'MUHAMAD FITRA', nipp: '65933', jabatan: 'PENYELIA DINASAN', jenis: 'ASP MADYA', berlaku: '23/12/2028', smartcard_url: 'https://www.dropbox.com/scl/fi/59e70vaqd4tew2iewq6r4/6.jpg?rlkey=xvdstqnhra3as7kc0tubknddf&raw=1'},
+        { nama: 'MUHAMAD FITRA', nipp: '65933', "jabatan": "PENYELIA DINASAN", "jenis": "ASP MADYA", "berlaku": "23/12/2028", "smartcard_url": "https://www.dropbox.com/scl/fi/59e70vaqd4tew2iewq6r4/6.jpg?rlkey=xvdstqnhra3as7kc0tubknddf&raw=1"},
         { nama: 'RIYAD FIRDAUS', nipp: '47335', jabatan: 'MASINIS MUDA', jenis: 'ASP MUDA', berlaku: '16/07/2028', smartcard_url: 'https://placehold.co/100x63/0D2B4F/FFFFFF?text=Card'},
         { nama: 'UJANG SURYA', nipp: '50162', jabatan: 'MASINIS MUDA', jenis: 'ASP MUDA', berlaku: '16/07/2028', smartcard_url: 'https://placehold.co/100x63/0D2B4F/FFFFFF?text=Card'},
         { nama: 'PUTUT RESTU WIBOWO', nipp: '50298', jabatan: 'MASINIS MUDA', jenis: 'ASP MUDA', berlaku: '28/12/2027', smartcard_url: 'https://placehold.co/100x63/0D2B4F/FFFFFF?text=Card'},
