@@ -142,149 +142,159 @@ body {
 }
 /* -- Efek Zoom untuk Smartcard -- */
 
-/* 1. Jadikan sel tabel sebagai 'jangkar' posisi */
 .smartcard-cell {
     position: relative;
 }
 
-/* 2. Atur gaya dasar dan transisi untuk gambar */
 .smartcard-image {
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     cursor: pointer;
 }
 
-/* 3. Atur efek saat mouse menyentuh area sel */
 .smartcard-cell:hover .smartcard-image {
-    position: absolute; /* Mengangkat gambar dari layout tabel */
-    z-index: 50;      /* Memastikan gambar tampil di atas elemen lain */
-    transform: scale(2.5); /* Memperbesar gambar 2.5 kali lipat */
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* Menambah bayangan agar terlihat melayang */
+    position: absolute; 
+    z-index: 50;      
+    transform: scale(2.5); 
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 /* ======================================================================
-  PENYESUAIAN RESPONSIVE - MOBILE & TABLET 
+  PENYESUAIAN RESPONSIVE v2 - FOKUS PADA KEJELASAN DI PONSEL
 ======================================================================
 */
 
 /* Untuk layar dengan lebar maksimum 768px (Tablet portrait dan ponsel) */
 @media (max-width: 768px) {
-    /* 1. Sembunyikan sidebar untuk memberi ruang bagi konten utama */
+    /* 1. Sembunyikan sidebar dan atur ulang layout utama */
     .sidebar {
         display: none;
     }
-
-    /* 2. Sesuaikan header agar lebih ringkas */
-    header {
-        flex-direction: row; /* Ubah menjadi baris */
-        justify-content: space-between; /* Sebar item */
-        align-items: center;
-        height: 64px; /* Tinggi header yang lebih ringkas */
-        padding: 0 1rem;
+    main {
+        width: 100%;
     }
 
+    /* 2. Header dibuat sangat ringkas */
+    header {
+        height: 60px; /* Tinggi header tetap */
+        padding: 0 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     header .text-center {
-        order: 1; /* Pindahkan judul ke kiri */
         text-align: left;
     }
-
     header .text-center h1 {
-        font-size: 1rem; /* Perkecil font judul utama */
-        line-height: 1.2rem;
+        font-size: 0.9rem; /* Judul lebih kecil tapi jelas */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 200px;
     }
-
-    /* Sembunyikan jam dan tanggal di mobile untuk menghemat ruang */
+    /* Sembunyikan elemen header yang tidak krusial di ponsel */
     header #clock-time,
     header #clock-date,
-    header #page-title {
+    header #page-title,
+    header .w-1\/4.flex.justify-start {
         display: none;
     }
-    
-    header .w-1\/4.flex.justify-start {
-      display: none; /* Sembunyikan logo Danantara */
-    }
-
-    header .w-1\/4.flex.justify-end {
-        order: 2; /* Pindahkan logo KAI ke kanan */
-    }
-    
     header .w-1\/4.flex.justify-end img {
-      height: 2rem; /* Sesuaikan ukuran logo KAI */
+      height: 2rem; /* Ukuran logo KAI */
     }
 
-    /* 3. Kurangi padding di area konten */
+    /* 3. Atur ulang padding dan font konten */
     #content-area {
         padding: 0.75rem;
     }
-
-    /* 4. Perkecil ukuran font judul di dalam konten */
+    .content-section .p-6, .content-section .p-8 {
+        padding: 1rem; /* Kurangi padding di dalam card */
+    }
     .content-section h2 {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
     }
 
-    .content-section h3 {
-        font-size: 1.1rem;
+    /* 4. Optimalkan Tabel untuk Keterbacaan */
+    .table-wrapper, .overflow-x-auto {
+        border: 1px solid #ddd;
+        border-radius: 8px;
     }
     
-    /* 5. Buat tabel lebih ringkas */
     table, .table {
-        font-size: 0.75rem; /* Perkecil font dasar tabel */
+        font-size: 12px; /* Font lebih besar agar mudah dibaca */
     }
 
     th, td {
-        padding: 0.4rem 0.3rem !important; /* Kurangi padding sel tabel, !important untuk override inline style jika ada */
-        white-space: normal; /* Izinkan teks untuk wrap di dalam sel */
-    }
-    
-    /* Pengecualian untuk tabel nominatif yang sangat padat */
-    #pegawaiTable th, #pegawaiTable td {
-        font-size: 0.65rem;
-        padding: 0.2rem !important;
+        padding: 6px 5px !important; /* Padding lebih nyaman */
+        white-space: normal !important; /* SANGAT PENTING: izinkan teks wrap */
+        line-height: 1.4; /* Jarak antar baris lebih baik */
     }
 
+    /* Khusus untuk tabel pegawai yang sangat padat */
     #pegawaiTable {
-        min-width: 1200px; /* Pastikan lebar minimum untuk scrolling yang benar */
+        font-size: 10px;
+        min-width: 1200px; /* Beri lebar minimum untuk scrolling */
+    }
+    #pegawaiTable th {
+        white-space: nowrap !important; /* Biarkan header tidak wrap */
     }
     
-    /* 6. Atur ulang grid untuk beberapa komponen */
+    /* 5. Paksa beberapa layout grid menjadi satu kolom */
+    #dashboard .lg\:grid-cols-3,
+    #pantauan-lintas .md\:grid-cols-2,
+    #perka-container .lg\:grid-cols-2 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    
+    /* 6. Atur ulang tab agar tidak berantakan */
     #struktur-tabs, #jadwal-tabs, #o20-tabs {
-        display: flex;
-        flex-wrap: wrap; /* Izinkan tombol tab untuk turun baris jika tidak muat */
-        justify-content: center;
+        flex-wrap: wrap;
         gap: 0.5rem;
+        padding-bottom: 0.5rem;
     }
     
-    /* 7. Penyesuaian untuk kartu KPI agar tidak terlalu tinggi */
-    .kpi-card p.text-3xl {
-        font-size: 1.5rem; /* Perkecil font angka KPI */
+    /* 7. Penyesuaian Visi & Misi dan AKHLAK */
+    #dashboard .md\:col-span-2,
+    #dashboard .md\:col-span-3 {
+        grid-column: span 1 / span 1;
+        border-right: none;
+        padding: 0;
     }
-
-    /* 8. Buat modal login lebih pas di layar kecil */
-    #login-modal .w-full.max-w-sm {
-        max-width: 90%;
+    #dashboard .md\:col-span-2 {
+        margin-bottom: 1rem;
+    }
+     .grid.grid-cols-2.md\:grid-cols-3.lg\:grid-cols-6 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* Paksa jadi 2 kolom */
     }
 }
 
-/* Penyesuaian tambahan untuk layar yang sangat kecil (lebar 480px ke bawah) */
+/* Penyesuaian tambahan untuk layar yang SANGAT kecil (lebar 480px ke bawah) */
 @media (max-width: 480px) {
     #content-area {
-        padding: 0.5rem;
+        padding: 0.5rem; /* Padding minimal */
+    }
+    .content-section .p-6, .content-section .p-8 {
+        padding: 0.75rem;
+    }
+    header .text-center h1 {
+      max-width: 150px; /* Batasi lagi lebar judul */
     }
 
-    .content-section h2 {
-        font-size: 1.1rem;
-    }
-    
-    /* Sembunyikan gambar tupoksi untuk menghemat ruang, tampilkan hanya teks */
-    #tupoksi .flex-shrink-0 img {
+    /* Sembunyikan gambar pada halaman tupoksi */
+    #tupoksi .flex-shrink-0 {
         display: none;
     }
-
-    #tupoksi .flex-col.lg\:flex-row {
-        flex-direction: column;
+    
+    /* Buat galeri foto menjadi 2 kolom saja */
+    #keselamatan .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     
-    /* Pastikan gambar di halaman keselamatan tidak terlalu besar */
-    #keselamatan .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr)); /* Maksimal 2 kolom */
+    /* Sembunyikan smartcard di tampilan daftar sertifikasi untuk hemat ruang */
+    #sertifikasiTable .smartcard-cell {
+        display: none;
+    }
+    #sertifikasiTable th:nth-child(6),
+    #sertifikasiTable td:nth-child(6) {
+        display: none;
     }
 }
