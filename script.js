@@ -1388,7 +1388,36 @@ function render_kompetensi() {
     ujiUlangBody += `</tbody>`;
     ujiUlangTable.innerHTML = ujiUlangHeader + ujiUlangBody;
     ujiUlangControls.innerHTML = isEditMode ? `<button class="add-row-btn" onclick="addTableRow('ujiUlang')">+ Tambah</button>` : '';
+    // --- PENAMBAHAN LOGIKA AUTOFILL ---
+    if (isEditMode) {
+        const pegawaiDataSource = appData.pegawai;
+        const attachAutocomplete = (tableBodyId) => {
+            const tableBody = document.getElementById(tableBodyId);
+            if (!tableBody) return;
+            tableBody.addEventListener('input', (event) => {
+                if (event.target.dataset.key === 'nipp') {
+                    const nippValue = event.target.value.trim();
+                    const row = event.target.closest('tr');
+                    const namaInput = row.querySelector('input[data-key="nama"]');
+                    const jabatanInput = row.querySelector('input[data-key="jabatan"]');
+                    if (!namaInput || !jabatanInput) return;
+                    const employee = pegawaiDataSource.find(p => p.nipp === nippValue);
+                    if (employee) {
+                        namaInput.value = employee.nama || '';
+                        jabatanInput.value = employee.jabatan || '';
+                    } else {
+                        namaInput.value = '';
+                        jabatanInput.value = '';
+                    }
+                }
+            });
+        };
+        attachAutocomplete('utsUpoTbody');
+        attachAutocomplete('ujiUlangTbody');
+    }
+    // --- AKHIR PENAMBAHAN ---
 }
+
 
 function saveChanges_kompetensi() {
     const newUtsUpoData = saveTableData('utsUpoTbody');
