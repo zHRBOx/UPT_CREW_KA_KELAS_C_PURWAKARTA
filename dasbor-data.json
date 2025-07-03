@@ -1,5 +1,5 @@
 {
-  "lastScheduleUpdate": "2025-07-03T00:00:00.000Z",
+  "lastScheduleUpdate": "2025-07-02T17:00:00.000Z",
   "rekapitulasiPegawai": {
     "nominatif": {
       "kupt": 1,
@@ -840,7 +840,7 @@
     ],
     "klb": [
       {
-        "no": "1",
+        "no": "",
         "nomor_ka": "",
         "lintas": "",
         "mulai": "",
@@ -1014,7 +1014,7 @@
     ],
     "klb": [
       {
-        "no": "",
+        "no": "1",
         "nomor_ka": "",
         "lintas": "",
         "mulai": "",
@@ -1282,12 +1282,12 @@
   },
   "wartaDinas": [
     {
-      "no": 1,
+      "no": "1",
       "warta": "EO/97",
       "tentang": "Go no go item mengalami gangguan sewaktu di perjalanan"
     },
     {
-      "no": 2,
+      "no": "2",
       "warta": "OR/14",
       "tentang": "Pengalihan tugas dan fungsi kdr ke mas dan assmas utuk ka barang"
     }
@@ -1679,11 +1679,11 @@
         "https://www.dropbox.com/scl/fi/xm45ztfcnaeq29hf7nhip/24-1.jpg?rlkey=p8rqamlhqu19qkow06rwx4dvb&st=o80ega9d&dl=1"
       ],
       "tanggapDarurat": [
-        "https://placehold.co/600x400/E0E7FF/0D2B4F?text=Struktur+Tanggap+Darurat"
+        "https://www.dropbox.com/scl/fi/wqfwevdasgiy0jm5u7qq9/27.jpg?rlkey=2sraso2zc9ziotpnrbv4m69cx&st=3hcm7vrh&dl=1"
       ],
       "briefing": {
         "pesan": "Selalu waspada saat melintas di perlintasan sebidang dan perhatikan batas kecepatan. Pastikan komunikasi dengan PPKA berjalan lancar di setiap stasiun.",
-        "review": "<b>[20 Juni 2025]</b> - Anjlokan KA Barang di Lintas Utara. Penyebab: Kerusakan bantalan rel. <i>Tindakan: Peningkatan kewaspadaan saat melewati petak jalan tersebut.</i>"
+        "review": "[20 Juni 2025] - Anjlokan KA Barang di Lintas Utara. Penyebab: Kerusakan bantalan rel. Tindakan: Peningkatan kewaspadaan saat melewati petak jalan tersebut."
       }
     }
   }
