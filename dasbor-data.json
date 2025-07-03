@@ -6,8 +6,8 @@
       "penyeliaInstruktur": 1,
       "penyeliaDinasan": 4,
       "masinis": 15,
-      "asistenMasinis": 3,
-      "jumlah": 24
+      "asistenMasinis": 4,
+      "jumlah": 25
     },
     "cukupanMasinis": {
       "dinasanMurni": 9,
@@ -21,9 +21,9 @@
       "dinasanMurni": 9,
       "lhs": 3,
       "dibutuhkan": 12,
-      "adanyaPegawai": 3,
+      "adanyaPegawai": 4,
       "serep": 1,
-      "kurangLebih": -9
+      "kurangLebih": -8
     }
   },
   "pegawai": [
@@ -2269,7 +2269,7 @@
     "program": {
       "jadwal": [
         {
-          "no_dinasan": 1,
+          "no_dinasan": "1",
           "kode_dinasan": "1",
           "no_ka": "325",
           "namaka": "COMMUTER LINE WALAHAR",
@@ -2284,7 +2284,7 @@
           "istirahat": "03:19"
         },
         {
-          "no_dinasan": 1,
+          "no_dinasan": "1",
           "kode_dinasan": "1",
           "no_ka": "328",
           "namaka": "COMMUTER LINE WALAHAR",
@@ -2299,7 +2299,7 @@
           "istirahat": ""
         },
         {
-          "no_dinasan": 2,
+          "no_dinasan": "2",
           "kode_dinasan": "2",
           "no_ka": "329",
           "namaka": "COMMUTER LINE WALAHAR",
@@ -2314,7 +2314,7 @@
           "istirahat": "01:02"
         },
         {
-          "no_dinasan": 2,
+          "no_dinasan": "2",
           "kode_dinasan": "2",
           "no_ka": "332",
           "namaka": "COMMUTER LINE WALAHAR",
@@ -2329,7 +2329,7 @@
           "istirahat": ""
         },
         {
-          "no_dinasan": 3,
+          "no_dinasan": "3",
           "kode_dinasan": "3",
           "no_ka": "327",
           "namaka": "COMMUTER LINE WALAHAR",
@@ -2344,7 +2344,7 @@
           "istirahat": "02:52"
         },
         {
-          "no_dinasan": 3,
+          "no_dinasan": "3",
           "kode_dinasan": "3",
           "no_ka": "330",
           "namaka": "COMMUTER LINE WALAHAR",
@@ -2359,7 +2359,7 @@
           "istirahat": ""
         },
         {
-          "no_dinasan": 4,
+          "no_dinasan": "4",
           "kode_dinasan": "4",
           "no_ka": "331",
           "namaka": "COMMUTER LINE JATILUHUR",
@@ -2374,7 +2374,7 @@
           "istirahat": "02:27"
         },
         {
-          "no_dinasan": 4,
+          "no_dinasan": "4",
           "kode_dinasan": "4",
           "no_ka": "336",
           "namaka": "COMMUTER LINE JATILUHUR",
@@ -2389,7 +2389,7 @@
           "istirahat": ""
         },
         {
-          "no_dinasan": 4,
+          "no_dinasan": "4",
           "kode_dinasan": "4",
           "no_ka": "337",
           "namaka": "COMMUTER LINE JATILUHUR",
@@ -2404,7 +2404,7 @@
           "istirahat": ""
         },
         {
-          "no_dinasan": 4,
+          "no_dinasan": "4",
           "kode_dinasan": "4",
           "no_ka": "334",
           "namaka": "COMMUTER LINE JATILUHUR",
@@ -2419,7 +2419,7 @@
           "istirahat": ""
         },
         {
-          "no_dinasan": 5,
+          "no_dinasan": "5",
           "kode_dinasan": "5",
           "no_ka": "R335",
           "namaka": "DINAS RANGKAIAN COMMUTER LINE JATILUHUR",
@@ -2434,7 +2434,7 @@
           "istirahat": "02:12"
         },
         {
-          "no_dinasan": 5,
+          "no_dinasan": "5",
           "kode_dinasan": "5",
           "no_ka": "335",
           "namaka": "COMMUTER LINE JATILUHUR",
@@ -2449,7 +2449,7 @@
           "istirahat": "02:55"
         },
         {
-          "no_dinasan": 5,
+          "no_dinasan": "5",
           "kode_dinasan": "5",
           "no_ka": "326",
           "namaka": "COMMUTER LINE WALAHAR",
@@ -2464,7 +2464,7 @@
           "istirahat": ""
         },
         {
-          "no_dinasan": 6,
+          "no_dinasan": "6",
           "kode_dinasan": "6",
           "no_ka": "338",
           "namaka": "COMMUTER LINE JATILUHUR",
@@ -2479,7 +2479,7 @@
           "istirahat": "02:40"
         },
         {
-          "no_dinasan": 7,
+          "no_dinasan": "7",
           "kode_dinasan": "7",
           "no_ka": "R325-2",
           "namaka": "DINAS RANGKAIAN COMMUTER LINE R WALAHAR",
@@ -2494,7 +2494,7 @@
           "istirahat": ""
         },
         {
-          "no_dinasan": 8,
+          "no_dinasan": "8",
           "kode_dinasan": "8AB",
           "no_ka": "348",
           "namaka": "COMMUTER LINE GARUT",
@@ -2509,7 +2509,7 @@
           "istirahat": "06:26"
         },
         {
-          "no_dinasan": 8,
+          "no_dinasan": "8",
           "kode_dinasan": "8AB",
           "no_ka": "349",
           "namaka": "COMMUTER LINE GARUT",
@@ -2524,7 +2524,7 @@
           "istirahat": ""
         },
         {
-          "no_dinasan": 9,
+          "no_dinasan": "9",
           "kode_dinasan": "9AB",
           "no_ka": "350",
           "namaka": "COMMUTER LINE GARUT",
@@ -2539,7 +2539,7 @@
           "istirahat": "01:55"
         },
         {
-          "no_dinasan": 9,
+          "no_dinasan": "9",
           "kode_dinasan": "9AB",
           "no_ka": "367",
           "namaka": "COMMUTER LINE BANDUNG RAYA",
@@ -2554,7 +2554,7 @@
           "istirahat": ""
         },
         {
-          "no_dinasan": 10,
+          "no_dinasan": "10",
           "kode_dinasan": "10",
           "no_ka": "SEREP PAGI",
           "namaka": "-",
