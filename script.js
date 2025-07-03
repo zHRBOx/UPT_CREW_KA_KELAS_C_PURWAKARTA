@@ -1087,11 +1087,11 @@ function render_struktur() {
             </div>
             <div class="mt-6">
                 <div id="pusat-content" class="tab-content active p-4">
-                    <h3 class="text-xl font-bold text-[#0D2B4F] mb-4 text-center">Struktur Organisasi Train Crew Operation</h3>
+                    <h3 class="text-xl font-bold text-[#0D2B4F] mb-4 text-center">STRUKTUR ORGANISASI DIREKTORAT OPERASI</h3>
                     ${createEditableImage('pusat', 'Direktorat Operasi', data.pusat)}
                 </div>
                 <div id="daop2-content" class="tab-content p-4">
-                    <h3 class="text-xl font-bold text-[#0D2B4F] mb-4 text-center">Struktur Organisasi Operasi DAOP 2 Bandung</h3>
+                    <h3 class="text-xl font-bold text-[#0D2B4F] mb-4 text-center">STRUKTUR ORGANISASI DAERAH OPERASI 2 BANDUNG</h3>
                     ${createEditableImage('daop2', 'DAOP 2 Bandung', data.daop2)}
                 </div>
                 <div id="upt-content" class="tab-content p-4">
