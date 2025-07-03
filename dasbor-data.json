@@ -1,5 +1,5 @@
 {
-  "lastScheduleUpdate": "2025-07-02T17:00:00.000Z",
+  "lastScheduleUpdate": "2025-07-03T00:00:00.000Z",
   "rekapitulasiPegawai": {
     "nominatif": {
       "kupt": 1,
@@ -840,7 +840,7 @@
     ],
     "klb": [
       {
-        "no": "",
+        "no": "1",
         "nomor_ka": "",
         "lintas": "",
         "mulai": "",
@@ -1014,7 +1014,7 @@
     ],
     "klb": [
       {
-        "no": "1",
+        "no": "",
         "nomor_ka": "",
         "lintas": "",
         "mulai": "",
