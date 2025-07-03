@@ -534,8 +534,11 @@ function rerenderCurrentSection() {
     const renderFunction = window[`render_${activeSectionId.replace(/-/g, '_')}`];
     if (typeof renderFunction === 'function') {
         renderFunction();
-    } else if (!sections[activeSectionId].content) {
-        document.getElementById(activeSectionId).innerHTML = `<div class="text-center p-10 text-gray-500">Konten untuk halaman ini belum tersedia.</div>`;
+    } else if (sections[activeSectionId] && sections[activeSectionId].content) {
+        // Fallback for static content if any remains
+        document.getElementById(activeSectionId).innerHTML = sections[activeSectionId].content;
+    } else {
+        document.getElementById(activeSectionId).innerHTML = `<div class="text-center p-10 text-gray-500">Konten untuk halaman ini belum tersedia atau gagal dimuat.</div>`;
     }
 }
 
@@ -1104,6 +1107,7 @@ function saveChanges_struktur() {
     appData.pageData.struktur.daop2 = document.getElementById('edit-struktur-daop2').value;
     appData.pageData.struktur.upt = document.getElementById('edit-struktur-upt').value;
 }
+
 
 function render_tupoksi() {
     const contentEl = document.getElementById('tupoksi');
