@@ -1,5 +1,5 @@
 {
-  "lastScheduleUpdate": "2025-07-03T00:00:00.000Z",
+  "lastScheduleUpdate": "2025-07-02T17:00:00.000Z",
   "rekapitulasiPegawai": {
     "nominatif": {
       "kupt": 1,
@@ -840,7 +840,7 @@
     ],
     "klb": [
       {
-        "no": "1",
+        "no": "",
         "nomor_ka": "",
         "lintas": "",
         "mulai": "",
@@ -1014,7 +1014,7 @@
     ],
     "klb": [
       {
-        "no": "",
+        "no": "1",
         "nomor_ka": "",
         "lintas": "",
         "mulai": "",
@@ -1735,21 +1735,6 @@
       "nama": "ROFI NOVIYANUS",
       "nipp": "54706",
       "jabatan": "MASINIS MADYA",
-      "tgl_uji": "03 MARET",
-      "nilai_teori": "100",
-      "waw_sarana": "",
-      "waw_operasi": "",
-      "prak_perka": "100",
-      "prak_adm": "",
-      "keterangan": "LULUS",
-      "penguji": "",
-      "ka": ""
-    },
-    {
-      "no": "",
-      "nama": "",
-      "nipp": "",
-      "jabatan": "",
       "tgl_uji": "",
       "nilai_teori": "",
       "waw_sarana": "",
@@ -1761,10 +1746,10 @@
       "ka": ""
     },
     {
-      "no": "",
-      "nama": "",
-      "nipp": "",
-      "jabatan": "",
+      "no": "2",
+      "nama": "ARIEF KURNIAWAN",
+      "nipp": "42003",
+      "jabatan": "PENYELIA DINASAN",
       "tgl_uji": "",
       "nilai_teori": "",
       "waw_sarana": "",
@@ -1776,10 +1761,10 @@
       "ka": ""
     },
     {
-      "no": "",
-      "nama": "",
-      "nipp": "",
-      "jabatan": "",
+      "no": "3",
+      "nama": "SUHADI ASMARA",
+      "nipp": "44726",
+      "jabatan": "PENYELIA DINASAN",
       "tgl_uji": "",
       "nilai_teori": "",
       "waw_sarana": "",
@@ -1791,10 +1776,10 @@
       "ka": ""
     },
     {
-      "no": "",
-      "nama": "",
-      "nipp": "",
-      "jabatan": "",
+      "no": "4",
+      "nama": "FAZHAR SEPTIA ILLHAM",
+      "nipp": "48552",
+      "jabatan": "PENYELIA DINASAN",
       "tgl_uji": "",
       "nilai_teori": "",
       "waw_sarana": "",
@@ -1806,10 +1791,10 @@
       "ka": ""
     },
     {
-      "no": "",
-      "nama": "",
-      "nipp": "",
-      "jabatan": "",
+      "no": "5",
+      "nama": "MUHAMAD FITRA",
+      "nipp": "65933",
+      "jabatan": "PENYELIA DINASAN",
       "tgl_uji": "",
       "nilai_teori": "",
       "waw_sarana": "",
@@ -1821,10 +1806,10 @@
       "ka": ""
     },
     {
-      "no": "",
-      "nama": "",
-      "nipp": "",
-      "jabatan": "",
+      "no": "6",
+      "nama": "RIYAD FIRDAUS",
+      "nipp": "47335",
+      "jabatan": "MASINIS MUDA",
       "tgl_uji": "",
       "nilai_teori": "",
       "waw_sarana": "",
@@ -1836,10 +1821,10 @@
       "ka": ""
     },
     {
-      "no": "",
-      "nama": "",
-      "nipp": "",
-      "jabatan": "",
+      "no": "7",
+      "nama": "UJANG SURYA",
+      "nipp": "50162",
+      "jabatan": "MASINIS MUDA",
       "tgl_uji": "",
       "nilai_teori": "",
       "waw_sarana": "",
@@ -1851,10 +1836,10 @@
       "ka": ""
     },
     {
-      "no": "",
-      "nama": "",
-      "nipp": "",
-      "jabatan": "",
+      "no": "8",
+      "nama": "PUTUT RESTU WIBOWO",
+      "nipp": "50298",
+      "jabatan": "MASINIS MUDA",
       "tgl_uji": "",
       "nilai_teori": "",
       "waw_sarana": "",
@@ -1866,10 +1851,10 @@
       "ka": ""
     },
     {
-      "no": "",
-      "nama": "",
-      "nipp": "",
-      "jabatan": "",
+      "no": "9",
+      "nama": "UNGGUL HENDRA EKA PRANOTO",
+      "nipp": "54730",
+      "jabatan": "MASINIS MUDA",
       "tgl_uji": "",
       "nilai_teori": "",
       "waw_sarana": "",
@@ -1881,10 +1866,10 @@
       "ka": ""
     },
     {
-      "no": "",
-      "nama": "",
-      "nipp": "",
-      "jabatan": "",
+      "no": "10",
+      "nama": "APEP ANDRIANTO",
+      "nipp": "55037",
+      "jabatan": "MASINIS MUDA",
       "tgl_uji": "",
       "nilai_teori": "",
       "waw_sarana": "",
@@ -1896,10 +1881,10 @@
       "ka": ""
     },
     {
-      "no": "",
-      "nama": "",
-      "nipp": "",
-      "jabatan": "",
+      "no": "11",
+      "nama": "HERI ISKANDAR",
+      "nipp": "55042",
+      "jabatan": "MASINIS MUDA",
       "tgl_uji": "",
       "nilai_teori": "",
       "waw_sarana": "",
@@ -1911,10 +1896,10 @@
       "ka": ""
     },
     {
-      "no": "",
-      "nama": "",
-      "nipp": "",
-      "jabatan": "",
+      "no": "12",
+      "nama": "MURDANI",
+      "nipp": "55045",
+      "jabatan": "MASINIS MUDA",
       "tgl_uji": "",
       "nilai_teori": "",
       "waw_sarana": "",
@@ -1926,10 +1911,10 @@
       "ka": ""
     },
     {
-      "no": "",
-      "nama": "",
-      "nipp": "",
-      "jabatan": "",
+      "no": "13",
+      "nama": "ALIF SUHARDIMAN",
+      "nipp": "60567",
+      "jabatan": "MASINIS MUDA",
       "tgl_uji": "",
       "nilai_teori": "",
       "waw_sarana": "",
@@ -1941,10 +1926,10 @@
       "ka": ""
     },
     {
-      "no": "",
-      "nama": "",
-      "nipp": "",
-      "jabatan": "",
+      "no": "14",
+      "nama": "NOPIYANA",
+      "nipp": "60676",
+      "jabatan": "MASINIS MUDA",
       "tgl_uji": "",
       "nilai_teori": "",
       "waw_sarana": "",
@@ -1956,10 +1941,10 @@
       "ka": ""
     },
     {
-      "no": "",
-      "nama": "",
-      "nipp": "",
-      "jabatan": "",
+      "no": "15",
+      "nama": "JUNAEDI",
+      "nipp": "60722",
+      "jabatan": "MASINIS MUDA",
       "tgl_uji": "",
       "nilai_teori": "",
       "waw_sarana": "",
@@ -1971,10 +1956,10 @@
       "ka": ""
     },
     {
-      "no": "",
-      "nama": "",
-      "nipp": "",
-      "jabatan": "",
+      "no": "16",
+      "nama": "ANDRI NURJANA",
+      "nipp": "64928",
+      "jabatan": "MASINIS MUDA",
       "tgl_uji": "",
       "nilai_teori": "",
       "waw_sarana": "",
@@ -1986,10 +1971,10 @@
       "ka": ""
     },
     {
-      "no": "",
-      "nama": "",
-      "nipp": "",
-      "jabatan": "",
+      "no": "17",
+      "nama": "ANDRIANA",
+      "nipp": "65975",
+      "jabatan": "MASINIS MUDA",
       "tgl_uji": "",
       "nilai_teori": "",
       "waw_sarana": "",
@@ -2001,10 +1986,10 @@
       "ka": ""
     },
     {
-      "no": "",
-      "nama": "",
-      "nipp": "",
-      "jabatan": "",
+      "no": "18",
+      "nama": "ANTO KRISTANTO",
+      "nipp": "67833",
+      "jabatan": "MASINIS MUDA",
       "tgl_uji": "",
       "nilai_teori": "",
       "waw_sarana": "",
@@ -2016,10 +2001,10 @@
       "ka": ""
     },
     {
-      "no": "",
-      "nama": "",
-      "nipp": "",
-      "jabatan": "",
+      "no": "19",
+      "nama": "CECEP ARI NUGRAHA",
+      "nipp": "68089",
+      "jabatan": "MASINIS MUDA",
       "tgl_uji": "",
       "nilai_teori": "",
       "waw_sarana": "",
@@ -2031,10 +2016,10 @@
       "ka": ""
     },
     {
-      "no": "",
-      "nama": "",
-      "nipp": "",
-      "jabatan": "",
+      "no": "20",
+      "nama": "ARIS SETIAWAN",
+      "nipp": "69943",
+      "jabatan": "MASINIS MUDA",
       "tgl_uji": "",
       "nilai_teori": "",
       "waw_sarana": "",
@@ -2046,10 +2031,10 @@
       "ka": ""
     },
     {
-      "no": "",
-      "nama": "",
-      "nipp": "",
-      "jabatan": "",
+      "no": "21",
+      "nama": "ANTONIUS TRI SETYANTO",
+      "nipp": "73829",
+      "jabatan": "MASINIS PERTAMA",
       "tgl_uji": "",
       "nilai_teori": "",
       "waw_sarana": "",
@@ -2061,10 +2046,25 @@
       "ka": ""
     },
     {
-      "no": "",
-      "nama": "",
-      "nipp": "",
-      "jabatan": "",
+      "no": "22",
+      "nama": "MAHESA BIMA ADI PANGESTU",
+      "nipp": "73831",
+      "jabatan": "MASINIS PERTAMA",
+      "tgl_uji": "",
+      "nilai_teori": "",
+      "waw_sarana": "",
+      "waw_operasi": "",
+      "prak_perka": "",
+      "prak_adm": "",
+      "keterangan": "",
+      "penguji": "",
+      "ka": ""
+    },
+    {
+      "no": "23",
+      "nama": "FAYZA HAFIZH ARDIANSYAH",
+      "nipp": "74126",
+      "jabatan": "MASINIS PERTAMA",
       "tgl_uji": "",
       "nilai_teori": "",
       "waw_sarana": "",
