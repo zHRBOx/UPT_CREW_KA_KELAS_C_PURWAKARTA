@@ -6,8 +6,8 @@
       "penyeliaInstruktur": 1,
       "penyeliaDinasan": 4,
       "masinis": 15,
-      "asistenMasinis": 4,
-      "jumlah": 25
+      "asistenMasinis": 3,
+      "jumlah": 24
     },
     "cukupanMasinis": {
       "dinasanMurni": 9,
@@ -23,7 +23,7 @@
       "dibutuhkan": 12,
       "adanyaPegawai": 4,
       "serep": 1,
-      "kurangLebih": -8
+      "kurangLebih": -9
     }
   },
   "pegawai": [
