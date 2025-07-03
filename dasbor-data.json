@@ -2647,7 +2647,11 @@
       "briefing": {
         "pesan": "Selalu waspada saat melintas di perlintasan sebidang dan perhatikan batas kecepatan. Pastikan komunikasi dengan PPKA berjalan lancar di setiap stasiun.",
         "review": "NIHIL"
-      }
+      },
+      "tanggapDarurat": [
+        "https://www.dropbox.com/scl/fi/wqfwevdasgiy0jm5u7qq9/27.jpg?rlkey=2sraso2zc9ziotpnrbv4m69cx&st=en2wh8qs&dl=1"
+      ]
     }
-  }
+  },
+  "lastScheduleUpdate": "2025-07-02T17:00:00.000Z"
 }
