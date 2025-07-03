@@ -56,6 +56,7 @@ const PROXY_ENDPOINT = '/api/github-proxy';
 
 // Data default jika gagal memuat dari remote atau local storage.
 let appData = {
+    lastScheduleUpdate: '', // PENYIMPANAN TANGGAL ROTASI JADWAL
     rekapitulasiPegawai: {
         nominatif: { kupt: 1, penyeliaInstruktur: 1, penyeliaDinasan: 4, masinis: 15, asistenMasinis: 3, jumlah: 24 },
         cukupanMasinis: { dinasanMurni: 9, lhs: 3, dibutuhkan: 12, adanyaPegawai: 15, serep: 1, kurangLebih: 3 },
@@ -221,6 +222,14 @@ let appData = {
         dashboard: {
             bestEmployee: { nama: 'HERI ISKANDAR', nipp: '55042', foto: 'https://www.dropbox.com/scl/fi/jctkl5g1bcw0ipv5m9vff/7.jpg?rlkey=o8yxba0spafp087rwftfyv4gw&st=sjrta404&dl=1' }
         },
+        profil: {
+            mainImage: 'https://upload.wikimedia.org/wikipedia/commons/2/24/Arya.train.crew.building.purwakarta.2019.jpg'
+        },
+        struktur: {
+            pusat: 'https://www.dropbox.com/scl/fi/cuhmqm6bgvckel9pmn7fc/PUSAT.png?rlkey=4sza7i77ehcgo1mk3htyw4ufx&st=vp29t2wf&dl=1',
+            daop2: 'https://www.dropbox.com/scl/fi/j658tpmrxjst12ni7p05w/DAOP.png?rlkey=3iwole5l971t2uuxidvs5m30f&st=zuatdhyu&dl=1',
+            upt: 'https://www.dropbox.com/scl/fi/dpaeklr9t96m257ut6reo/UPT-CREW.png?rlkey=xhn1anq4dduxuap8ynz3die7u&st=2moepz5t&dl=1'
+        },
         tupoksi: {
             kupt: { nama: 'Yadi Supriadi', nipp: '44662', foto: 'https://www.dropbox.com/scl/fi/u1ecdsbxlv5k1c0phz4s9/1.jpg?rlkey=52el3zbql0ttpn0q6gtid1f0j&st=q5mx46gw&dl=1' },
             instruktur: { nama: 'Rofi Noviyanus', nipp: '54706', foto: 'https://www.dropbox.com/scl/fi/gck5kbyawzo1d6jokm2zw/2.jpg?rlkey=pfwcg6an9dyh2c24y1i7os4vj&st=klkxiwni&dl=1' },
@@ -235,6 +244,7 @@ let appData = {
             ibpr: [ 'https://www.dropbox.com/scl/fi/foubkekd9xjnxp5dnbay4/9-1.jpg?rlkey=ypa3luo4vbnflpptp0h30cp80&st=884bngiq&dl=1', 'https://www.dropbox.com/scl/fi/3rz9ukokcl5a0a8vjaw42/10-1.jpg?rlkey=xylwfnpzfm5d7o4nk8041dlv8&st=mmmq3yy8&dl=1' ],
             kebijakan: [ 'https://www.dropbox.com/scl/fi/34x5ljtq290tpowvn87be/22-1.jpg?rlkey=fojfe2pl9pkqnse4x3w5qojbq&st=ufqisnju&dl=1' ],
             integritas: [ 'https://www.dropbox.com/scl/fi/xm45ztfcnaeq29hf7nhip/24-1.jpg?rlkey=p8rqamlhqu19qkow06rwx4dvb&st=o80ega9d&dl=1' ],
+            tanggapDarurat: [ 'https://placehold.co/600x400/E0E7FF/0D2B4F?text=Struktur+Tanggap+Darurat' ],
             briefing: {
                 pesan: 'Selalu waspada saat melintas di perlintasan sebidang dan perhatikan batas kecepatan. Pastikan komunikasi dengan PPKA berjalan lancar di setiap stasiun.',
                 review: '<b>[20 Juni 2025]</b> - Anjlokan KA Barang di Lintas Utara. Penyebab: Kerusakan bantalan rel. <i>Tindakan: Peningkatan kewaspadaan saat melewati petak jalan tersebut.</i>'
@@ -245,14 +255,8 @@ let appData = {
 
 const sections = {
     dashboard: { title: 'Dasbor Utama' },
-    profil: {
-        title: 'Profil UPT Crew KA',
-        content: `<div class="bg-white p-8 rounded-lg shadow"><h2 class="text-2xl font-bold text-[#0D2B4F] mb-4">Profil UPT Crew KA Kelas C Purwakarta</h2><div class="flex flex-col md:flex-row gap-8 items-center"><img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Arya.train.crew.building.purwakarta.2019.jpg" alt="Kantor UPT Purwakarta" class="w-full md:w-1/2 rounded-lg object-cover"><div class="text-gray-800 space-y-6"><p class="text-xl font-bold leading-relaxed text-justify">UPT Crew KA Purwakarta adalah Unit Pelaksana Teknis yang berada di wilayah Daop 2 Bandung yang memiliki wewenang dan bertanggung jawab dalam penugasan masinis dan asisten masinis untuk dinas kereta api, langsir, atau dinas cadangan di stasiun awal pemberangkatan kereta api atau di stasiun pergantian awak KA.</p><p class="text-xl font-bold leading-relaxed text-justify">Berlokasi di wilayah paling barat Daerah Operasi 2 Bandung, UPT Crew KA Purwakarta menjadi garda terdepan yang berbatasan langsung dengan wilayah Daerah Operasi 1 Jakarta, memegang peranan krusial dalam kelancaran operasional kereta api di lintas barat.</p></div></div></div>`
-    },
-    struktur: {
-        title: 'Struktur Organisasi',
-        content: `<div class="bg-white p-6 rounded-lg shadow"><div class="border-b border-gray-200"><nav id="struktur-tabs" class="-mb-px flex space-x-8" aria-label="Tabs"><button onclick="switchTab('struktur', 'upt')" class="tab-button active whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">UPT Crew KA Kelas C Purwakarta</button><button onclick="switchTab('struktur', 'daop2')" class="tab-button whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300">DAERAH OPERASI 2 BANDUNG</button><button onclick="switchTab('struktur', 'pusat')" class="tab-button whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300">DIREKTORAT OPERASI</button></nav></div><div class="mt-6"><div id="upt-content" class="tab-content active p-4"><h3 class="text-xl font-bold text-[#0D2B4F] mb-4 text-center">Struktur Organisasi UPT Crew KA Kelas C Purwakarta</h3><img src="https://www.dropbox.com/scl/fi/dpaeklr9t96m257ut6reo/UPT-CREW.png?rlkey=xhn1anq4dduxuap8ynz3die7u&st=2moepz5t&dl=1" alt="Bagan Struktur Organisasi UPT Crew KA Purwakarta" class="w-full h-auto rounded-lg shadow-md object-contain mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/1200x800/E0E7FF/0D2B4F?text=Gagal+Memuat+Bagan+UPT';"></div><div id="daop2-content" class="tab-content p-4"><h3 class="text-xl font-bold text-[#0D2B4F] mb-4 text-center">Struktur Organisasi Operasi DAOP 2 Bandung</h3><img src="https://www.dropbox.com/scl/fi/j658tpmrxjst12ni7p05w/DAOP.png?rlkey=3iwole5l971t2uuxidvs5m30f&st=zuatdhyu&dl=1" alt="Bagan Struktur Organisasi DAOP 2 Bandung" class="w-full h-auto rounded-lg shadow-md object-contain mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/1200x800/E0E7FF/0D2B4F?text=Gagal+Memuat+Bagan+DAOP+2';"></div><div id="pusat-content" class="tab-content p-4"><h3 class="text-xl font-bold text-[#0D2B4F] mb-4 text-center">Struktur Organisasi Train Crew Operation</h3><img src="https://www.dropbox.com/scl/fi/cuhmqm6bgvckel9pmn7fc/PUSAT.png?rlkey=4sza7i77ehcgo1mk3htyw4ufx&st=vp29t2wf&dl=1" alt="Bagan Struktur Organisasi Direktorat Operasi" class="w-full h-auto rounded-lg shadow-md object-contain mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/1200x800/E0E7FF/0D2B4F?text=Gagal+Memuat+Bagan+Pusat';"></div></div></div>`
-    },
+    profil: { title: 'Profil UPT Crew KA', content: '' },
+    struktur: { title: 'Struktur Organisasi', content: '' },
     tupoksi: { title: 'Tugas Pokok & Tanggung Jawab' },
     'rekapitulasi-pegawai': { title: 'Rekapitulasi & Program' },
     pegawai: { title: 'Daftar Nominatif Pegawai' },
@@ -685,33 +689,38 @@ function clearScheduleData(schedule) {
 function manageScheduleRotation() {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
-    const lastVisitString = localStorage.getItem('lastVisitDate');
-    if (!lastVisitString) {
-        localStorage.setItem('lastVisitDate', today.toISOString());
+
+    const lastUpdateString = appData.lastScheduleUpdate;
+
+    if (!lastUpdateString) {
+        console.log('Inisialisasi tanggal update jadwal untuk pertama kali.');
+        appData.lastScheduleUpdate = today.toISOString();
         return;
     }
-    const lastVisitDate = new Date(lastVisitString);
-    lastVisitDate.setHours(0, 0, 0, 0);
-    const timeDiff = today.getTime() - lastVisitDate.getTime();
-    const dayDifference = Math.round(timeDiff / (1000 * 3600 * 24));
-    if (dayDifference === 1) {
-        console.log("Rotasi jadwal normal terdeteksi.");
+
+    const lastUpdateDate = new Date(lastUpdateString);
+    lastUpdateDate.setHours(0, 0, 0, 0);
+
+    if (today.getTime() > lastUpdateDate.getTime()) {
+        const diffDays = Math.round((today.getTime() - lastUpdateDate.getTime()) / (1000 * 60 * 60 * 24));
+        console.log(`Terdeteksi perubahan tanggal sebanyak ${diffDays} hari. Merotasi jadwal.`);
+        
         appData.jadwalHariIni = JSON.parse(JSON.stringify(appData.jadwalBesok));
-        // [BUG FIX]: Memperbaiki kesalahan pengetikan dari 'appDara' menjadi 'appData'.
         clearScheduleData(appData.jadwalBesok);
-    } else if (dayDifference > 1) {
-        console.log("Data jadwal basi terdeteksi. Mengosongkan kedua jadwal.");
-        clearScheduleData(appData.jadwalHariIni);
-        clearScheduleData(appData.jadwalBesok);
+        appData.lastScheduleUpdate = today.toISOString();
+
+        console.log('Menyimpan data jadwal yang telah dirotasi ke remote...');
+        localStorage.setItem('appData', JSON.stringify(appData));
+        uploadDataSecurely(appData).catch(err => {
+            console.error("Gagal melakukan sinkronisasi otomatis setelah rotasi jadwal:", err);
+            showCustomAlert('Rotasi jadwal berhasil, tapi gagal sinkronisasi ke server.', 'error');
+        });
+
     } else {
-        // Jika tidak ada perbedaan hari, tidak melakukan apa-apa.
-        return;
+        console.log('Tanggal tidak berubah. Jadwal hari ini tetap sama.');
     }
-    // Simpan data yang sudah dirotasi dan tanggal kunjungan terakhir.
-    localStorage.setItem('lastVisitDate', today.toISOString());
-    localStorage.setItem('appData', JSON.stringify(appData));
-    uploadDataSecurely(appData).catch(err => console.error("Gagal sinkronisasi otomatis setelah rotasi:", err));
 }
+
 
 function addTableRow(dataKey, subKey = null, thirdKey = null) {
     // [DIPERBAIKI] Simpan data yang ada di tabel sebelum menambahkan baris baru
@@ -814,7 +823,6 @@ function saveTableData(tbodyId) {
 
 // --- FUNGSI KALKULASI & RENDER ---
 
-// [PERBAIKAN] Fungsi kalkulasi yang telah diperbaiki
 function calculateKeteranganDinasan() {
     const jadwal = appData.jadwalHariIni;
     const result = {
@@ -834,7 +842,6 @@ function calculateKeteranganDinasan() {
 
     if (!jadwal) return result;
 
-    // Ambil daftar NIPP dari manajemen
     const penyeliaInstrukturNipps = appData.pegawai
         .filter(p => p.jabatan.toUpperCase() === 'PENYELIA INSTRUKTUR')
         .map(p => p.nipp);
@@ -842,17 +849,14 @@ function calculateKeteranganDinasan() {
         .filter(p => p.jabatan.toUpperCase() === 'PENYELIA DINASAN')
         .map(p => p.nipp);
 
-    // Fungsi untuk memproses satu awak KA (Masinis atau Asisten)
     const processAwakKA = (nipp, dinasType) => {
-        if (!nipp) return; // Lewati jika tidak ada NIPP
+        if (!nipp) return;
 
-        // Cek apakah NIPP termasuk manajemen
         if (penyeliaInstrukturNipps.includes(nipp)) {
             result.manajemenInstrukturDinas++;
         } else if (penyeliaDinasanNipps.includes(nipp)) {
             result.manajemenPenyeliaDinas++;
         } else {
-            // Jika bukan manajemen, hitung sebagai ASP Dinas
             if (dinasType === 'reguler') {
                 result.dinasanReguler++;
             } else if (dinasType === 'klb') {
@@ -861,40 +865,34 @@ function calculateKeteranganDinasan() {
         }
     };
 
-    // Proses Jadwal Reguler
     if (jadwal.reguler && Array.isArray(jadwal.reguler)) {
         jadwal.reguler.forEach(row => {
             const noKa = (row.nomor_ka || '').toUpperCase();
-            let crewCount = 0;
-            if (row.nipp_mas && row.nipp_mas.trim() !== '') crewCount++;
-            if (row.nipp_as && row.nipp_as.trim() !== '') crewCount++;
+            let hasMasinis = row.nipp_mas && row.nipp_mas.trim() !== '';
+            let hasAsisten = row.nipp_as && row.nipp_as.trim() !== '';
 
-            if (crewCount > 0) {
-                if (noKa.includes('LIBUR')) {
-                    result.libur += crewCount;
-                } else if (noKa.includes('SEREP')) {
-                    result.serep += crewCount;
-                } else if (noKa !== '') {
-                    // Proses masinis dan asisten untuk dinasan reguler
-                    processAwakKA(row.nipp_mas, 'reguler');
-                    processAwakKA(row.nipp_as, 'reguler');
-                }
+            if (noKa.includes('LIBUR')) {
+                if(hasMasinis) result.libur++;
+                if(hasAsisten) result.libur++;
+            } else if (noKa.includes('SEREP')) {
+                if(hasMasinis) result.serep++;
+                if(hasAsisten) result.serep++;
+            } else if (noKa !== '') {
+                if(hasMasinis) processAwakKA(row.nipp_mas, 'reguler');
+                if(hasAsisten) processAwakKA(row.nipp_as, 'reguler');
             }
         });
     }
 
-    // Proses Jadwal KLB
     if (jadwal.klb && Array.isArray(jadwal.klb)) {
         jadwal.klb.forEach(row => {
             if (row.nomor_ka && row.nomor_ka.trim() !== '') {
-                // Proses masinis dan asisten untuk dinasan KLB
-                processAwakKA(row.nipp_mas, 'klb');
-                processAwakKA(row.nipp_as, 'klb');
+                if (row.nipp_mas && row.nipp_mas.trim() !== '') processAwakKA(row.nipp_mas, 'klb');
+                if (row.nipp_as && row.nipp_as.trim() !== '') processAwakKA(row.nipp_as, 'klb');
             }
         });
     }
 
-    // Proses data lain-lain (cuti, dll)
     if (jadwal.cuti && Array.isArray(jadwal.cuti)) {
         jadwal.cuti.forEach(row => {
             if (row.cuti) {
@@ -922,14 +920,11 @@ function calculateKeteranganDinasan() {
     return result;
 }
 
-
 function render_dashboard() {
     const contentEl = document.getElementById('dashboard');
-    const dinasInfo = calculateAwakKADinas();
-    const jumlahAwakDinas = dinasInfo.total;
-    
-    const keterangan = calculateKeteranganDinasan();
-    const manajemenDinas = keterangan.manajemenInstrukturDinas + keterangan.manajemenPenyeliaDinas;
+    const dinasInfo = calculateKeteranganDinasan();
+    const jumlahAwakDinas = dinasInfo.dinasanReguler + dinasInfo.dinasanKlb;
+    const manajemenDinas = dinasInfo.manajemenInstrukturDinas + dinasInfo.manajemenPenyeliaDinas;
     const totalOrangBertugas = jumlahAwakDinas + manajemenDinas;
 
     let kpiCardsHtml = `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
@@ -967,28 +962,28 @@ function render_dashboard() {
             <div class="space-y-4">
                 <div>
                     <h5 class="font-bold text-gray-800 border-b pb-1 mb-2">MANAJEMEN DINAS KA</h5>
-                    <p class="flex justify-between"><span>Penyelia Instruktur</span> <span class="font-bold">${keterangan.manajemenInstrukturDinas}</span></p>
-                    <p class="flex justify-between"><span>Penyelia Dinasan</span> <span class="font-bold">${keterangan.manajemenPenyeliaDinas}</span></p>
+                    <p class="flex justify-between"><span>Penyelia Instruktur</span> <span class="font-bold">${dinasInfo.manajemenInstrukturDinas}</span></p>
+                    <p class="flex justify-between"><span>Penyelia Dinasan</span> <span class="font-bold">${dinasInfo.manajemenPenyeliaDinas}</span></p>
                 </div>
                  <div>
                     <h5 class="font-bold text-gray-800 border-b pb-1 mb-2">ASP DINAS KA</h5>
-                    <p class="flex justify-between"><span>REGULER</span> <span class="font-bold">${keterangan.dinasanReguler}</span></p>
-                    <p class="flex justify-between"><span>KLB</span> <span class="font-bold">${keterangan.dinasanKlb}</span></p>
+                    <p class="flex justify-between"><span>REGULER</span> <span class="font-bold">${dinasInfo.dinasanReguler}</span></p>
+                    <p class="flex justify-between"><span>KLB</span> <span class="font-bold">${dinasInfo.dinasanKlb}</span></p>
                 </div>
             </div>
             <div class="space-y-2">
                 <h5 class="font-bold text-gray-800 border-b pb-1 mb-2">SEREP / LIBUR</h5>
-                <p class="flex justify-between"><span>LIBUR</span> <span class="font-bold">${keterangan.libur}</span></p>
-                <p class="flex justify-between"><span>SEREP</span> <span class="font-bold">${keterangan.serep}</span></p>
+                <p class="flex justify-between"><span>LIBUR</span> <span class="font-bold">${dinasInfo.libur}</span></p>
+                <p class="flex justify-between"><span>SEREP</span> <span class="font-bold">${dinasInfo.serep}</span></p>
             </div>
             <div class="space-y-2">
                 <h5 class="font-bold text-gray-800 border-b pb-1 mb-2">LAIN-LAIN</h5>
-                <p class="flex justify-between"><span>CUTI TAHUNAN (CT)</span> <span class="font-bold">${keterangan.cutiTahunan}</span></p>
-                <p class="flex justify-between"><span>CUTI PENTING (CP)</span> <span class="font-bold">${keterangan.cutiPenting}</span></p>
-                <p class="flex justify-between"><span>CUTI SAKIT (CSK)</span> <span class="font-bold">${keterangan.cutiSakit}</span></p>
-                <p class="flex justify-between"><span>DIKLAT</span> <span class="font-bold">${keterangan.diklap}</span></p>
-                <p class="flex justify-between"><span>PEMBINAAN</span> <span class="font-bold">${keterangan.pembinaan}</span></p>
-                <p class="flex justify-between"><span>SERTIFIKASI</span> <span class="font-bold">${keterangan.sertifikasi}</span></p>
+                <p class="flex justify-between"><span>CUTI TAHUNAN (CT)</span> <span class="font-bold">${dinasInfo.cutiTahunan}</span></p>
+                <p class="flex justify-between"><span>CUTI PENTING (CP)</span> <span class="font-bold">${dinasInfo.cutiPenting}</span></p>
+                <p class="flex justify-between"><span>CUTI SAKIT (CSK)</span> <span class="font-bold">${dinasInfo.cutiSakit}</span></p>
+                <p class="flex justify-between"><span>DIKLAT</span> <span class="font-bold">${dinasInfo.diklap}</span></p>
+                <p class="flex justify-between"><span>PEMBINAAN</span> <span class="font-bold">${dinasInfo.pembinaan}</span></p>
+                <p class="flex justify-between"><span>SERTIFIKASI</span> <span class="font-bold">${dinasInfo.sertifikasi}</span></p>
             </div>
         </div>
     </div>`;
@@ -1028,17 +1023,99 @@ function saveChanges_dashboard() {
     safeUpdate('edit-best-foto', value => appData.pageData.dashboard.bestEmployee.foto = value);
 }
 
+function render_profil() {
+    const contentEl = document.getElementById('profil');
+    const data = appData.pageData.profil;
+    let imageSectionHtml;
+
+    if (isEditMode) {
+        imageSectionHtml = `
+            <div class="w-full md:w-1/2">
+                <img src="${data.mainImage}" alt="Kantor UPT Purwakarta" class="rounded-lg h-auto w-full mb-2">
+                <label for="edit-profil-image" class="block text-sm font-medium text-gray-700">URL Gambar Profil:</label>
+                <input type="text" id="edit-profil-image" class="edit-input w-full mt-1" value="${data.mainImage}">
+            </div>
+        `;
+    } else {
+        imageSectionHtml = `<img src="${data.mainImage}" alt="Kantor UPT Purwakarta" class="w-full md:w-1/2 rounded-lg h-auto">`;
+    }
+
+    contentEl.innerHTML = `
+        <div class="bg-white p-8 rounded-lg shadow">
+            <h2 class="text-2xl font-bold text-[#0D2B4F] mb-4">Profil UPT Crew KA Kelas C Purwakarta</h2>
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                ${imageSectionHtml}
+                <div class="text-gray-800 space-y-6 md:w-1/2">
+                    <p class="text-xl font-bold leading-relaxed text-justify">UPT Crew KA Purwakarta adalah Unit Pelaksana Teknis yang berada di wilayah Daop 2 Bandung yang memiliki wewenang dan bertanggung jawab dalam penugasan masinis dan asisten masinis untuk dinas kereta api, langsir, atau dinas cadangan di stasiun awal pemberangkatan kereta api atau di stasiun pergantian awak KA.</p>
+                    <p class="text-xl font-bold leading-relaxed text-justify">Berlokasi di wilayah paling barat Daerah Operasi 2 Bandung, UPT Crew KA Purwakarta menjadi garda terdepan yang berbatasan langsung dengan wilayah Daerah Operasi 1 Jakarta, memegang peranan krusial dalam kelancaran operasional kereta api di lintas barat.</p>
+                </div>
+            </div>
+        </div>`;
+}
+
+function saveChanges_profil() {
+    const newImageUrl = document.getElementById('edit-profil-image').value;
+    appData.pageData.profil.mainImage = newImageUrl;
+}
+
+function render_struktur() {
+    const contentEl = document.getElementById('struktur');
+    const data = appData.pageData.struktur;
+
+    const createEditableImage = (id, label, src) => {
+        if (isEditMode) {
+            return `
+                <img src="${src}" alt="Bagan Struktur Organisasi ${label}" class="w-full h-auto rounded-lg shadow-md object-contain mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/1200x800/E0E7FF/0D2B4F?text=Gagal+Memuat+Bagan';">
+                <label for="edit-struktur-${id}" class="block text-sm font-medium text-gray-700 mt-2">URL Gambar ${label}:</label>
+                <input type="text" id="edit-struktur-${id}" class="edit-input w-full mt-1" value="${src}">
+            `;
+        }
+        return `<img src="${src}" alt="Bagan Struktur Organisasi ${label}" class="w-full h-auto rounded-lg shadow-md object-contain mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/1200x800/E0E7FF/0D2B4F?text=Gagal+Memuat+Bagan';">`;
+    };
+
+    contentEl.innerHTML = `
+        <div class="bg-white p-6 rounded-lg shadow">
+            <div class="border-b border-gray-200">
+                <nav id="struktur-tabs" class="-mb-px flex space-x-8" aria-label="Tabs">
+                    <button onclick="switchTab('struktur', 'pusat')" class="tab-button active whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">DIREKTORAT OPERASI</button>
+                    <button onclick="switchTab('struktur', 'daop2')" class="tab-button whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300">DAERAH OPERASI 2 BANDUNG</button>
+                    <button onclick="switchTab('struktur', 'upt')" class="tab-button whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300">UPT Crew KA Kelas C Purwakarta</button>
+                </nav>
+            </div>
+            <div class="mt-6">
+                <div id="pusat-content" class="tab-content active p-4">
+                    <h3 class="text-xl font-bold text-[#0D2B4F] mb-4 text-center">Struktur Organisasi Train Crew Operation</h3>
+                    ${createEditableImage('pusat', 'Direktorat Operasi', data.pusat)}
+                </div>
+                <div id="daop2-content" class="tab-content p-4">
+                    <h3 class="text-xl font-bold text-[#0D2B4F] mb-4 text-center">Struktur Organisasi Operasi DAOP 2 Bandung</h3>
+                    ${createEditableImage('daop2', 'DAOP 2 Bandung', data.daop2)}
+                </div>
+                <div id="upt-content" class="tab-content p-4">
+                    <h3 class="text-xl font-bold text-[#0D2B4F] mb-4 text-center">Struktur Organisasi UPT Crew KA Kelas C Purwakarta</h3>
+                    ${createEditableImage('upt', 'UPT Crew KA Purwakarta', data.upt)}
+                </div>
+            </div>
+        </div>`;
+}
+
+function saveChanges_struktur() {
+    appData.pageData.struktur.pusat = document.getElementById('edit-struktur-pusat').value;
+    appData.pageData.struktur.daop2 = document.getElementById('edit-struktur-daop2').value;
+    appData.pageData.struktur.upt = document.getElementById('edit-struktur-upt').value;
+}
+
 function render_tupoksi() {
     const contentEl = document.getElementById('tupoksi');
     const { kupt, instruktur, penyelia } = appData.pageData.tupoksi;
     const createPersonCard = (person, idPrefix) => {
-        if (isEditMode) { return `<div class="text-center flex-shrink-0"><img src="${person.foto}" class="rounded-lg mx-auto shadow-md" style="width:150px; height:180px; object-fit:cover;"><input type="text" id="${idPrefix}-foto" class="edit-input mt-2" placeholder="URL Foto" value="${person.foto}"><input type="text" id="${idPrefix}-nama" class="edit-input mt-2 font-bold text-center" value="${person.nama}"><input type="text" id="${idPrefix}-nipp" class="edit-input mt-1 text-center" value="${person.nipp}"></div>`; }
-        return `<div class="text-center flex-shrink-0"><img src="${person.foto}" class="rounded-lg mx-auto shadow-md" alt="Foto ${person.nama}" style="width:150px; height:180px; object-fit:cover;"><h4 class="mt-3 font-bold text-base">${person.nama}</h4><p class="text-sm text-gray-500">NIPP ${person.nipp}</p></div>`;
+        if (isEditMode) { return `<div class="text-center flex-shrink-0"><img src="${person.foto}" class="rounded-lg mx-auto shadow-md w-full h-auto max-w-[150px]"><input type="text" id="${idPrefix}-foto" class="edit-input mt-2" placeholder="URL Foto" value="${person.foto}"><input type="text" id="${idPrefix}-nama" class="edit-input mt-2 font-bold text-center" value="${person.nama}"><input type="text" id="${idPrefix}-nipp" class="edit-input mt-1 text-center" value="${person.nipp}"></div>`; }
+        return `<div class="text-center flex-shrink-0"><img src="${person.foto}" class="rounded-lg mx-auto shadow-md w-full h-auto max-w-[150px]" alt="Foto ${person.nama}"><h4 class="mt-3 font-bold text-base">${person.nama}</h4><p class="text-sm text-gray-500">NIPP ${person.nipp}</p></div>`;
     };
     const createPenyeliaGrid = () => {
         return penyelia.map((p, index) => {
-            if (isEditMode) { return `<div class="text-center"><img src="${p.foto}" class="rounded-lg mx-auto mb-2" style="width:100px; height:120px; object-fit:cover;"><input type="text" id="penyelia-${index}-foto" class="edit-input" placeholder="URL Foto" value="${p.foto}"><input type="text" id="penyelia-${index}-nama" class="edit-input mt-1 text-center font-semibold" value="${p.nama}"><input type="text" id="penyelia-${index}-nipp" class="edit-input mt-1 text-center" value="${p.nipp}"></div>`; }
-            return `<div class="text-center"><img src="${p.foto}" class="rounded-lg mx-auto mb-2" alt="Foto ${p.nama}" style="width:100px; height:120px; object-fit:cover;"><p class="font-semibold text-sm">${p.nama}</p><p class="text-xs text-gray-500">NIPP ${p.nipp}</p></div>`;
+            if (isEditMode) { return `<div class="text-center"><img src="${p.foto}" class="rounded-lg mx-auto mb-2 w-full h-auto max-w-[100px]"><input type="text" id="penyelia-${index}-foto" class="edit-input" placeholder="URL Foto" value="${p.foto}"><input type="text" id="penyelia-${index}-nama" class="edit-input mt-1 text-center font-semibold" value="${p.nama}"><input type="text" id="penyelia-${index}-nipp" class="edit-input mt-1 text-center" value="${p.nipp}"></div>`; }
+            return `<div class="text-center"><img src="${p.foto}" class="rounded-lg mx-auto mb-2 w-full h-auto max-w-[100px]" alt="Foto ${p.nama}"><p class="font-semibold text-sm">${p.nama}</p><p class="text-xs text-gray-500">NIPP ${p.nipp}</p></div>`;
         }).join('');
     };
     contentEl.innerHTML = `<div class="space-y-6"><div class="bg-white p-6 rounded-lg shadow"><h3 class="text-xl font-bold text-[#0D2B4F] text-center mb-4">Kepala UPT (KUPT)</h3><div class="flex flex-col lg:flex-row items-center lg:items-start gap-8">${createPersonCard(kupt, 'kupt')}<div class="w-full"><p class="text-gray-800 mb-2 font-semibold">Tugas Pokok & Tanggung Jawab:</p><ul class="list-disc list-inside text-sm text-gray-700 space-y-2 leading-relaxed"><li>Menyusun program kerja, evaluasi, serta laporan realisasi program kerja.</li><li>Merencanakan dan mengevaluasi jumlah dan dinasan Awak KA.</li><li>Meningkatkan kompetensi teknis dan kompetensi Awak KA.</li><li>Mengevaluasi dan melakukan penilaian kinerja Wakil KUPT Crew KA, Penyelia dan Awak KA.</li><li>Mengelola resiko dan menjamin keselamatan sesuai di bidang yang dikelola.</li><li>Menyusun, mengusulkan dan memantau program pengembangan pelatihan dan atau sertifikasi serta kecakapan Awak KA.</li></ul></div></div></div><div class="bg-white p-6 rounded-lg shadow"><h3 class="text-xl font-bold text-[#0D2B4F] text-center mb-4">Penyelia Instruktur</h3><div class="flex flex-col lg:flex-row items-center lg:items-start gap-8">${createPersonCard(instruktur, 'instruktur')}<div class="w-full"><p class="text-gray-800 mb-2 font-semibold">Tugas Pokok & Tanggung Jawab:</p><ul class="list-disc list-inside text-sm text-gray-700 space-y-2 leading-relaxed"><li>Melakukan pembinaan dan pelatihan tentang regulasi dan teknik menjalankan KA dan langsiran.</li><li>Memberikan penilaian dan evaluasi kepada Awak KA binaannya.</li><li>Melakukan Running minimal 4 (empat) kali dalam satu bulan sebagai bentuk pembinaan, pelatihan, dan pengawasan di lapangan.</li></ul></div></div></div><div class="bg-white p-6 rounded-lg shadow"><h3 class="text-xl font-bold text-[#0D2B4F] text-center mb-4">Penyelia Dinasan</h3><div class="w-full"><p class="text-gray-800 mb-2 font-semibold">Tugas Pokok & Tanggung Jawab:</p><ul class="list-disc list-inside text-sm text-gray-700 mb-6 space-y-2 leading-relaxed"><li>Membuat, mengatur dan menyiapkan dinasan Masinis/Asisten Masinis termasuk input data dinasan Awak KA ke dalam sistem Pranopka.</li><li>Melakukan Assesment Pra Dinas.</li><li>Melakukan pemeriksaan bentuk dan kelengkapan perjalanan dinas.</li><li>Memvalidasi akhir dinasan serta melakukan pemantauan situasi operasi kereta api dan langsiran.</li></ul></div><div class="w-full"><p class="text-gray-800 mb-3 font-semibold text-center">Tim Penyelia Dinasan</p><div class="grid grid-cols-2 md:grid-cols-4 gap-4">${createPenyeliaGrid()}</div></div></div></div>`;
@@ -1184,7 +1261,7 @@ function render_sertifikasi() {
                 if (col.key === 'smartcard_url') { cells += `<td class="p-1 border align-middle"><div class="flex items-center gap-2"><img src="${s.smartcard_url.replace(/&dl=0/g, '&raw=1')}" class="h-[31px] w-[50px] object-cover rounded-sm border" onerror="this.style.display='none'"><input class="edit-input" data-key="${col.key}" value="${s[col.key] || ''}"></div></td>`; } 
                 else { cells += `<td class="p-1 border align-middle"><input class="edit-input ${textAlign}" data-key="${col.key}" value="${s[col.key] || ''}"></td>`; }
             } else {
-                if (col.key === 'smartcard_url') { const imageUrl = s[col.key] ? s[col.key].replace(/&dl=0/g, '&raw=1') : ''; cells += `<td class="py-2 px-4 align-middle smartcard-cell"><img src="${imageUrl}" class="w-[100px] h-[63px] object-cover rounded-md shadow-sm mx-auto smartcard-image" onerror="this.src='https://placehold.co/100x63/EFEFEF/AAAAAA?text=Gagal+Muat'; this.classList.add('border');"></td>`; } 
+                if (col.key === 'smartcard_url') { const imageUrl = s[col.key] ? s[col.key].replace(/&dl=0/g, '&raw=1') : ''; cells += `<td class="py-2 px-4 align-middle smartcard-cell"><img src="${imageUrl}" class="w-[100px] h-auto rounded-md shadow-sm mx-auto smartcard-image" onerror="this.src='https://placehold.co/100x63/EFEFEF/AAAAAA?text=Gagal+Muat'; this.classList.add('border');"></td>`; } 
                 else { cells += `<td class="py-3 px-4 align-middle ${textAlign}">${s[col.key] || ''}</td>`; }
             }
         });
@@ -1503,11 +1580,35 @@ function saveChanges_pantauan_lintas() {
 
 function render_keselamatan() {
     const contentEl = document.getElementById('keselamatan');
-    const { ibpr, kebijakan, integritas, briefing } = appData.pageData.keselamatan;
+    const { ibpr, kebijakan, integritas, tanggapDarurat, briefing } = appData.pageData.keselamatan;
+
     const createGallery = (title, images, dataKey) => {
-        let itemsHtml = isEditMode ? images.map((img, index) => `<div class="relative"><img src="${img}" class="w-full h-auto rounded-lg shadow-md"><input class="edit-input mt-1" id="edit-${dataKey}-${index}" value="${img}"></div>`).join('') + `<div class="flex items-center justify-center border-2 border-dashed rounded-lg h-full"><button class="add-row-btn" onclick="addPhoto('${dataKey}')">+ Foto</button></div>` : images.map(img => `<img src="${img}" class="w-full h-auto rounded-lg shadow-md object-cover">`).join('');
+        let itemsHtml = isEditMode ? (images || []).map((img, index) => `<div class="relative"><img src="${img}" class="w-full h-auto rounded-lg shadow-md"><input class="edit-input mt-1" id="edit-${dataKey}-${index}" value="${img}"></div>`).join('') + `<div class="flex items-center justify-center border-2 border-dashed rounded-lg h-full"><button class="add-row-btn" onclick="addPhoto('${dataKey}')">+ Foto</button></div>` : (images || []).map(img => `<img src="${img}" class="w-full h-auto rounded-lg shadow-md">`).join('');
         return `<div class="bg-white p-6 rounded-lg shadow"><h2 class="text-2xl font-bold text-[#0D2B4F] mb-4">${title}</h2><div class="grid grid-cols-2 md:grid-cols-4 gap-4">${itemsHtml}</div></div>`;
     };
+    
+    const createTanggapDaruratSection = (images) => {
+        const title = 'Struktur Organisasi Tanggap Darurat';
+        const dataKey = 'tanggapDarurat';
+        let itemsHtml = '';
+        if (isEditMode) {
+            itemsHtml = (images || []).map((img, index) =>
+                `<div class="relative mb-4">
+                    <img src="${img}" class="w-full h-auto rounded-lg shadow-md" onerror="this.style.display='none'">
+                    <input class="edit-input mt-1" id="edit-${dataKey}-${index}" value="${img}">
+                 </div>`
+            ).join('') + `<button class="add-row-btn" onclick="addPhoto('${dataKey}')">+ Tambah Gambar</button>`;
+        } else {
+            itemsHtml = (images || []).map(img =>
+                `<img src="${img}" class="w-full h-auto rounded-lg shadow-md mb-4">`
+            ).join('');
+        }
+        return `<div class="bg-white p-6 rounded-lg shadow">
+                    <h2 class="text-2xl font-bold text-[#0D2B4F] mb-4">${title}</h2>
+                    <div>${itemsHtml}</div>
+                </div>`;
+    };
+
     const wartaCols = [{key:'no', label:'NO'}, {key:'warta', label:'WARTA DINAS'}, {key:'tentang', label:'TENTANG'}];
     let wartaTable = `<div class="bg-white p-6 rounded-lg shadow"><h2 class="text-xl font-bold text-[#0D2B4F] mb-4 text-center">Kumpulan Warta Dinas (WAD)</h2><div class="overflow-x-auto"><table class="w-full text-sm border-collapse border"><thead class="table-header"><tr>${wartaCols.map(c=>`<th class="p-2 border">${c.label}</th>`).join('')}${isEditMode?'<th class="p-2 border">Aksi</th>':''}</tr></thead><tbody id="wartaDinasTableBody" class="text-center">`;
     wartaTable += appData.wartaDinas.map((p,idx)=>`<tr>${wartaCols.map(c=>isEditMode?`<td class="p-1 border"><input class="edit-input" data-key="${c.key}" value="${p[c.key]||''}"></td>`:`<td class="p-2 border">${p[c.key]||''}</td>`).join('')}${isEditMode?`<td class="p-1 border"><button class="delete-row-btn" onclick="deleteTableRow('wartaDinas', ${idx})">X</button></td>`:''}</tr>`).join('');
@@ -1517,12 +1618,20 @@ function render_keselamatan() {
     briefingHtml += `</div><div class="bg-red-50 p-6 rounded-lg shadow"><h3 class="font-bold text-lg mb-3 text-red-800"><i class="fas fa-exclamation-triangle mr-2"></i>Review Kejadian Terkini</h3>`;
     briefingHtml += isEditMode ? `<textarea id="edit-briefing-review" class="edit-textarea w-full">${briefing.review.replace(/<br>/g, '\n').replace(/<b>/g, '').replace(/<\/b>/g, '').replace(/<i>/g, '').replace(/<\/i>/g, '')}</textarea>` : `<p class="text-sm text-gray-700 space-y-2">${briefing.review}</p>`;
     briefingHtml += `</div></div></div>`;
-    contentEl.innerHTML = `<div class="space-y-6">${createGallery('IBPR', ibpr, 'ibpr')}${createGallery('Kebijakan Keselamatan', kebijakan, 'kebijakan')}${createGallery('Fakta Integritas', integritas, 'integritas')}${wartaTable}${briefingHtml}</div>`;
+    
+    contentEl.innerHTML = `<div class="space-y-6">
+                            ${createGallery('IBPR', ibpr, 'ibpr')}
+                            ${createGallery('Kebijakan Keselamatan', kebijakan, 'kebijakan')}
+                            ${createGallery('Fakta Integritas', integritas, 'integritas')}
+                            ${createTanggapDaruratSection(tanggapDarurat)}
+                            ${wartaTable}
+                            ${briefingHtml}
+                           </div>`;
 }
 
 function saveChanges_keselamatan() {
     const safeUpdate = (id, callback) => { const element = document.getElementById(id); if (element) callback(element.value); };
-    ['ibpr', 'kebijakan', 'integritas'].forEach(key => {
+    ['ibpr', 'kebijakan', 'integritas', 'tanggapDarurat'].forEach(key => {
         const newUrls = [];
         document.querySelectorAll(`[id^=edit-${key}-]`).forEach(input => newUrls.push(input.value));
         appData.pageData.keselamatan[key] = newUrls;
@@ -1536,6 +1645,9 @@ function saveChanges_keselamatan() {
 }
 
 function addPhoto(dataKey) {
+    if (!appData.pageData.keselamatan[dataKey]) {
+        appData.pageData.keselamatan[dataKey] = [];
+    }
     appData.pageData.keselamatan[dataKey].push('');
     rerenderCurrentSection();
 }
