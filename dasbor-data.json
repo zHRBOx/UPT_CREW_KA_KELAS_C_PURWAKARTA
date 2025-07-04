@@ -865,12 +865,12 @@
   "jadwalBesok": {
     "penyelia": {
       "dinas1": {
-        "nama": "FAZHAR SEPTIA ILLHAM",
-        "nipp": "48552"
+        "nama": "YADI SUPRIADI",
+        "nipp": "44662"
       },
       "dinas2": {
-        "nama": "ARIEF KURNIAWAN",
-        "nipp": "42003"
+        "nama": "YADI SUPRIADI",
+        "nipp": "44662"
       },
       "dinas3": {
         "nama": "SUHADI ASMARA",
@@ -899,8 +899,8 @@
         "habis": "18:05",
         "masinis": "CECEP ARI NUGRAHA",
         "nipp_mas": "68089",
-        "asisten": "UJANG SURYA",
-        "nipp_as": "50162"
+        "asisten": "RIYAD FIRDAUS",
+        "nipp_as": "47335"
       },
       {
         "no": "3",
@@ -957,10 +957,10 @@
         "lintas": "PWK-BD, PWK-BD",
         "mulai": "15:25",
         "habis": "01:05",
-        "masinis": "UNGGUL HENDRA EKA PRANOTO",
-        "nipp_mas": "54730",
-        "asisten": "SANDI PERMANA",
-        "nipp_as": "75725"
+        "masinis": "ROFI NOVIYANUS",
+        "nipp_mas": "54706",
+        "asisten": "ARIEF KURNIAWAN",
+        "nipp_as": "42003"
       },
       {
         "no": "8",
@@ -971,8 +971,8 @@
         "habis": "15:20",
         "masinis": "ANDRI NURJANA",
         "nipp_mas": "64928",
-        "asisten": "RIYAD FIRDAUS",
-        "nipp_as": "47335"
+        "asisten": "MAHESA BIMA ADI PANGESTU",
+        "nipp_as": "73831"
       },
       {
         "no": "9",
@@ -981,7 +981,7 @@
         "lintas": "CREW KA PWK",
         "mulai": "08:00",
         "habis": "16:00",
-        "masinis": "A7",
+        "masinis": "CP",
         "nipp_mas": "",
         "asisten": "A8",
         "nipp_as": ""
@@ -1028,12 +1028,19 @@
       {
         "diklap": "",
         "cuti": "JUNAEDI / CT (04-07)",
-        "csk": "",
+        "csk": "UNGGUL HENDRA EKA PRATAMA (04)",
+        "pembinaan": "",
+        "sertifikasi": ""
+      },
+      {
+        "diklap": "",
+        "cuti": "UJANG SURYA / CP (04)",
+        "csk": "FAYZA HAFIZH ARDIANSYAH (04)",
         "pembinaan": "",
         "sertifikasi": ""
       }
     ],
-    "catatanPenting": ""
+    "catatanPenting": "CP : ANTAR ANAK KE RUMAH SAKIT"
   },
   "nilaiUtsUpo": [
     {
