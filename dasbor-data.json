@@ -2079,9 +2079,25 @@
       "no": "",
       "tanggal": "",
       "no_ka": "",
-      "kejadian": "",
+      "kejadian": "PETAK JALAN CBR-CKP",
       "tindak_lanjut": "",
-      "keterangan": "NIHIL"
+      "keterangan": ""
+    },
+    {
+      "no": "1",
+      "tanggal": "02/06/2025",
+      "no_ka": "KA 333",
+      "kejadian": "(CL WALAHAR) TERTEMPER OTK",
+      "tindak_lanjut": "LAPOR PPKP",
+      "keterangan": "CLOSE"
+    },
+    {
+      "no": "",
+      "tanggal": "",
+      "no_ka": "",
+      "kejadian": "JALUR HILIR KM 87 +000",
+      "tindak_lanjut": "",
+      "keterangan": ""
     }
   ],
   "pantauanKKA": [
