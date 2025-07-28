@@ -1,5 +1,5 @@
 {
-  "lastScheduleUpdate": "2025-07-27T17:00:00.000Z",
+  "lastScheduleUpdate": "2025-07-28T00:00:00.000Z",
   "rekapitulasiPegawai": {
     "nominatif": {
       "kupt": 1,
@@ -872,6 +872,7 @@
     ],
     "cuti": [
       {
+        "no": 1,
         "diklap": "",
         "cuti": "",
         "csk": "",
